@@ -5,11 +5,11 @@ from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.chrome.service import Service
 
-from vpn import *
+# from vpn import *
 
-# set up and start vpn service (get too many requests error need to rotate if get blocked)
-directory = os.path.dirname(__file__)
-expressvpn(directory, "South Africa")
+# # set up and start vpn service (get too many requests error need to rotate if get blocked)
+# directory = os.path.dirname(__file__)
+# expressvpn(directory, "South Africa")
 
 # Set User Agent and chrome option
 USER_AGENT = "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/104.0.0.0 Safari/537.36"
