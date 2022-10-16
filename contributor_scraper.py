@@ -1,4 +1,5 @@
 import pandas as pd
+import time
 
 from selenium import webdriver
 from selenium.webdriver.common.by import By
@@ -42,13 +43,45 @@ element_list = []
 
 for crates_url in crates_url_list:
     driver.get(crates_url)
+
+    time.sleep(3)
+
+    github_url = None
+    project_owner_github_url = None
+
+    # get github url
+    url_name_list = [el.text for el in driver.find_elements(By.XPATH,r"//*[@class='_title_t2rnmm']")]
+    url_link_list = [el.text for el in driver.find_elements(By.XPATH,r"//*[@class='_link_t2rnmm']")]
+
+    for index, url_name in enumerate(url_name_list):
+        if url_name == "Repository":
+            github_url = url_link_list[index]
     
+    time.sleep(3)
+
+    # get the list of crates owner url
     project_owner_el_list = driver.find_elements(By.XPATH,r"//*[@class='_list_181lzn _detailed_181lzn']/li/a")
 
-    for project_owner_el in project_owner_el_list:
-        owner_url = project_owner_el.get_attribute('href')
+    owner_url_list = []
 
-        element_list.append({'crates_url': crates_url,'owner_url':crates_url})
+    for project_owner_el in project_owner_el_list:
+
+        # get the crates owner url
+        owner_url = project_owner_el.get_attribute('href')
+        owner_url_list.append(owner_url)
+
+    for owner_url in owner_url_list:
+
+        # get the crates owner github repo
+        driver.get(owner_url)
+
+        time.sleep(3)
+
+        project_owner_github_el = driver.find_element(By.XPATH,r"//*[@class='_header_yor1li _header_1c6xgh']/a")
+
+        project_owner_github_url = project_owner_github_el.get_attribute('href')
+
+        element_list.append({'crates_url': crates_url,'owner_url': project_owner_github_url, 'github_url': github_url})
 
 Owner_url_Data = pd.DataFrame.from_records(element_list)     
 Owner_url_Data.to_excel('Owner_url_Data.xlsx')
