@@ -1,15 +1,10 @@
 import csv
 import pandas as pd
+import time
 
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.chrome.service import Service
-
-# from vpn import *
-
-# # set up and start vpn service (get too many requests error need to rotate if get blocked)
-# directory = os.path.dirname(__file__)
-# expressvpn(directory, "South Africa")
 
 # Set User Agent and chrome option
 USER_AGENT = "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/104.0.0.0 Safari/537.36"
@@ -47,6 +42,18 @@ with open("names_projects_Cargo.csv") as csv_file:
         project_url = "https://libraries.io/cargo/" + str(project['project'])
 
         driver.get(project_url)
+
+        # Check for too many requests error
+
+        time.sleep(1)
+
+        error_429 = driver.find_element(By.XPATH,r"//*").text
+
+        if error_429 == '429 Too Many Requests':
+            time.sleep(15)
+            driver.get(project_url)
+
+        time.sleep(10)
 
         Latest_release = None
         First_release = None
@@ -94,7 +101,7 @@ with open("names_projects_Cargo.csv") as csv_file:
                 continue
 
             
-        element_list.append({'Latest_release': Latest_release, 'First_release': First_release, 'Stars': Stars, 'Forks': Forks, 'Watch': Watch, 'Contributors': Contributors, 'crates_url': crates_url, 'github_repo': github_repo})
+        element_list.append({'project': project, 'Latest_release': Latest_release, 'First_release': First_release, 'Stars': Stars, 'Forks': Forks, 'Watch': Watch, 'Contributors': Contributors, 'crates_url': crates_url, 'github_repo': github_repo})
     
     Reference_Data = pd.DataFrame.from_records(element_list)     
     Reference_Data.to_excel('project_metadata.xlsx')

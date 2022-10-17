@@ -5,12 +5,6 @@ from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.chrome.service import Service
 
-# from vpn import *
-
-# # set up and start vpn service (get too many requests error need to rotate if get blocked)
-# directory = os.path.dirname(__file__)
-# expressvpn(directory, "South Africa")
-
 df = pd.read_excel('project_metadata.xlsx')
 crates_url_list = df['crates_url'].tolist()
 
@@ -42,9 +36,10 @@ driver = webdriver.Chrome(
 element_list = []
 
 for crates_url in crates_url_list:
+
     driver.get(crates_url)
 
-    time.sleep(3)
+    time.sleep(5)
 
     github_url = None
     project_owner_github_url = None
@@ -57,7 +52,7 @@ for crates_url in crates_url_list:
         if url_name == "Repository":
             github_url = url_link_list[index]
     
-    time.sleep(3)
+    time.sleep(5)
 
     # get the list of crates owner url
     project_owner_el_list = driver.find_elements(By.XPATH,r"//*[@class='_list_181lzn _detailed_181lzn']/li/a")
