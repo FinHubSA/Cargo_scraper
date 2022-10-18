@@ -1,0 +1,155 @@
+import csv
+import pandas as pd
+import time
+import json
+
+from selenium import webdriver
+from selenium.webdriver.common.by import By
+
+# Set User Agent and chrome option
+USER_AGENT = "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/104.0.0.0 Safari/537.36"
+chrome_options = webdriver.ChromeOptions()
+chrome_options.add_argument(f"user-agent={USER_AGENT}")
+chrome_options.add_argument("--disable-blink-features=AutomationControlled")
+chrome_options.add_experimental_option("excludeSwitches", ["enable-automation"])
+chrome_options.add_experimental_option("useAutomationExtension", False)
+chrome_options.add_experimental_option(
+    "prefs",
+    {
+        "download.prompt_for_download": False,  # To auto download the file
+        "download.directory_upgrade": True,
+        "plugins.always_open_pdf_externally": True,  # It will not show PDF directly in chrome
+        "credentials_enable_service": False,  # gets rid of password saver popup
+        "profile.password_manager_enabled": False,  # gets rid of password saver popup
+    },
+)
+throttle = 0
+
+# Start driver
+driver = webdriver.Chrome(
+    "/Users/danaebouwer/Documents/Work/rust_scraper/chromedriver",
+    options=chrome_options,
+)
+
+# load csv list
+with open("/Users/danaebouwer/Documents/Work/rust_scraper/names_projects_Cargo.csv") as csv_file:
+    project_list = csv.DictReader(csv_file)
+
+    for index_project, project in enumerate(project_list):
+
+        try:
+            project_name = project['project']
+
+            # try:
+
+            project_url = "https://libraries.io/cargo/" + str(project['project'])
+
+            driver.get(project_url)
+
+            # Check for too many requests error
+            time.sleep(1)
+
+            error_429 = driver.find_element(By.XPATH,r"//*").text
+
+            if error_429 == '429 Too Many Requests':
+                time.sleep(15)
+                driver.get(project_url)
+
+            time.sleep(10)
+
+            Latest_release = None
+            First_release = None
+            Stars = None
+            Forks = None
+            Watch = None
+            Contributors = None
+            Repository_size = None
+            crates_url = None
+            github_repo = None
+
+            # get the project links
+            project_el_list = driver.find_elements(By.XPATH,r"//*[@class='project-links']/span/a")
+            for project_el in project_el_list:
+                        
+                project_link_name = project_el.text
+                if project_link_name == 'Cargo':
+                    crates_url = project_el.get_attribute('href')
+                elif project_link_name == 'Repository':
+                    github_repo = project_el.get_attribute('href')
+                else:
+                    continue
+            
+            # get the metadata
+            element_tag_name_list = [el.text for el in driver.find_elements(By.XPATH,r"//*[@class='col-md-4 sidebar']/dl[@class='row']/dt")]
+            element_tag_value_list = [el.text for el in driver.find_elements(By.XPATH,r"//*[@class='col-md-4 sidebar']/dl[@class='row']/dd")]
+
+            for index, element_tag_name in enumerate(element_tag_name_list):
+
+                if element_tag_name == 'Latest release':
+                    Latest_release = element_tag_value_list[index]
+                elif element_tag_name == 'First release':
+                    First_release = element_tag_value_list[index]
+                elif element_tag_name == 'Stars':
+                    Stars = element_tag_value_list[index]
+                elif element_tag_name == 'Forks':
+                    Forks = element_tag_value_list[index]
+                elif element_tag_name == 'Watchers':
+                    Watch = element_tag_value_list[index]
+                elif element_tag_name == 'Contributors':
+                    Contributors = element_tag_value_list[index]
+                elif element_tag_name == 'Repository size':
+                    Repository_size = element_tag_value_list[index]
+                else:
+                    continue
+            
+            with open("/Users/danaebouwer/Documents/Work/rust_scraper/Scraper_1/metadata.json", "r") as metadata_input_json_file:
+                metadata_list = json.load(metadata_input_json_file)
+            
+            metadata_list.append({'project': project_name, 'Latest_release': Latest_release, 'First_release': First_release, 'Stars': Stars, 'Forks': Forks, 'Watch': Watch, 'Contributors': Contributors, 'crates_url': crates_url, 'github_repo': github_repo})
+
+            with open("/Users/danaebouwer/Documents/Work/rust_scraper/Scraper_1/metadata.json", "w") as metadata_output_json_file:
+                json.dump(metadata_list, metadata_output_json_file, indent=4, sort_keys=True)
+
+            # get the maintainer and contributor url
+
+            maintainer_contributor_heading = None
+            maintainer_contributor_url = None
+
+            maintainer_contributor_list = driver.find_elements(By.XPATH,r"//*[@class='col-md-12']")
+
+            for maintainer_contributor in maintainer_contributor_list:
+
+                maintainer_contributor_heading = maintainer_contributor.find_element(By.XPATH,r"./h3").text
+
+                if maintainer_contributor_heading == 'Maintainers' or maintainer_contributor_heading == "Contributors":
+
+                    maintainer_contributor_url_list = maintainer_contributor.find_elements(By.XPATH,r"./a")
+
+                    for maintainer_contributor_url_el in maintainer_contributor_url_list:
+                        maintainer_contributor_url = maintainer_contributor_url_el.get_attribute('href')
+                
+                        with open("/Users/danaebouwer/Documents/Work/rust_scraper/Scraper_1/contributor_url.json", "r") as contributor_list_input_json_file:
+                            contributor_list = json.load(contributor_list_input_json_file)
+
+                        contributor_list.append({'project': project_name, 'contributor_type': maintainer_contributor_heading, 'maintainer_contributor_url': maintainer_contributor_url})
+
+                        with open("/Users/danaebouwer/Documents/Work/rust_scraper/Scraper_1/contributor_url.json", "w") as contributor_list_output_json_file:
+                            json.dump(contributor_list, contributor_list_output_json_file, indent=4, sort_keys=True)
+        except Exception as e:
+            time.sleep(60)
+
+            with open("/Users/danaebouwer/Documents/Work/rust_scraper/Scraper_1/error_list.json", "r") as error_list_input_json_file:
+                error_list = json.load(error_list_input_json_file)
+
+            error_list.append({'failed_requests':project, 'Index': str(index_project), 'Error': str(e)})
+            
+            with open("/Users/danaebouwer/Documents/Work/rust_scraper/Scraper_1/error_list.json", "w") as error_list_output_json_file:
+                json.dump(error_list, error_list_output_json_file, indent=4, sort_keys=True)
+
+            continue
+
+
+
+        
+        
+
