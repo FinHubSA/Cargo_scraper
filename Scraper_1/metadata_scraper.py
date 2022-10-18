@@ -2,6 +2,7 @@ import csv
 import pandas as pd
 import time
 import json
+import os
 
 from selenium import webdriver
 from selenium.webdriver.common.by import By
@@ -27,12 +28,12 @@ throttle = 0
 
 # Start driver
 driver = webdriver.Chrome(
-    "/Users/danaebouwer/Documents/Work/rust_scraper/chromedriver",
+    "../rust_scraper/chromedriver",
     options=chrome_options,
 )
 
 # load csv list
-with open("/Users/danaebouwer/Documents/Work/rust_scraper/names_projects_Cargo.csv") as csv_file:
+with open("../rust_scraper/names_projects_Cargo.csv") as csv_file:
     project_list = csv.DictReader(csv_file)
 
     for index_project, project in enumerate(project_list):
@@ -102,12 +103,12 @@ with open("/Users/danaebouwer/Documents/Work/rust_scraper/names_projects_Cargo.c
                 else:
                     continue
             
-            with open("/Users/danaebouwer/Documents/Work/rust_scraper/Scraper_1/metadata.json", "r") as metadata_input_json_file:
+            with open("../rust_scraper/Scraper_1/metadata.json", "r") as metadata_input_json_file:
                 metadata_list = json.load(metadata_input_json_file)
             
             metadata_list.append({'project': project_name, 'Latest_release': Latest_release, 'First_release': First_release, 'Stars': Stars, 'Forks': Forks, 'Watch': Watch, 'Contributors': Contributors, 'crates_url': crates_url, 'github_repo': github_repo})
 
-            with open("/Users/danaebouwer/Documents/Work/rust_scraper/Scraper_1/metadata.json", "w") as metadata_output_json_file:
+            with open("../rust_scraper/Scraper_1/metadata.json", "w") as metadata_output_json_file:
                 json.dump(metadata_list, metadata_output_json_file, indent=4, sort_keys=True)
 
             # get the maintainer and contributor url
@@ -128,22 +129,22 @@ with open("/Users/danaebouwer/Documents/Work/rust_scraper/names_projects_Cargo.c
                     for maintainer_contributor_url_el in maintainer_contributor_url_list:
                         maintainer_contributor_url = maintainer_contributor_url_el.get_attribute('href')
                 
-                        with open("/Users/danaebouwer/Documents/Work/rust_scraper/Scraper_1/contributor_url.json", "r") as contributor_list_input_json_file:
+                        with open("../rust_scraper/Scraper_1/contributor_url.json", "r") as contributor_list_input_json_file:
                             contributor_list = json.load(contributor_list_input_json_file)
 
                         contributor_list.append({'project': project_name, 'contributor_type': maintainer_contributor_heading, 'maintainer_contributor_url': maintainer_contributor_url})
 
-                        with open("/Users/danaebouwer/Documents/Work/rust_scraper/Scraper_1/contributor_url.json", "w") as contributor_list_output_json_file:
+                        with open("../rust_scraper/Scraper_1/contributor_url.json", "w") as contributor_list_output_json_file:
                             json.dump(contributor_list, contributor_list_output_json_file, indent=4, sort_keys=True)
         except Exception as e:
             time.sleep(60)
 
-            with open("/Users/danaebouwer/Documents/Work/rust_scraper/Scraper_1/error_list.json", "r") as error_list_input_json_file:
+            with open("../rust_scraper/Scraper_1/error_list.json", "r") as error_list_input_json_file:
                 error_list = json.load(error_list_input_json_file)
 
             error_list.append({'failed_requests':project, 'Index': str(index_project), 'Error': str(e)})
             
-            with open("/Users/danaebouwer/Documents/Work/rust_scraper/Scraper_1/error_list.json", "w") as error_list_output_json_file:
+            with open("../rust_scraper/Scraper_1/error_list.json", "w") as error_list_output_json_file:
                 json.dump(error_list, error_list_output_json_file, indent=4, sort_keys=True)
 
             continue

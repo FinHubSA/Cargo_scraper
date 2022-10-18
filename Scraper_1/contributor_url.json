@@ -20898,5 +20898,130 @@
         "contributor_type": "Contributors",
         "maintainer_contributor_url": "https://libraries.io/github/mlalic",
         "project": "peekable_reader"
+    },
+    {
+        "contributor_type": "Maintainers",
+        "maintainer_contributor_url": "https://crates.io/users/kevinmehall",
+        "project": "peg"
+    },
+    {
+        "contributor_type": "Contributors",
+        "maintainer_contributor_url": "https://libraries.io/github/kevinmehall",
+        "project": "peg"
+    },
+    {
+        "contributor_type": "Contributors",
+        "maintainer_contributor_url": "https://libraries.io/github/jonas-schievink",
+        "project": "peg"
+    },
+    {
+        "contributor_type": "Contributors",
+        "maintainer_contributor_url": "https://libraries.io/github/globin",
+        "project": "peg"
+    },
+    {
+        "contributor_type": "Contributors",
+        "maintainer_contributor_url": "https://libraries.io/github/SimonSapin",
+        "project": "peg"
+    },
+    {
+        "contributor_type": "Contributors",
+        "maintainer_contributor_url": "https://libraries.io/github/dario23",
+        "project": "peg"
+    },
+    {
+        "contributor_type": "Contributors",
+        "maintainer_contributor_url": "https://libraries.io/github/daramos",
+        "project": "peg"
+    },
+    {
+        "contributor_type": "Contributors",
+        "maintainer_contributor_url": "https://libraries.io/github/plaflamme",
+        "project": "peg"
+    },
+    {
+        "contributor_type": "Contributors",
+        "maintainer_contributor_url": "https://libraries.io/github/ebfull",
+        "project": "peg"
+    },
+    {
+        "contributor_type": "Contributors",
+        "maintainer_contributor_url": "https://libraries.io/github/gsingh93",
+        "project": "peg"
+    },
+    {
+        "contributor_type": "Contributors",
+        "maintainer_contributor_url": "https://libraries.io/github/lily-mara",
+        "project": "peg"
+    },
+    {
+        "contributor_type": "Contributors",
+        "maintainer_contributor_url": "https://libraries.io/github/emk",
+        "project": "peg"
+    },
+    {
+        "contributor_type": "Contributors",
+        "maintainer_contributor_url": "https://libraries.io/github/benesch",
+        "project": "peg"
+    },
+    {
+        "contributor_type": "Contributors",
+        "maintainer_contributor_url": "https://libraries.io/github/zsol",
+        "project": "peg"
+    },
+    {
+        "contributor_type": "Contributors",
+        "maintainer_contributor_url": "https://libraries.io/github/zrsmith92",
+        "project": "peg"
+    },
+    {
+        "contributor_type": "Contributors",
+        "maintainer_contributor_url": "https://libraries.io/github/bgw",
+        "project": "peg"
+    },
+    {
+        "contributor_type": "Contributors",
+        "maintainer_contributor_url": "https://libraries.io/github/Tpt",
+        "project": "peg"
+    },
+    {
+        "contributor_type": "Contributors",
+        "maintainer_contributor_url": "https://libraries.io/github/mre",
+        "project": "peg"
+    },
+    {
+        "contributor_type": "Contributors",
+        "maintainer_contributor_url": "https://libraries.io/github/neunenak",
+        "project": "peg"
+    },
+    {
+        "contributor_type": "Contributors",
+        "maintainer_contributor_url": "https://libraries.io/github/loganmhb",
+        "project": "peg"
+    },
+    {
+        "contributor_type": "Contributors",
+        "maintainer_contributor_url": "https://libraries.io/github/iximeow",
+        "project": "peg"
+    },
+    {
+        "contributor_type": "Contributors",
+        "maintainer_contributor_url": "https://libraries.io/github/fgasperij",
+        "project": "peg"
+    },
+    {
+        "contributor_type": "Contributors",
+        "maintainer_contributor_url": "https://libraries.io/github/nabijaczleweli",
+        "project": "peg"
+    },
+    {
+        "contributor_type": "Contributors",
+        "maintainer_contributor_url": "https://libraries.io/github/buster",
+        "project": "peg"
+    },
+    {
+        "contributor_type": "Contributors",
+        "maintainer_contributor_url": "https://libraries.io/github/fiveop",
+        "project": "peg"
     }
 ]

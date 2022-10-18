@@ -5487,5 +5487,16 @@
         "crates_url": "https://crates.io/crates/peekable_reader/0.0.2",
         "github_repo": "https://github.com/mlalic/peekable-reader-rs",
         "project": "peekable_reader"
+    },
+    {
+        "Contributors": "47",
+        "First_release": "Nov 23, 2014",
+        "Forks": "99",
+        "Latest_release": "23 days ago",
+        "Stars": "1.14K",
+        "Watch": "20",
+        "crates_url": "https://crates.io/crates/peg/0.8.1",
+        "github_repo": "https://github.com/kevinmehall/rust-peg",
+        "project": "peg"
     }
 ]
