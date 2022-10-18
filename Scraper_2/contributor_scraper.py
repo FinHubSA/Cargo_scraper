@@ -1,13 +1,8 @@
-import pandas as pd
 import time
 import json
-import os
 
 from selenium import webdriver
 from selenium.webdriver.common.by import By
-
-# set directory
-directory = os.path.dirname(__file__)
 
 # import metadata file
 with open("../rust_scraper/Scraper_2/metadata.json", "r") as metadata_input_json_file:
@@ -48,7 +43,7 @@ for index_metadata, metadata in enumerate(metadata_list):
         # go to the crates url page for project
         driver.get(crates_url)
 
-        time.sleep(3)
+        time.sleep(2)
 
         github_url = None
         project_maintainer_github_url = None
@@ -61,7 +56,7 @@ for index_metadata, metadata in enumerate(metadata_list):
             if url_name == "Repository":
                 github_url = url_link_list[index]
         
-        time.sleep(3)
+        time.sleep(2)
 
         # get the list of project maintainer url
         project_maintainer_el_list = driver.find_elements(By.XPATH,r"//*[@class='_list_181lzn _detailed_181lzn']/li/a")
@@ -79,11 +74,19 @@ for index_metadata, metadata in enumerate(metadata_list):
             # get the project maintainer github repo
             driver.get(maintainer_url)
 
-            time.sleep(3)
+            time.sleep(2)
 
-            project_maintainer_github_el = driver.find_element(By.XPATH,r"//*[@class='_header_yor1li _header_1c6xgh']/a")
+            try:
+                project_maintainer_github_el = driver.find_element(By.XPATH,r"//*[@class='_header-row_pld0lu']/a")
 
-            project_maintainer_github_url = project_maintainer_github_el.get_attribute('href')
+                project_maintainer_github_url = project_maintainer_github_el.get_attribute('href')
+
+            except:
+                project_maintainer_github_el = driver.find_element(By.XPATH,r"//*[@class='_header_yor1li _header_1c6xgh']/a")
+
+                project_maintainer_github_url = project_maintainer_github_el.get_attribute('href')
+
+            
 
             with open("../rust_scraper/Scraper_2/maintainer_github_url.json", "r") as maintainer_github_input_file:
                 maintainer_github_url_list = json.load(maintainer_github_input_file)
