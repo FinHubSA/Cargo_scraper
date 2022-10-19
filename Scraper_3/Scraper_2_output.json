@@ -1,0 +1,950 @@
+[
+    {
+        "crates_url": "https://crates.io/crates/libblas-sys/0.1.0",
+        "github_url": "github.com/stainless-steel/libblas-sys",
+        "owner_url": "https://github.com/emberian",
+        "project": "libblas-sys"
+    },
+    {
+        "crates_url": "https://crates.io/crates/libblas-sys/0.1.0",
+        "github_url": "github.com/stainless-steel/libblas-sys",
+        "owner_url": "https://github.com/IvanUkhov",
+        "project": "libblas-sys"
+    },
+    {
+        "crates_url": "https://crates.io/crates/liberty/0.0.2",
+        "github_url": null,
+        "owner_url": "https://github.com/magnets-moe-dumper",
+        "project": "liberty"
+    },
+    {
+        "crates_url": "https://crates.io/crates/libgit2-sys/0.14.0+1.5.0",
+        "github_url": "github.com/rust-lang/git2-rs",
+        "owner_url": "https://github.com/alexcrichton",
+        "project": "libgit2-sys"
+    },
+    {
+        "crates_url": "https://crates.io/crates/libgit2-sys/0.14.0+1.5.0",
+        "github_url": "github.com/rust-lang/git2-rs",
+        "owner_url": "https://github.com/joshtriplett",
+        "project": "libgit2-sys"
+    },
+    {
+        "crates_url": "https://crates.io/crates/libgit2-sys/0.14.0+1.5.0",
+        "github_url": "github.com/rust-lang/git2-rs",
+        "owner_url": "https://github.com/ehuss",
+        "project": "libgit2-sys"
+    },
+    {
+        "crates_url": "https://crates.io/crates/libjit-sys/0.2.1",
+        "github_url": "github.com/TomBebbington/jit.rs",
+        "owner_url": "https://github.com/TomBebbington",
+        "project": "libjit-sys"
+    },
+    {
+        "crates_url": "https://crates.io/crates/liblapack-sys/0.2.0",
+        "github_url": "github.com/stainless-steel/liblapack-sys",
+        "owner_url": "https://github.com/emberian",
+        "project": "liblapack-sys"
+    },
+    {
+        "crates_url": "https://crates.io/crates/liblapack-sys/0.2.0",
+        "github_url": "github.com/stainless-steel/liblapack-sys",
+        "owner_url": "https://github.com/IvanUkhov",
+        "project": "liblapack-sys"
+    },
+    {
+        "crates_url": "https://crates.io/crates/liblmdb-sys/0.2.2",
+        "github_url": "github.com/vhbit/lmdb-rs",
+        "owner_url": "https://github.com/vhbit",
+        "project": "liblmdb-sys"
+    },
+    {
+        "crates_url": "https://crates.io/crates/library/0.0.2",
+        "github_url": null,
+        "owner_url": "https://github.com/magnets-moe-dumper",
+        "project": "library"
+    },
+    {
+        "crates_url": "https://crates.io/crates/libnanomsg/0.1.0",
+        "github_url": null,
+        "owner_url": "https://github.com/thehydroimpulse",
+        "project": "libnanomsg"
+    },
+    {
+        "crates_url": "https://crates.io/crates/libssh2-sys/0.2.23",
+        "github_url": "github.com/alexcrichton/ssh2-rs",
+        "owner_url": "https://github.com/alexcrichton",
+        "project": "libssh2-sys"
+    },
+    {
+        "crates_url": "https://crates.io/crates/libssh2-sys/0.2.23",
+        "github_url": "github.com/alexcrichton/ssh2-rs",
+        "owner_url": "https://github.com/wez",
+        "project": "libssh2-sys"
+    },
+    {
+        "crates_url": "https://crates.io/crates/libssh2-sys/0.2.23",
+        "github_url": "github.com/alexcrichton/ssh2-rs",
+        "owner_url": "https://github.com/crisidev",
+        "project": "libssh2-sys"
+    },
+    {
+        "crates_url": "https://crates.io/crates/libressl-pnacl-sys/2.1.6",
+        "github_url": "github.com/DiamondLovesYou/libressl-pnacl-sys",
+        "owner_url": "https://github.com/DiamondLovesYou",
+        "project": "libressl-pnacl-sys"
+    },
+    {
+        "crates_url": "https://crates.io/crates/libssh/0.0.1",
+        "github_url": "github.com/manuels/libssh.rs",
+        "owner_url": "https://github.com/manuels",
+        "project": "libssh"
+    },
+    {
+        "crates_url": "https://crates.io/crates/libtar-sys/0.1.9",
+        "github_url": "github.com/stainless-steel/libtar-sys",
+        "owner_url": "https://github.com/IvanUkhov",
+        "project": "libtar-sys"
+    },
+    {
+        "crates_url": "https://crates.io/crates/lif/0.0.2",
+        "github_url": null,
+        "owner_url": "https://github.com/magnets-moe-dumper",
+        "project": "lif"
+    },
+    {
+        "crates_url": "https://crates.io/crates/libz-sys/1.1.8",
+        "github_url": "github.com/rust-lang/libz-sys",
+        "owner_url": "https://github.com/alexcrichton",
+        "project": "libz-sys"
+    },
+    {
+        "crates_url": "https://crates.io/crates/libz-sys/1.1.8",
+        "github_url": "github.com/rust-lang/libz-sys",
+        "owner_url": "https://github.com/joshtriplett",
+        "project": "libz-sys"
+    },
+    {
+        "crates_url": "https://crates.io/crates/libz-sys/1.1.8",
+        "github_url": "github.com/rust-lang/libz-sys",
+        "owner_url": "https://github.com/rust-lang-owner",
+        "project": "libz-sys"
+    },
+    {
+        "crates_url": "https://crates.io/crates/linenoise/0.0.3",
+        "github_url": "github.com/cmr/linenoise-rs",
+        "owner_url": "https://github.com/emberian",
+        "project": "linenoise"
+    },
+    {
+        "crates_url": "https://crates.io/crates/linenoise-rust/0.2.1",
+        "github_url": "github.com/octplane/rust-linenoise",
+        "owner_url": "https://github.com/octplane",
+        "project": "linenoise-rust"
+    },
+    {
+        "crates_url": "https://crates.io/crates/linenoise-sys/1.0.0",
+        "github_url": "github.com/cmr/linenoise-rs",
+        "owner_url": "https://github.com/emberian",
+        "project": "linenoise-sys"
+    },
+    {
+        "crates_url": "https://crates.io/crates/lmdb/0.8.0",
+        "github_url": "github.com/danburkert/lmdb-rs",
+        "owner_url": "https://github.com/danburkert",
+        "project": "lmdb"
+    },
+    {
+        "crates_url": "https://crates.io/crates/load/0.0.2",
+        "github_url": null,
+        "owner_url": "https://github.com/reem",
+        "project": "load"
+    },
+    {
+        "crates_url": "https://crates.io/crates/llvmint/0.0.3",
+        "github_url": "github.com/aweinstock314/llvmint",
+        "owner_url": "https://github.com/huonw",
+        "project": "llvmint"
+    },
+    {
+        "crates_url": "https://crates.io/crates/llvmint/0.0.3",
+        "github_url": "github.com/aweinstock314/llvmint",
+        "owner_url": "https://github.com/aweinstock314",
+        "project": "llvmint"
+    },
+    {
+        "crates_url": "https://crates.io/crates/lithium/0.0.1",
+        "github_url": "github.com/reem/rust-lithium",
+        "owner_url": "https://github.com/reem",
+        "project": "lithium"
+    },
+    {
+        "crates_url": "https://crates.io/crates/lmdb-rs/0.7.6",
+        "github_url": "github.com/vhbit/lmdb-rs",
+        "owner_url": "https://github.com/vhbit",
+        "project": "lmdb-rs"
+    },
+    {
+        "crates_url": "https://crates.io/crates/lua/0.0.10",
+        "github_url": "github.com/jcmoyer/rust-lua53",
+        "owner_url": "https://github.com/jcmoyer",
+        "project": "lua"
+    },
+    {
+        "crates_url": "https://crates.io/crates/lua52-sys/0.1.2",
+        "github_url": "github.com/tomaka/rust-hl-lua",
+        "owner_url": "https://github.com/tomaka",
+        "project": "lua52-sys"
+    },
+    {
+        "crates_url": "https://crates.io/crates/logger/0.4.0",
+        "github_url": "github.com/iron/logger",
+        "owner_url": "https://github.com/iron",
+        "project": "logger"
+    },
+    {
+        "crates_url": "https://crates.io/crates/logger/0.4.0",
+        "github_url": "github.com/iron/logger",
+        "owner_url": "https://github.com/reem",
+        "project": "logger"
+    },
+    {
+        "crates_url": "https://crates.io/crates/logger/0.4.0",
+        "github_url": "github.com/iron/logger",
+        "owner_url": "https://github.com/untitaker",
+        "project": "logger"
+    },
+    {
+        "crates_url": "https://crates.io/crates/lux/0.1.2",
+        "github_url": null,
+        "owner_url": "https://github.com/TyOverby",
+        "project": "lux"
+    },
+    {
+        "crates_url": "https://crates.io/crates/lzf/0.3.1",
+        "github_url": null,
+        "owner_url": "https://github.com/badboy",
+        "project": "lzf"
+    },
+    {
+        "crates_url": "https://crates.io/crates/magic/0.13.0",
+        "github_url": "github.com/robo9k/rust-magic",
+        "owner_url": "https://github.com/robo9k",
+        "project": "magic"
+    },
+    {
+        "crates_url": "https://crates.io/crates/magic-sys/0.3.0",
+        "github_url": "github.com/robo9k/rust-magic-sys",
+        "owner_url": "https://github.com/robo9k",
+        "project": "magic-sys"
+    },
+    {
+        "crates_url": "https://crates.io/crates/malloc_buf/1.0.0",
+        "github_url": "github.com/SSheldon/malloc_buf",
+        "owner_url": "https://github.com/SSheldon",
+        "project": "malloc_buf"
+    },
+    {
+        "crates_url": "https://crates.io/crates/markov/1.0.4",
+        "github_url": "github.com/aatxe/markov",
+        "owner_url": "https://github.com/aatxe",
+        "project": "markov"
+    },
+    {
+        "crates_url": "https://crates.io/crates/matches/0.1.8",
+        "github_url": "github.com/SimonSapin/rust-std-candidates",
+        "owner_url": "https://github.com/SimonSapin",
+        "project": "matches"
+    },
+    {
+        "crates_url": "https://crates.io/crates/math/0.10.0",
+        "github_url": "github.com/Rustinante/math",
+        "owner_url": "https://github.com/Rustinante",
+        "project": "math"
+    },
+    {
+        "crates_url": "https://crates.io/crates/matrix/0.22.0",
+        "github_url": "github.com/stainless-steel/matrix",
+        "owner_url": "https://github.com/IvanUkhov",
+        "project": "matrix"
+    },
+    {
+        "crates_url": "https://crates.io/crates/maybe_utf8/0.2.3",
+        "github_url": "github.com/lifthrasiir/rust-maybe_utf8",
+        "owner_url": "https://github.com/lifthrasiir",
+        "project": "maybe_utf8"
+    },
+    {
+        "crates_url": "https://crates.io/crates/maxminddb/0.23.0",
+        "github_url": "github.com/oschwald/maxminddb-rust",
+        "owner_url": "https://github.com/oschwald",
+        "project": "maxminddb"
+    },
+    {
+        "crates_url": "https://crates.io/crates/md/0.0.1",
+        "github_url": "github.com/netvl/md.rs",
+        "owner_url": "https://github.com/netvl",
+        "project": "md"
+    },
+    {
+        "crates_url": "https://crates.io/crates/mdbm-sys/0.0.1",
+        "github_url": "github.com/erickt/rust-mdbm",
+        "owner_url": "https://github.com/erickt",
+        "project": "mdbm-sys"
+    },
+    {
+        "crates_url": "https://crates.io/crates/memcache/0.16.0",
+        "github_url": "github.com/aisk/rust-memcache",
+        "owner_url": "https://github.com/aisk",
+        "project": "memcache"
+    },
+    {
+        "crates_url": "https://crates.io/crates/memcmp/0.0.6",
+        "github_url": "github.com/daramos/rust-memcmp",
+        "owner_url": "https://github.com/daramos",
+        "project": "memcmp"
+    },
+    {
+        "crates_url": "https://crates.io/crates/Memoirs/0.1.2",
+        "github_url": "github.com/Inspiravetion/Memoirs",
+        "owner_url": "https://github.com/Inspiravetion",
+        "project": "Memoirs"
+    },
+    {
+        "crates_url": "https://crates.io/crates/metafactory/0.4.4",
+        "github_url": "github.com/Nercury/metafactory-rs",
+        "owner_url": "https://github.com/Nercury",
+        "project": "metafactory"
+    },
+    {
+        "crates_url": "https://crates.io/crates/mime/0.3.16",
+        "github_url": "github.com/hyperium/mime",
+        "owner_url": "https://github.com/seanmonstar",
+        "project": "mime"
+    },
+    {
+        "crates_url": "https://crates.io/crates/midi/0.1.0",
+        "github_url": "github.com/samdoshi/midi-rs",
+        "owner_url": "https://github.com/samdoshi",
+        "project": "midi"
+    },
+    {
+        "crates_url": "https://crates.io/crates/miniz-sys/0.1.12",
+        "github_url": "github.com/alexcrichton/flate2-rs",
+        "owner_url": "https://github.com/alexcrichton",
+        "project": "miniz-sys"
+    },
+    {
+        "crates_url": "https://crates.io/crates/mio/0.8.4",
+        "github_url": "github.com/tokio-rs/mio",
+        "owner_url": "https://github.com/tokio-rs",
+        "project": "mio"
+    },
+    {
+        "crates_url": "https://crates.io/crates/mio/0.8.4",
+        "github_url": "github.com/tokio-rs/mio",
+        "owner_url": "https://github.com/carllerche",
+        "project": "mio"
+    },
+    {
+        "crates_url": "https://crates.io/crates/mod/0.0.2",
+        "github_url": null,
+        "owner_url": "https://github.com/magnets-moe-dumper",
+        "project": "mod"
+    },
+    {
+        "crates_url": "https://crates.io/crates/ml/0.0.2",
+        "github_url": "github.com/IvanUkhov/ml",
+        "owner_url": "https://github.com/IvanUkhov",
+        "project": "ml"
+    },
+    {
+        "crates_url": "https://crates.io/crates/modifier/0.1.0",
+        "github_url": "github.com/reem/rust-modifier",
+        "owner_url": "https://github.com/iron",
+        "project": "modifier"
+    },
+    {
+        "crates_url": "https://crates.io/crates/modifier/0.1.0",
+        "github_url": "github.com/reem/rust-modifier",
+        "owner_url": "https://github.com/reem",
+        "project": "modifier"
+    },
+    {
+        "crates_url": "https://crates.io/crates/monad_macros/0.0.1",
+        "github_url": "github.com/epsilonz/monad.rs",
+        "owner_url": "https://github.com/silvanshade",
+        "project": "monad_macros"
+    },
+    {
+        "crates_url": "https://crates.io/crates/monad/0.0.2",
+        "github_url": "github.com/epsilonz/monad.rs",
+        "owner_url": "https://github.com/silvanshade",
+        "project": "monad"
+    },
+    {
+        "crates_url": "https://crates.io/crates/mongo/0.0.1",
+        "github_url": null,
+        "owner_url": "https://github.com/TylerBrock",
+        "project": "mongo"
+    },
+    {
+        "crates_url": "https://crates.io/crates/mopa/0.2.2",
+        "github_url": "github.com/chris-morgan/mopa",
+        "owner_url": "https://github.com/chris-morgan",
+        "project": "mopa"
+    },
+    {
+        "crates_url": "https://crates.io/crates/morphism/0.4.1",
+        "github_url": "github.com/freebroccolo/morphism.rs",
+        "owner_url": "https://github.com/silvanshade",
+        "project": "morphism"
+    },
+    {
+        "crates_url": "https://crates.io/crates/morphism/0.4.1",
+        "github_url": "github.com/freebroccolo/morphism.rs",
+        "owner_url": "https://github.com/freebroccolo",
+        "project": "morphism"
+    },
+    {
+        "crates_url": "https://crates.io/crates/mount/0.4.0",
+        "github_url": "github.com/iron/mount",
+        "owner_url": "https://github.com/iron",
+        "project": "mount"
+    },
+    {
+        "crates_url": "https://crates.io/crates/mount/0.4.0",
+        "github_url": "github.com/iron/mount",
+        "owner_url": "https://github.com/reem",
+        "project": "mount"
+    },
+    {
+        "crates_url": "https://crates.io/crates/mount/0.4.0",
+        "github_url": "github.com/iron/mount",
+        "owner_url": "https://github.com/untitaker",
+        "project": "mount"
+    },
+    {
+        "crates_url": "https://crates.io/crates/move-acceptor/0.0.1",
+        "github_url": null,
+        "owner_url": "https://github.com/reem",
+        "project": "move-acceptor"
+    },
+    {
+        "crates_url": "https://crates.io/crates/mpack/0.1.2",
+        "github_url": "github.com/dradtke/mpack",
+        "owner_url": "https://github.com/dradtke",
+        "project": "mpack"
+    },
+    {
+        "crates_url": "https://crates.io/crates/mpd/0.0.12",
+        "github_url": "github.com/kstep/rust-mpd",
+        "owner_url": "https://github.com/kstep",
+        "project": "mpd"
+    },
+    {
+        "crates_url": "https://crates.io/crates/mpfr-sys/0.0.8",
+        "github_url": "github.com/netvl/mpfr-sys",
+        "owner_url": "https://github.com/netvl",
+        "project": "mpfr-sys"
+    },
+    {
+        "crates_url": "https://crates.io/crates/msgpack/0.1.0",
+        "github_url": "github.com/mneumann/rust-msgpack",
+        "owner_url": "https://github.com/mneumann",
+        "project": "msgpack"
+    },
+    {
+        "crates_url": "https://crates.io/crates/mucell/0.3.5",
+        "github_url": "github.com/chris-morgan/mucell",
+        "owner_url": "https://github.com/chris-morgan",
+        "project": "mucell"
+    },
+    {
+        "crates_url": "https://crates.io/crates/multidim/0.0.1",
+        "github_url": "github.com/samnardoni/multidim",
+        "owner_url": "https://github.com/samnardoni",
+        "project": "multidim"
+    },
+    {
+        "crates_url": "https://crates.io/crates/multipart/0.18.0",
+        "github_url": "http://github.com/abonander/multipart",
+        "owner_url": "https://github.com/abonander",
+        "project": "multipart"
+    },
+    {
+        "crates_url": "https://crates.io/crates/murmurhash64/0.3.1",
+        "github_url": "github.com/badboy/murmurhash64-rs",
+        "owner_url": "https://github.com/badboy",
+        "project": "murmurhash64"
+    },
+    {
+        "crates_url": "https://crates.io/crates/music/0.0.2",
+        "github_url": null,
+        "owner_url": "https://github.com/magnets-moe-dumper",
+        "project": "music"
+    },
+    {
+        "crates_url": "https://crates.io/crates/mustache/0.9.0",
+        "github_url": "github.com/nickel-org/rust-mustache",
+        "owner_url": "https://github.com/erickt",
+        "project": "mustache"
+    },
+    {
+        "crates_url": "https://crates.io/crates/mustache/0.9.0",
+        "github_url": "github.com/nickel-org/rust-mustache",
+        "owner_url": "https://github.com/cburgdorf",
+        "project": "mustache"
+    },
+    {
+        "crates_url": "https://crates.io/crates/mustache/0.9.0",
+        "github_url": "github.com/nickel-org/rust-mustache",
+        "owner_url": "https://github.com/Ryman",
+        "project": "mustache"
+    },
+    {
+        "crates_url": "https://crates.io/crates/mustache/0.9.0",
+        "github_url": "github.com/nickel-org/rust-mustache",
+        "owner_url": "https://github.com/jolhoeft",
+        "project": "mustache"
+    },
+    {
+        "crates_url": "https://crates.io/crates/mux/0.1.1",
+        "github_url": "github.com/bryce-anderson/rust-mux",
+        "owner_url": "https://github.com/olix0r",
+        "project": "mux"
+    },
+    {
+        "crates_url": "https://crates.io/crates/mux/0.1.1",
+        "github_url": "github.com/bryce-anderson/rust-mux",
+        "owner_url": "https://github.com/bryce-anderson",
+        "project": "mux"
+    },
+    {
+        "crates_url": "https://crates.io/crates/mysql/22.2.0",
+        "github_url": "github.com/blackbeam/rust-mysql-simple",
+        "owner_url": "https://github.com/blackbeam",
+        "project": "mysql"
+    },
+    {
+        "crates_url": "https://crates.io/crates/nalgebra/0.31.2",
+        "github_url": "github.com/dimforge/nalgebra",
+        "owner_url": "https://github.com/sebcrozet",
+        "project": "nalgebra"
+    },
+    {
+        "crates_url": "https://crates.io/crates/nalgebra/0.31.2",
+        "github_url": "github.com/dimforge/nalgebra",
+        "owner_url": "https://github.com/aepsil0n",
+        "project": "nalgebra"
+    },
+    {
+        "crates_url": "https://crates.io/crates/nanomsg/0.7.2",
+        "github_url": "github.com/thehydroimpulse/nanomsg.rs",
+        "owner_url": "https://github.com/thehydroimpulse",
+        "project": "nanomsg"
+    },
+    {
+        "crates_url": "https://crates.io/crates/nanomsg/0.7.2",
+        "github_url": "github.com/thehydroimpulse/nanomsg.rs",
+        "owner_url": "https://github.com/blabaere",
+        "project": "nanomsg"
+    },
+    {
+        "crates_url": "https://crates.io/crates/nano_time/0.1.0",
+        "github_url": "github.com/HeroesGrave/nanotime-rs",
+        "owner_url": "https://github.com/HeroesGrave",
+        "project": "nano_time"
+    },
+    {
+        "crates_url": "https://crates.io/crates/nasm/0.0.1",
+        "github_url": "github.com/goodmanio/nasm",
+        "owner_url": "https://github.com/goodmanio",
+        "project": "nasm"
+    },
+    {
+        "crates_url": "https://crates.io/crates/natord/1.0.9",
+        "github_url": "github.com/lifthrasiir/rust-natord",
+        "owner_url": "https://github.com/lifthrasiir",
+        "project": "natord"
+    },
+    {
+        "crates_url": "https://crates.io/crates/natural_sort/0.0.1",
+        "github_url": null,
+        "owner_url": "https://github.com/ucarion",
+        "project": "natural_sort"
+    },
+    {
+        "crates_url": "https://crates.io/crates/nd_iter/0.0.4",
+        "github_url": null,
+        "owner_url": "https://github.com/TyOverby",
+        "project": "nd_iter"
+    },
+    {
+        "crates_url": "https://crates.io/crates/netaddr/0.1.2",
+        "github_url": "github.com/KokaKiwi/rust-netaddr",
+        "owner_url": "https://github.com/KokaKiwi",
+        "project": "netaddr"
+    },
+    {
+        "crates_url": "https://crates.io/crates/net/0.0.2",
+        "github_url": null,
+        "owner_url": "https://github.com/magnets-moe-dumper",
+        "project": "net"
+    },
+    {
+        "crates_url": "https://crates.io/crates/neovim/0.1.0",
+        "github_url": "github.com/dradtke/neovim-rs",
+        "owner_url": "https://github.com/dradtke",
+        "project": "neovim"
+    },
+    {
+        "crates_url": "https://crates.io/crates/netrc/0.4.1",
+        "github_url": "github.com/Yuhta/netrc-rs",
+        "owner_url": "https://github.com/pwoolcoc",
+        "project": "netrc"
+    },
+    {
+        "crates_url": "https://crates.io/crates/netrc/0.4.1",
+        "github_url": "github.com/Yuhta/netrc-rs",
+        "owner_url": "https://github.com/Yuhta",
+        "project": "netrc"
+    },
+    {
+        "crates_url": "https://crates.io/crates/network/0.0.2",
+        "github_url": null,
+        "owner_url": "https://github.com/magnets-moe-dumper",
+        "project": "network"
+    },
+    {
+        "crates_url": "https://crates.io/crates/news/0.0.2",
+        "github_url": null,
+        "owner_url": "https://github.com/magnets-moe-dumper",
+        "project": "news"
+    },
+    {
+        "crates_url": "https://crates.io/crates/nice/0.1.9",
+        "github_url": null,
+        "owner_url": "https://github.com/manuels",
+        "project": "nice"
+    },
+    {
+        "crates_url": "https://crates.io/crates/nix/0.25.0",
+        "github_url": "github.com/nix-rust/nix",
+        "owner_url": "https://github.com/nix-rust",
+        "project": "nix"
+    },
+    {
+        "crates_url": "https://crates.io/crates/nix/0.25.0",
+        "github_url": "github.com/nix-rust/nix",
+        "owner_url": "https://github.com/carllerche",
+        "project": "nix"
+    },
+    {
+        "crates_url": "https://crates.io/crates/nntp/0.0.5",
+        "github_url": "github.com/mattnenterprise/rust-nntp",
+        "owner_url": "https://github.com/mattnenterprise",
+        "project": "nntp"
+    },
+    {
+        "crates_url": "https://crates.io/crates/node_rub/0.0.3",
+        "github_url": "github.com/rust-builder/node-rub",
+        "owner_url": "https://github.com/CraZySacX",
+        "project": "node_rub"
+    },
+    {
+        "crates_url": "https://crates.io/crates/noise/0.8.1",
+        "github_url": "github.com/razaekel/noise-rs",
+        "owner_url": "https://github.com/emberian",
+        "project": "noise"
+    },
+    {
+        "crates_url": "https://crates.io/crates/noise/0.8.1",
+        "github_url": "github.com/razaekel/noise-rs",
+        "owner_url": "https://github.com/Cifram",
+        "project": "noise"
+    },
+    {
+        "crates_url": "https://crates.io/crates/noise/0.8.1",
+        "github_url": "github.com/razaekel/noise-rs",
+        "owner_url": "https://github.com/brendanzab",
+        "project": "noise"
+    },
+    {
+        "crates_url": "https://crates.io/crates/noise/0.8.1",
+        "github_url": "github.com/razaekel/noise-rs",
+        "owner_url": "https://github.com/Razaekel",
+        "project": "noise"
+    },
+    {
+        "crates_url": "https://crates.io/crates/noise/0.8.1",
+        "github_url": "github.com/razaekel/noise-rs",
+        "owner_url": "https://github.com/csherratt",
+        "project": "noise"
+    },
+    {
+        "crates_url": "https://crates.io/crates/noisy/0.0.3",
+        "github_url": "github.com/cacteye/noisy",
+        "owner_url": "https://github.com/kuhsaft",
+        "project": "noisy"
+    },
+    {
+        "crates_url": "https://crates.io/crates/nom/7.1.1",
+        "github_url": "github.com/Geal/nom",
+        "owner_url": "https://github.com/Geal",
+        "project": "nom"
+    },
+    {
+        "crates_url": "https://crates.io/crates/notify/5.0.0",
+        "github_url": "github.com/notify-rs/notify",
+        "owner_url": "https://github.com/rust-bus",
+        "project": "notify"
+    },
+    {
+        "crates_url": "https://crates.io/crates/notify/5.0.0",
+        "github_url": "github.com/notify-rs/notify",
+        "owner_url": "https://github.com/notify-rs",
+        "project": "notify"
+    },
+    {
+        "crates_url": "https://crates.io/crates/notify/5.0.0",
+        "github_url": "github.com/notify-rs/notify",
+        "owner_url": "https://github.com/passcod",
+        "project": "notify"
+    },
+    {
+        "crates_url": "https://crates.io/crates/notify/5.0.0",
+        "github_url": "github.com/notify-rs/notify",
+        "owner_url": "https://github.com/0xpr03",
+        "project": "notify"
+    },
+    {
+        "crates_url": "https://crates.io/crates/notify/5.0.0",
+        "github_url": "github.com/notify-rs/notify",
+        "owner_url": "https://github.com/JohnTitor",
+        "project": "notify"
+    },
+    {
+        "crates_url": "https://crates.io/crates/n-tree/0.0.1",
+        "github_url": null,
+        "owner_url": "https://github.com/reem",
+        "project": "n-tree"
+    },
+    {
+        "crates_url": "https://crates.io/crates/nullable/0.0.1",
+        "github_url": "github.com/reem/rust-nullable",
+        "owner_url": "https://github.com/reem",
+        "project": "nullable"
+    },
+    {
+        "crates_url": "https://crates.io/crates/num/0.4.0",
+        "github_url": "github.com/rust-num/num",
+        "owner_url": "https://github.com/alexcrichton",
+        "project": "num"
+    },
+    {
+        "crates_url": "https://crates.io/crates/num/0.4.0",
+        "github_url": "github.com/rust-num/num",
+        "owner_url": "https://github.com/cuviper",
+        "project": "num"
+    },
+    {
+        "crates_url": "https://crates.io/crates/num/0.4.0",
+        "github_url": "github.com/rust-num/num",
+        "owner_url": "https://github.com/hauleth",
+        "project": "num"
+    },
+    {
+        "crates_url": "https://crates.io/crates/number_prefix/0.4.0",
+        "github_url": "github.com/ogham/rust-number-prefix",
+        "owner_url": "https://github.com/ogham",
+        "project": "number_prefix"
+    },
+    {
+        "crates_url": "https://crates.io/crates/number_words/0.0.3",
+        "github_url": "github.com/FranklinChen/number-words-rust",
+        "owner_url": "https://github.com/FranklinChen",
+        "project": "number_words"
+    },
+    {
+        "crates_url": "https://crates.io/crates/nx/0.3.0",
+        "github_url": "github.com/NoLifeDev/nx-rs",
+        "owner_url": "https://github.com/retep998",
+        "project": "nx"
+    },
+    {
+        "crates_url": "https://crates.io/crates/oauth2/4.2.3",
+        "github_url": "github.com/ramosbugs/oauth2-rs",
+        "owner_url": "https://github.com/alexcrichton",
+        "project": "oauth2"
+    },
+    {
+        "crates_url": "https://crates.io/crates/oauth2/4.2.3",
+        "github_url": "github.com/ramosbugs/oauth2-rs",
+        "owner_url": "https://github.com/ramosbugs",
+        "project": "oauth2"
+    },
+    {
+        "crates_url": "https://crates.io/crates/oauthcli/2.0.0-beta-2",
+        "github_url": "github.com/azyobuzin/rust-oauthcli",
+        "owner_url": "https://github.com/azyobuzin",
+        "project": "oauthcli"
+    },
+    {
+        "crates_url": "https://crates.io/crates/oauth-client/0.8.0",
+        "github_url": "github.com/gifnksm/oauth-client-rs",
+        "owner_url": "https://github.com/gifnksm",
+        "project": "oauth-client"
+    },
+    {
+        "crates_url": "https://crates.io/crates/obj/0.10.2",
+        "github_url": "github.com/kvark/obj",
+        "owner_url": "https://github.com/kvark",
+        "project": "obj"
+    },
+    {
+        "crates_url": "https://crates.io/crates/obj/0.10.2",
+        "github_url": "github.com/kvark/obj",
+        "owner_url": "https://github.com/csherratt",
+        "project": "obj"
+    },
+    {
+        "crates_url": "https://crates.io/crates/objc/0.2.6",
+        "github_url": "http://github.com/SSheldon/rust-objc",
+        "owner_url": "https://github.com/SSheldon",
+        "project": "objc"
+    },
+    {
+        "crates_url": "https://crates.io/crates/objc_test_utils/0.0.2",
+        "github_url": "http://github.com/SSheldon/rust-objc",
+        "owner_url": "https://github.com/SSheldon",
+        "project": "objc_test_utils"
+    },
+    {
+        "crates_url": "https://crates.io/crates/ogg-sys/0.0.9",
+        "github_url": "github.com/tomaka/ogg-sys",
+        "owner_url": "https://github.com/tomaka",
+        "project": "ogg-sys"
+    },
+    {
+        "crates_url": "https://crates.io/crates/obj-rs/0.7.0",
+        "github_url": "github.com/simnalamburt/obj-rs",
+        "owner_url": "https://github.com/simnalamburt",
+        "project": "obj-rs"
+    },
+    {
+        "crates_url": "https://crates.io/crates/old-http/0.1.1-pre",
+        "github_url": "github.com/chris-morgan/rust-http",
+        "owner_url": "https://github.com/DiamondLovesYou",
+        "project": "old-http"
+    },
+    {
+        "crates_url": "https://crates.io/crates/ole32-sys/0.2.0",
+        "github_url": "github.com/retep998/winapi-rs",
+        "owner_url": "https://github.com/retep998",
+        "project": "ole32-sys"
+    },
+    {
+        "crates_url": "https://crates.io/crates/oncemutex/0.1.1",
+        "github_url": "github.com/reem/rust-once-mutex",
+        "owner_url": "https://github.com/reem",
+        "project": "oncemutex"
+    },
+    {
+        "crates_url": "https://crates.io/crates/openssl/0.10.42",
+        "github_url": "github.com/sfackler/rust-openssl",
+        "owner_url": "https://github.com/sfackler",
+        "project": "openssl"
+    },
+    {
+        "crates_url": "https://crates.io/crates/openssl2-sys/1.0.0",
+        "github_url": null,
+        "owner_url": "https://github.com/DiamondLovesYou",
+        "project": "openssl2-sys"
+    },
+    {
+        "crates_url": "https://crates.io/crates/openssl-sys/0.9.76",
+        "github_url": "github.com/sfackler/rust-openssl",
+        "owner_url": "https://github.com/alexcrichton",
+        "project": "openssl-sys"
+    },
+    {
+        "crates_url": "https://crates.io/crates/openssl-sys/0.9.76",
+        "github_url": "github.com/sfackler/rust-openssl",
+        "owner_url": "https://github.com/sfackler",
+        "project": "openssl-sys"
+    },
+    {
+        "crates_url": "https://crates.io/crates/opentype/0.19.0",
+        "github_url": "github.com/bodoni/opentype",
+        "owner_url": "https://github.com/IvanUkhov",
+        "project": "opentype"
+    },
+    {
+        "crates_url": "https://crates.io/crates/ordered-float/3.2.0",
+        "github_url": "github.com/reem/rust-ordered-float",
+        "owner_url": "https://github.com/servo",
+        "project": "ordered-float"
+    },
+    {
+        "crates_url": "https://crates.io/crates/ordered-float/3.2.0",
+        "github_url": "github.com/reem/rust-ordered-float",
+        "owner_url": "https://github.com/reem",
+        "project": "ordered-float"
+    },
+    {
+        "crates_url": "https://crates.io/crates/ordered-float/3.2.0",
+        "github_url": "github.com/reem/rust-ordered-float",
+        "owner_url": "https://github.com/mbrubeck",
+        "project": "ordered-float"
+    },
+    {
+        "crates_url": "https://crates.io/crates/pad/0.1.6",
+        "github_url": null,
+        "owner_url": "https://github.com/ogham",
+        "project": "pad"
+    },
+    {
+        "crates_url": "https://crates.io/crates/oxischeme/0.0.3",
+        "github_url": "github.com/fitzgen/oxischeme",
+        "owner_url": "https://github.com/fitzgen",
+        "project": "oxischeme"
+    },
+    {
+        "crates_url": "https://crates.io/crates/parmap/0.0.1",
+        "github_url": null,
+        "owner_url": "https://github.com/reem",
+        "project": "parmap"
+    },
+    {
+        "crates_url": "https://crates.io/crates/patina/0.0.1",
+        "github_url": null,
+        "owner_url": "https://github.com/DaGenix",
+        "project": "patina"
+    },
+    {
+        "crates_url": "https://crates.io/crates/pb/0.2.0",
+        "github_url": "github.com/kstep/rust-pb",
+        "owner_url": "https://github.com/kstep",
+        "project": "pb"
+    },
+    {
+        "crates_url": "https://crates.io/crates/pathmatch/0.1.2",
+        "github_url": "github.com/hamstergene/pathmatch",
+        "owner_url": "https://github.com/hamstergene",
+        "project": "pathmatch"
+    },
+    {
+        "crates_url": "https://crates.io/crates/peekable_reader/0.0.2",
+        "github_url": "github.com/mlalic/peekable-reader-rs",
+        "owner_url": "https://github.com/mlalic",
+        "project": "peekable_reader"
+    },
+    {
+        "crates_url": "https://crates.io/crates/peg/0.8.1",
+        "github_url": "github.com/kevinmehall/rust-peg",
+        "owner_url": "https://github.com/kevinmehall",
+        "project": "peg"
+    }
+]

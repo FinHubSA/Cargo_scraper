@@ -1,17 +1,17 @@
+from cmath import nan
 import pandas as pd
 import time
+import json
 
 from selenium import webdriver
 from selenium.webdriver.common.by import By
-from selenium.webdriver.chrome.service import Service
 from selenium.webdriver.support import expected_conditions
-from selenium.webdriver.chrome.service import Service
 from selenium.webdriver.support.ui import WebDriverWait
-from webdriver_manager.chrome import ChromeDriverManager
 
-df = pd.read_excel('github_url_Data.xlsx')
-# github_contributor_url_list = df['contributor_github_url'].tolist()
-contributor_github_url_list = ['https://github.com/Moredread']
+
+# import contributor_project_data file
+with open("../rust_scraper/Scraper_4/Scraper_3_output.json", "r") as Scraper_3_input_json_file:
+    contributor_github_url_data_list = json.load(Scraper_3_input_json_file)
 
 # Set User Agent and chrome option
 USER_AGENT = "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/104.0.0.0 Safari/537.36"
@@ -38,26 +38,17 @@ driver = webdriver.Chrome(
     options=chrome_options,
 )
 
-element_list = []
+def yearly_metadata(date):
 
-for contributor_github_url in contributor_github_url_list:
-
-    driver.get(contributor_github_url)
-
-    year_list = WebDriverWait(driver, 20).until(expected_conditions.presence_of_all_elements_located((By.XPATH, r"//*[@class='js-year-link filter-item px-3 mb-2 py-2']")))
-
-    for index, year in enumerate(year_list):
+    try:
 
         time.sleep(2)
 
-        year_list = WebDriverWait(driver, 20).until(expected_conditions.presence_of_all_elements_located((By.XPATH, r"//*[@class='js-year-link filter-item px-3 mb-2 py-2']")))
+        driver.find_element(By.XPATH, r"//*[@class='Box mb-5 p-3 activity-overview-box border-top border-xl-top-0']")
 
-        year_list[index].click()
-
-        time.sleep(2)
-
-        contributions = WebDriverWait(driver, 20).until(expected_conditions.presence_of_element_located((By.XPATH, r"//*[@class='f4 text-normal mb-2']"))).text
-        contributions = int(contributions.split(" ")[0])
+        contributions = WebDriverWait(driver, 5).until(expected_conditions.presence_of_element_located((By.XPATH, r"//*[@class='f4 text-normal mb-2']"))).text
+        contributions = contributions.split(" ")[0]
+        contributions = int(contributions.replace(",",""))
 
         if contributions == 0:
             code_review = 0
@@ -67,34 +58,107 @@ for contributor_github_url in contributor_github_url_list:
 
         else:
             try:
-                code_review = WebDriverWait(driver, 20).until(expected_conditions.presence_of_element_located((By.XPATH, r"//*[@class='activity-overview-percentage js-highlight-percent-top']"))).text
+                code_review = WebDriverWait(driver, 5).until(expected_conditions.presence_of_element_located((By.XPATH, r"//*[@class='activity-overview-percentage js-highlight-percent-top']"))).text
                 code_review = int(code_review.split("%")[0])
                 code_review = code_review * contributions / 100
             except:
                 code_review = 0
             
             try:
-                issues = WebDriverWait(driver, 20).until(expected_conditions.presence_of_element_located((By.XPATH, r"//*[@class='activity-overview-percentage js-highlight-percent-right']"))).text
+                issues = WebDriverWait(driver, 5).until(expected_conditions.presence_of_element_located((By.XPATH, r"//*[@class='activity-overview-percentage js-highlight-percent-right']"))).text
                 issues = int(issues.split("%")[0])
                 issues = issues * contributions / 100
             except:
                 issues = 0
 
             try:
-                pull_requests = WebDriverWait(driver, 20).until(expected_conditions.presence_of_element_located((By.XPATH, r"//*[@class='activity-overview-percentage js-highlight-percent-bottom']"))).text
+                pull_requests = WebDriverWait(driver, 5).until(expected_conditions.presence_of_element_located((By.XPATH, r"//*[@class='activity-overview-percentage js-highlight-percent-bottom']"))).text
                 pull_requests = int(pull_requests.split("%")[0])
                 pull_requests = pull_requests * contributions / 100
             except:
                 pull_requests = 0
 
             try:
-                commits = WebDriverWait(driver, 20).until(expected_conditions.presence_of_element_located((By.XPATH, r"//*[@class='activity-overview-percentage js-highlight-percent-left']"))).text
+                commits = WebDriverWait(driver, 5).until(expected_conditions.presence_of_element_located((By.XPATH, r"//*[@class='activity-overview-percentage js-highlight-percent-left']"))).text
                 commits = int(commits.split("%")[0])
                 commits = commits * contributions / 100
             except:
                 commits = 0
+    except:
 
-        element_list.append({'contributor_github_url':contributor_github_url, 'contributions':contributions,'code_review':code_review,'issues':issues,'pull_requests':pull_requests,'commits':commits})
+        time.sleep(2)
 
-    github_contributor_metadata = pd.DataFrame.from_records(element_list)     
-    github_contributor_metadata.to_excel('github_contributor_metadata.xlsx')
+        contributions = WebDriverWait(driver, 5).until(expected_conditions.presence_of_element_located((By.XPATH, r"//*[@class='f4 text-normal mb-2']"))).text
+        contributions = contributions.split(" ")[0]
+        contributions = int(contributions.replace(",",""))
+
+        code_review = None
+        issues = None
+        pull_requests = None
+        commits = None
+
+    with open("../rust_scraper/Scraper_4/Scraper_4_output.json", "r") as Scraper_4_input_json_file:
+        contributor_metadata = json.load(Scraper_4_input_json_file)
+
+    contributor_metadata.append({'year': date, 'contributor_github_url': contributor_github_url, 'contributions': contributions,'code_review': code_review,'issues': issues,'pull_requests': pull_requests,'commits': commits})
+    
+    with open("../rust_scraper/Scraper_4/Scraper_4_output.json", "w") as Scraper_4_output_json_file:
+        json.dump(contributor_metadata, Scraper_4_output_json_file, indent=4, sort_keys=True)
+
+
+
+for index_contributor_github_url_data, contributor_github_url_data in enumerate(contributor_github_url_data_list):
+
+    project = contributor_github_url_data['project']
+    contributor_github_url = contributor_github_url_data['contributor_github_url']
+
+    try:
+
+        if pd.isnull(contributor_github_url):
+
+            with open("../rust_scraper/Scraper_4/contributors_to_scrape.json", "r") as contributors_to_scrape_input_json_file:
+                contributors_to_scrape = json.load(contributors_to_scrape_input_json_file)
+
+            contributors_to_scrape.append({'project': project})
+    
+            with open("../rust_scraper/Scraper_4/contributors_to_scrape.json", "w") as contributors_to_scrape_output_json_file:
+                json.dump(contributors_to_scrape, contributors_to_scrape_output_json_file, indent=4, sort_keys=True)
+
+            continue
+
+        driver.get(contributor_github_url)
+
+        # get latest year data
+        
+        date = "2022"
+
+        yearly_metadata(date)
+
+        # get all other years data
+        year_list = WebDriverWait(driver, 20).until(expected_conditions.presence_of_all_elements_located((By.XPATH, r"//*[@class='js-year-link filter-item px-3 mb-2 py-2']")))
+
+        for index, year in enumerate(year_list):
+
+            time.sleep(2)
+
+            year_list = WebDriverWait(driver, 20).until(expected_conditions.presence_of_all_elements_located((By.XPATH, r"//*[@class='js-year-link filter-item px-3 mb-2 py-2']")))
+
+            date = year.text
+
+            year_list[index].click()
+
+            yearly_metadata(date)
+
+    except Exception as e:
+
+        with open("../rust_scraper/Scraper_4/error_list.json", "r") as error_list_input_json_file:
+            error_list = json.load(error_list_input_json_file)
+
+        error_list.append({'project': project, 'failed_requests': contributor_github_url, 'Index': str(index_contributor_github_url_data), 'Error': str(e)})
+        
+        with open("../rust_scraper/Scraper_4/error_list.json", "w") as error_list_output_json_file:
+            json.dump(error_list, error_list_output_json_file, indent=4, sort_keys=True)
+
+        time.sleep(60)
+
+        continue

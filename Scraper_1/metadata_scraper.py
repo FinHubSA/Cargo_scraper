@@ -30,6 +30,7 @@ driver = webdriver.Chrome(
     "../rust_scraper/chromedriver",
     options=chrome_options,
 )
+count = 0
 
 # load csv list
 with open("../rust_scraper/names_projects_Cargo.csv") as csv_file:
@@ -37,10 +38,22 @@ with open("../rust_scraper/names_projects_Cargo.csv") as csv_file:
 
     for index_project, project in enumerate(project_list):
 
-        try:
-            project_name = project['project']
+        count += 1
 
-            # try:
+        if count == 500:
+
+            count = 0
+
+            driver.close()
+
+            driver = webdriver.Chrome(
+                "../rust_scraper/chromedriver",
+                options=chrome_options,
+            )
+
+        try:
+
+            project_name = project['project']
 
             project_url = "https://libraries.io/cargo/" + str(project['project'])
 
@@ -102,41 +115,41 @@ with open("../rust_scraper/names_projects_Cargo.csv") as csv_file:
                 else:
                     continue
             
-            with open("../rust_scraper/Scraper_1/metadata.json", "r") as metadata_input_json_file:
-                metadata_list = json.load(metadata_input_json_file)
+            with open("../rust_scraper/Scraper_1/Scraper_1_output.json", "r") as Scraper_1_input_json_file:
+                metadata_list = json.load(Scraper_1_input_json_file)
             
             metadata_list.append({'project': project_name, 'Latest_release': Latest_release, 'First_release': First_release, 'Stars': Stars, 'Forks': Forks, 'Watch': Watch, 'Contributors': Contributors, 'crates_url': crates_url, 'github_repo': github_repo})
 
-            with open("../rust_scraper/Scraper_1/metadata.json", "w") as metadata_output_json_file:
-                json.dump(metadata_list, metadata_output_json_file, indent=4, sort_keys=True)
+            with open("../rust_scraper/Scraper_1/Scraper_1_output.json", "w") as Scraper_1_output_json_file:
+                json.dump(metadata_list, Scraper_1_output_json_file, indent=4, sort_keys=True)
 
-            # get the maintainer and contributor url
+            # # get the maintainer and contributor url
 
-            maintainer_contributor_heading = None
-            maintainer_contributor_url = None
+            # maintainer_contributor_heading = None
+            # maintainer_contributor_url = None
 
-            maintainer_contributor_list = driver.find_elements(By.XPATH,r"//*[@class='col-md-12']")
+            # maintainer_contributor_list = driver.find_elements(By.XPATH,r"//*[@class='col-md-12']")
 
-            for maintainer_contributor in maintainer_contributor_list:
+            # for maintainer_contributor in maintainer_contributor_list:
 
-                maintainer_contributor_heading = maintainer_contributor.find_element(By.XPATH,r"./h3").text
+            #     maintainer_contributor_heading = maintainer_contributor.find_element(By.XPATH,r"./h3").text
 
-                if maintainer_contributor_heading == 'Maintainers' or maintainer_contributor_heading == "Contributors":
+            #     if maintainer_contributor_heading == 'Maintainers' or maintainer_contributor_heading == "Contributors":
 
-                    maintainer_contributor_url_list = maintainer_contributor.find_elements(By.XPATH,r"./a")
+            #         maintainer_contributor_url_list = maintainer_contributor.find_elements(By.XPATH,r"./a")
 
-                    for maintainer_contributor_url_el in maintainer_contributor_url_list:
-                        maintainer_contributor_url = maintainer_contributor_url_el.get_attribute('href')
+            #         for maintainer_contributor_url_el in maintainer_contributor_url_list:
+            #             maintainer_contributor_url = maintainer_contributor_url_el.get_attribute('href')
                 
-                        with open("../rust_scraper/Scraper_1/contributor_url.json", "r") as contributor_list_input_json_file:
-                            contributor_list = json.load(contributor_list_input_json_file)
+            #             with open("../rust_scraper/Scraper_1/contributor_url.json", "r") as contributor_list_input_json_file:
+            #                 contributor_list = json.load(contributor_list_input_json_file)
 
-                        contributor_list.append({'project': project_name, 'contributor_type': maintainer_contributor_heading, 'maintainer_contributor_url': maintainer_contributor_url})
+            #             contributor_list.append({'project': project_name, 'contributor_type': maintainer_contributor_heading, 'maintainer_contributor_url': maintainer_contributor_url})
 
-                        with open("../rust_scraper/Scraper_1/contributor_url.json", "w") as contributor_list_output_json_file:
-                            json.dump(contributor_list, contributor_list_output_json_file, indent=4, sort_keys=True)
+            #             with open("../rust_scraper/Scraper_1/contributor_url.json", "w") as contributor_list_output_json_file:
+            #                 json.dump(contributor_list, contributor_list_output_json_file, indent=4, sort_keys=True)
+
         except Exception as e:
-            time.sleep(60)
 
             with open("../rust_scraper/Scraper_1/error_list.json", "r") as error_list_input_json_file:
                 error_list = json.load(error_list_input_json_file)
@@ -145,6 +158,8 @@ with open("../rust_scraper/names_projects_Cargo.csv") as csv_file:
             
             with open("../rust_scraper/Scraper_1/error_list.json", "w") as error_list_output_json_file:
                 json.dump(error_list, error_list_output_json_file, indent=4, sort_keys=True)
+
+            time.sleep(60)
 
             continue
 

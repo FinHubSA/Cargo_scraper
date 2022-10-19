@@ -5,8 +5,8 @@ from selenium import webdriver
 from selenium.webdriver.common.by import By
 
 # import metadata file
-with open("../rust_scraper/Scraper_2/metadata.json", "r") as metadata_input_json_file:
-    metadata_list = json.load(metadata_input_json_file)
+with open("../rust_scraper/Scraper_2/Scraper_1_output.json", "r") as Scraper_1_input_json_file:
+    metadata_list = json.load(Scraper_1_input_json_file)
 
 # Set User Agent and chrome option
 USER_AGENT = "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/104.0.0.0 Safari/537.36"
@@ -88,17 +88,15 @@ for index_metadata, metadata in enumerate(metadata_list):
 
             
 
-            with open("../rust_scraper/Scraper_2/maintainer_github_url.json", "r") as maintainer_github_input_file:
-                maintainer_github_url_list = json.load(maintainer_github_input_file)
+            with open("../rust_scraper/Scraper_2/Scraper_2_output.json", "r") as Scraper_2_input_file:
+                maintainer_github_url_list = json.load(Scraper_2_input_file)
 
             maintainer_github_url_list.append({'project': project, 'crates_url': crates_url,'owner_url': project_maintainer_github_url, 'github_url': github_url})
 
-            with open("../rust_scraper/Scraper_2/maintainer_github_url.json", "w") as maintainer_github_output_file:
-                json.dump(maintainer_github_url_list, maintainer_github_output_file, indent=4, sort_keys=True)
+            with open("../rust_scraper/Scraper_2/Scraper_2_output.json", "w") as Scraper_2_output_file:
+                json.dump(maintainer_github_url_list, Scraper_2_output_file, indent=4, sort_keys=True)
 
     except Exception as e:
-
-        time.sleep(60)
 
         with open("../rust_scraper/Scraper_2/error_list.json", "r") as error_list_input_json_file:
             error_list = json.load(error_list_input_json_file)
@@ -107,5 +105,7 @@ for index_metadata, metadata in enumerate(metadata_list):
         
         with open("../rust_scraper/Scraper_2/error_list.json", "w") as error_list_output_json_file:
             json.dump(error_list, error_list_output_json_file, indent=4, sort_keys=True)
+
+        time.sleep(60)
 
         continue
