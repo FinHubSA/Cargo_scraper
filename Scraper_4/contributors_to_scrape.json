@@ -1,1 +1,50 @@
-[]
+[
+    {
+        "project": "acorn"
+    },
+    {
+        "project": "a"
+    },
+    {
+        "project": "adamantium"
+    },
+    {
+        "project": "aleph"
+    },
+    {
+        "project": "allocator"
+    },
+    {
+        "project": "ansi"
+    },
+    {
+        "project": "an"
+    },
+    {
+        "project": "async"
+    },
+    {
+        "project": "better_range"
+    },
+    {
+        "project": "bittorrent"
+    },
+    {
+        "project": "bloom"
+    },
+    {
+        "project": "bourbaki"
+    },
+    {
+        "project": "book"
+    },
+    {
+        "project": "browser"
+    },
+    {
+        "project": "buildable"
+    },
+    {
+        "project": "better_range"
+    }
+]

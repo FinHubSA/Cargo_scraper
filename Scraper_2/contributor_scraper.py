@@ -106,6 +106,6 @@ for index_metadata, metadata in enumerate(metadata_list):
         with open("../rust_scraper/Scraper_2/error_list.json", "w") as error_list_output_json_file:
             json.dump(error_list, error_list_output_json_file, indent=4, sort_keys=True)
 
-        time.sleep(60)
+        time.sleep(10)
 
         continue

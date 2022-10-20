@@ -7,6 +7,7 @@ from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support import expected_conditions
 from selenium.webdriver.support.ui import WebDriverWait
+from selenium.webdriver.common.action_chains import ActionChains
 
 
 # import contributor_project_data file
@@ -135,19 +136,22 @@ for index_contributor_github_url_data, contributor_github_url_data in enumerate(
         yearly_metadata(date)
 
         # get all other years data
-        year_list = WebDriverWait(driver, 20).until(expected_conditions.presence_of_all_elements_located((By.XPATH, r"//*[@class='js-year-link filter-item px-3 mb-2 py-2']")))
+        year_list_len = WebDriverWait(driver, 20).until(expected_conditions.presence_of_all_elements_located((By.XPATH, r"//*[@class='filter-list small']/li")))
 
-        for index, year in enumerate(year_list):
+        for year in range(1,len(year_list_len)):
 
-            time.sleep(2)
+            year_list = WebDriverWait(driver, 20).until(expected_conditions.presence_of_all_elements_located((By.XPATH, r"//*[@class='filter-list small']/li")))
 
-            year_list = WebDriverWait(driver, 20).until(expected_conditions.presence_of_all_elements_located((By.XPATH, r"//*[@class='js-year-link filter-item px-3 mb-2 py-2']")))
+            year_element = year_list[year]
+            date = year_element.text
 
-            date = year.text
+            ActionChains(driver).move_to_element(year_element).perform()
 
-            year_list[index].click()
+            year_element.click()
 
             yearly_metadata(date)
+
+
 
     except Exception as e:
 
@@ -159,6 +163,6 @@ for index_contributor_github_url_data, contributor_github_url_data in enumerate(
         with open("../rust_scraper/Scraper_4/error_list.json", "w") as error_list_output_json_file:
             json.dump(error_list, error_list_output_json_file, indent=4, sort_keys=True)
 
-        time.sleep(60)
+        time.sleep(10)
 
         continue

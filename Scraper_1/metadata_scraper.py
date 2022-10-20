@@ -77,6 +77,7 @@ with open("../rust_scraper/names_projects_Cargo.csv") as csv_file:
             Watch = None
             Contributors = None
             Repository_size = None
+            Total_releases = None
             crates_url = None
             github_repo = None
 
@@ -112,13 +113,15 @@ with open("../rust_scraper/names_projects_Cargo.csv") as csv_file:
                     Contributors = element_tag_value_list[index]
                 elif element_tag_name == 'Repository size':
                     Repository_size = element_tag_value_list[index]
+                elif element_tag_name == 'Total releases':
+                    Total_releases = element_tag_value_list[index]
                 else:
                     continue
             
             with open("../rust_scraper/Scraper_1/Scraper_1_output.json", "r") as Scraper_1_input_json_file:
                 metadata_list = json.load(Scraper_1_input_json_file)
             
-            metadata_list.append({'project': project_name, 'Latest_release': Latest_release, 'First_release': First_release, 'Stars': Stars, 'Forks': Forks, 'Watch': Watch, 'Contributors': Contributors, 'crates_url': crates_url, 'github_repo': github_repo})
+            metadata_list.append({'project': project_name, 'Latest_release': Latest_release, 'First_release': First_release, 'Stars': Stars, 'Forks': Forks, 'Watch': Watch, 'Contributors': Contributors, 'repository_size': Repository_size, 'total_releases': Total_releases, 'crates_url': crates_url, 'github_repo': github_repo})
 
             with open("../rust_scraper/Scraper_1/Scraper_1_output.json", "w") as Scraper_1_output_json_file:
                 json.dump(metadata_list, Scraper_1_output_json_file, indent=4, sort_keys=True)
