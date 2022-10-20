@@ -3,6 +3,8 @@ import json
 
 from selenium import webdriver
 from selenium.webdriver.common.by import By
+from selenium.webdriver.support.ui import WebDriverWait
+from selenium.webdriver.support import expected_conditions
 
 # import metadata file
 with open("../rust_scraper/Scraper_2/Scraper_1_output.json", "r") as Scraper_1_input_json_file:
@@ -43,23 +45,22 @@ for index_metadata, metadata in enumerate(metadata_list):
         # go to the crates url page for project
         driver.get(crates_url)
 
-        time.sleep(2)
-
-        github_url = None
         project_maintainer_github_url = None
 
         # get github url of project
-        url_name_list = [el.text for el in driver.find_elements(By.XPATH,r"//*[@class='_title_t2rnmm']")]
-        url_link_list = [el.text for el in driver.find_elements(By.XPATH,r"//*[@class='_link_t2rnmm']")]
+        try:
+            url_name_list = [el.text for el in WebDriverWait(driver, 2).until(expected_conditions.presence_of_all_elements_located((By.XPATH,r"//*[@class='_title_t2rnmm']")))]
+            url_link_list = [el.text for el in WebDriverWait(driver, 2).until(expected_conditions.presence_of_all_elements_located((By.XPATH,r"//*[@class='_link_t2rnmm']")))]
 
-        for index, url_name in enumerate(url_name_list):
-            if url_name == "Repository":
-                github_url = url_link_list[index]
-        
-        time.sleep(2)
+            for index, url_name in enumerate(url_name_list):
+                if url_name == "Repository":
+                    github_url = url_link_list[index]
+
+        except:
+            github_url = None
 
         # get the list of project maintainer url
-        project_maintainer_el_list = driver.find_elements(By.XPATH,r"//*[@class='_list_181lzn _detailed_181lzn']/li/a")
+        project_maintainer_el_list = WebDriverWait(driver, 5).until(expected_conditions.presence_of_all_elements_located((By.XPATH,r"//*[@class='_list_181lzn _detailed_181lzn']/li/a")))
 
         maintainer_url_list = []
 
@@ -74,14 +75,14 @@ for index_metadata, metadata in enumerate(metadata_list):
             # get the project maintainer github repo
             driver.get(maintainer_url)
 
-            time.sleep(2)
-
             try:
-                project_maintainer_github_el = driver.find_element(By.XPATH,r"//*[@class='_header-row_pld0lu']/a")
+
+                project_maintainer_github_el = WebDriverWait(driver, 2).until(expected_conditions.presence_of_element_located((By.XPATH,r"//*[@class='_header-row_pld0lu']/a")))
 
                 project_maintainer_github_url = project_maintainer_github_el.get_attribute('href')
 
             except:
+
                 project_maintainer_github_el = driver.find_element(By.XPATH,r"//*[@class='_header_yor1li _header_1c6xgh']/a")
 
                 project_maintainer_github_url = project_maintainer_github_el.get_attribute('href')

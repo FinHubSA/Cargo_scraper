@@ -43,9 +43,7 @@ def yearly_metadata(date):
 
     try:
 
-        time.sleep(2)
-
-        driver.find_element(By.XPATH, r"//*[@class='Box mb-5 p-3 activity-overview-box border-top border-xl-top-0']")
+        WebDriverWait(driver, 1).until(expected_conditions.presence_of_element_located((By.XPATH, r"//*[@class='Box mb-5 p-3 activity-overview-box border-top border-xl-top-0']")))
 
         contributions = WebDriverWait(driver, 5).until(expected_conditions.presence_of_element_located((By.XPATH, r"//*[@class='f4 text-normal mb-2']"))).text
         contributions = contributions.split(" ")[0]
@@ -86,8 +84,6 @@ def yearly_metadata(date):
             except:
                 commits = 0
     except:
-
-        time.sleep(2)
 
         contributions = WebDriverWait(driver, 5).until(expected_conditions.presence_of_element_located((By.XPATH, r"//*[@class='f4 text-normal mb-2']"))).text
         contributions = contributions.split(" ")[0]
@@ -136,18 +132,26 @@ for index_contributor_github_url_data, contributor_github_url_data in enumerate(
         yearly_metadata(date)
 
         # get all other years data
-        year_list_len = WebDriverWait(driver, 20).until(expected_conditions.presence_of_all_elements_located((By.XPATH, r"//*[@class='filter-list small']/li")))
+        year_list_len = WebDriverWait(driver, 5).until(expected_conditions.presence_of_all_elements_located((By.XPATH, r"//*[@class='filter-list small']/li")))
 
         for year in range(1,len(year_list_len)):
 
-            year_list = WebDriverWait(driver, 20).until(expected_conditions.presence_of_all_elements_located((By.XPATH, r"//*[@class='filter-list small']/li")))
+            time.sleep(2)
+
+            year_list = WebDriverWait(driver, 5).until(expected_conditions.presence_of_all_elements_located((By.XPATH, r"//*[@class='filter-list small']/li")))
 
             year_element = year_list[year]
             date = year_element.text
 
-            ActionChains(driver).move_to_element(year_element).perform()
+            ActionChains(driver).move_to_element(year_element).click().perform()
 
-            year_element.click()
+            # driver.execute_script("arguments[0].scrollIntoView(true);", year_element)
+
+            # driver.execute_script('arguments[0].click();', year_element)
+
+            # ActionChains(driver).move_to_element(year_element).perform()
+            
+            # year_element.click()
 
             yearly_metadata(date)
 

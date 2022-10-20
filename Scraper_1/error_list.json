@@ -5,5 +5,19 @@
         "failed_requests": {
             "project": "wayland-kbd"
         }
+    },
+    {
+        "Error": "Message: no such element: Unable to locate element: {\"method\":\"xpath\",\"selector\":\"./div/div/p/small/a\"}\n  (Session info: chrome=106.0.5249.119)\nStacktrace:\n0   chromedriver                        0x0000000104f46f44 chromedriver + 3813188\n1   chromedriver                        0x0000000104ed8ae0 chromedriver + 3361504\n2   chromedriver                        0x0000000104bdcc5c chromedriver + 232540\n3   chromedriver                        0x0000000104c0e380 chromedriver + 435072\n4   chromedriver                        0x0000000104c04898 chromedriver + 395416\n5   chromedriver                        0x0000000104c3bf44 chromedriver + 622404\n6   chromedriver                        0x0000000104c03358 chromedriver + 389976\n7   chromedriver                        0x0000000104c04284 chromedriver + 393860\n8   chromedriver                        0x0000000104f1ae18 chromedriver + 3632664\n9   chromedriver                        0x0000000104f1e97c chromedriver + 3647868\n10  chromedriver                        0x0000000104f24b58 chromedriver + 3672920\n11  chromedriver                        0x0000000104f1f350 chromedriver + 3650384\n12  chromedriver                        0x0000000104efc8dc chromedriver + 3508444\n13  chromedriver                        0x0000000104f39914 chromedriver + 3758356\n14  chromedriver                        0x0000000104f39a78 chromedriver + 3758712\n15  chromedriver                        0x0000000104f4d6cc chromedriver + 3839692\n16  libsystem_pthread.dylib             0x00000001c2fa9240 _pthread_start + 148\n17  libsystem_pthread.dylib             0x00000001c2fa4024 thread_start + 8\n",
+        "Index": "0",
+        "failed_requests": {
+            "project": "todotxt"
+        }
+    },
+    {
+        "Error": "Message: stale element reference: element is not attached to the page document\n  (Session info: chrome=106.0.5249.119)\nStacktrace:\n0   chromedriver                        0x0000000102e46f44 chromedriver + 3813188\n1   chromedriver                        0x0000000102dd8ae0 chromedriver + 3361504\n2   chromedriver                        0x0000000102adcc5c chromedriver + 232540\n3   chromedriver                        0x0000000102adf934 chromedriver + 244020\n4   chromedriver                        0x0000000102adf79c chromedriver + 243612\n5   chromedriver                        0x0000000102adf9d0 chromedriver + 244176\n6   chromedriver                        0x0000000102b0e104 chromedriver + 434436\n7   chromedriver                        0x0000000102b04898 chromedriver + 395416\n8   chromedriver                        0x0000000102b3bf44 chromedriver + 622404\n9   chromedriver                        0x0000000102b03358 chromedriver + 389976\n10  chromedriver                        0x0000000102b04284 chromedriver + 393860\n11  chromedriver                        0x0000000102e1ae18 chromedriver + 3632664\n12  chromedriver                        0x0000000102e1e97c chromedriver + 3647868\n13  chromedriver                        0x0000000102e24b58 chromedriver + 3672920\n14  chromedriver                        0x0000000102e1f350 chromedriver + 3650384\n15  chromedriver                        0x0000000102dfc8dc chromedriver + 3508444\n16  chromedriver                        0x0000000102e39914 chromedriver + 3758356\n17  chromedriver                        0x0000000102e39a78 chromedriver + 3758712\n18  chromedriver                        0x0000000102e4d6cc chromedriver + 3839692\n19  libsystem_pthread.dylib             0x00000001c2fa9240 _pthread_start + 148\n20  libsystem_pthread.dylib             0x00000001c2fa4024 thread_start + 8\n",
+        "Index": "0",
+        "failed_requests": {
+            "project": "amethyst_ecs"
+        }
     }
 ]
