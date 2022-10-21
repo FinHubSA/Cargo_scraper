@@ -177,6 +177,16 @@ with open("../names_projects_Cargo.csv") as csv_file:
             with open("error_list.json", "w") as error_list_output_json_file:
                 json.dump(error_list, error_list_output_json_file, indent=4, sort_keys=True)
 
+            with open("unscraped_projects.csv", "a+") as unscraped_projects_file:
+                unscraped_projects_file.write(project)
+            
+            driver.close()
+
+            driver = webdriver.Remote(
+                selenium_connection,
+                options=chrome_options,
+            )
+
             time.sleep(60)
 
             continue
