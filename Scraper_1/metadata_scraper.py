@@ -62,11 +62,22 @@ with open("../rust_scraper/names_projects_Cargo.csv") as csv_file:
             # Check for too many requests error
             time.sleep(1)
 
-            error_429 = driver.find_element(By.XPATH,r"//*").text
+            too_many_requests = True
+            count_requests_error = 0
 
-            if error_429 == '429 Too Many Requests':
-                time.sleep(15)
-                driver.get(project_url)
+            while too_many_requests and count_requests_error <=10:
+
+                error_429 = driver.find_element(By.XPATH,r"//*").text
+
+                if error_429 == '429 Too Many Requests':
+                    count_requests_error += 1
+                    print(project_name)
+                    print(error_429)
+                    time.sleep(20)
+                    driver.get(project_url)
+                else:
+                    too_many_requests = False
+
 
             time.sleep(10)
 
