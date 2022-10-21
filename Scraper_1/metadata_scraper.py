@@ -36,139 +36,116 @@ driver = webdriver.Remote(
 )
 
 count = 0
+        
+def scrape_project(project, index_project, depth):
+    count += 1
 
-# load csv list
-with open("../names_projects_Cargo.csv") as csv_file:
-    project_list = csv.DictReader(csv_file)
+    if count == 500:
 
-    for index_project, project in enumerate(project_list):
+        count = 0
 
-        count += 1
+        driver.close()
 
-        if count == 500:
+        driver = webdriver.Remote(
+            selenium_connection,
+            options=chrome_options,
+        )
+    try:
 
-            count = 0
+        project_name = project['project']
 
-            driver.close()
+        project_url = "https://libraries.io/cargo/" + str(project['project'])
 
-            driver = webdriver.Remote(
-                selenium_connection,
-                options=chrome_options,
-            )
-        try:
+        driver.get(project_url)
 
-            project_name = project['project']
+        # Check for too many requests error
+        time.sleep(1)
 
-            project_url = "https://libraries.io/cargo/" + str(project['project'])
+        too_many_requests = True
+        count_requests_error = 0
 
-            driver.get(project_url)
+        while too_many_requests and count_requests_error <=10:
 
-            # Check for too many requests error
-            time.sleep(1)
+            error_429 = driver.find_element(By.XPATH,r"//*").text
 
-            too_many_requests = True
-            count_requests_error = 0
-
-            while too_many_requests and count_requests_error <=10:
-
-                error_429 = driver.find_element(By.XPATH,r"//*").text
-
-                if error_429 == '429 Too Many Requests':
-                    count_requests_error += 1
-                    print(project_name)
-                    print(error_429)
-                    time.sleep(20)
-                    driver.get(project_url)
-                else:
-                    too_many_requests = False
+            if error_429 == '429 Too Many Requests':
+                count_requests_error += 1
+                print(project_name)
+                print(error_429)
+                time.sleep(20)
+                driver.get(project_url)
+            else:
+                too_many_requests = False
 
 
-            time.sleep(10)
+        time.sleep(10)
 
-            Latest_release = None
-            First_release = None
-            Stars = None
-            Forks = None
-            Watch = None
-            Contributors = None
-            Repository_size = None
-            Total_releases = None
-            crates_url = None
-            github_repo = None
+        Latest_release = None
+        First_release = None
+        Stars = None
+        Forks = None
+        Watch = None
+        Contributors = None
+        Repository_size = None
+        Total_releases = None
+        crates_url = None
+        github_repo = None
 
-            # get the project links
-            project_el_list = driver.find_elements(By.XPATH,r"//*[@class='project-links']/span/a")
-            for project_el in project_el_list:
-                        
-                project_link_name = project_el.text
-                if project_link_name == 'Cargo':
-                    crates_url = project_el.get_attribute('href')
-                elif project_link_name == 'Repository':
-                    github_repo = project_el.get_attribute('href')
-                else:
-                    continue
-            
-            # get the metadata
-            element_tag_name_list = [el.text for el in driver.find_elements(By.XPATH,r"//*[@class='col-md-4 sidebar']/dl[@class='row']/dt")]
-            element_tag_value_list = [el.text for el in driver.find_elements(By.XPATH,r"//*[@class='col-md-4 sidebar']/dl[@class='row']/dd")]
+        # get the project links
+        project_el_list = driver.find_elements(By.XPATH,r"//*[@class='project-links']/span/a")
+        for project_el in project_el_list:
+                    
+            project_link_name = project_el.text
+            if project_link_name == 'Cargo':
+                crates_url = project_el.get_attribute('href')
+            elif project_link_name == 'Repository':
+                github_repo = project_el.get_attribute('href')
+            else:
+                continue
+        
+        # get the metadata
+        element_tag_name_list = [el.text for el in driver.find_elements(By.XPATH,r"//*[@class='col-md-4 sidebar']/dl[@class='row']/dt")]
+        element_tag_value_list = [el.text for el in driver.find_elements(By.XPATH,r"//*[@class='col-md-4 sidebar']/dl[@class='row']/dd")]
 
-            for index, element_tag_name in enumerate(element_tag_name_list):
+        for index, element_tag_name in enumerate(element_tag_name_list):
 
-                if element_tag_name == 'Latest release':
-                    Latest_release = element_tag_value_list[index]
-                elif element_tag_name == 'First release':
-                    First_release = element_tag_value_list[index]
-                elif element_tag_name == 'Stars':
-                    Stars = element_tag_value_list[index]
-                elif element_tag_name == 'Forks':
-                    Forks = element_tag_value_list[index]
-                elif element_tag_name == 'Watchers':
-                    Watch = element_tag_value_list[index]
-                elif element_tag_name == 'Contributors':
-                    Contributors = element_tag_value_list[index]
-                elif element_tag_name == 'Repository size':
-                    Repository_size = element_tag_value_list[index]
-                elif element_tag_name == 'Total releases':
-                    Total_releases = element_tag_value_list[index]
-                else:
-                    continue
-            
-            with open("Scraper_1_output.json", "r") as Scraper_1_input_json_file:
-                metadata_list = json.load(Scraper_1_input_json_file)
-            
-            metadata_list.append({'project': project_name, 'Latest_release': Latest_release, 'First_release': First_release, 'Stars': Stars, 'Forks': Forks, 'Watch': Watch, 'Contributors': Contributors, 'repository_size': Repository_size, 'total_releases': Total_releases, 'crates_url': crates_url, 'github_repo': github_repo})
+            if element_tag_name == 'Latest release':
+                Latest_release = element_tag_value_list[index]
+            elif element_tag_name == 'First release':
+                First_release = element_tag_value_list[index]
+            elif element_tag_name == 'Stars':
+                Stars = element_tag_value_list[index]
+            elif element_tag_name == 'Forks':
+                Forks = element_tag_value_list[index]
+            elif element_tag_name == 'Watchers':
+                Watch = element_tag_value_list[index]
+            elif element_tag_name == 'Contributors':
+                Contributors = element_tag_value_list[index]
+            elif element_tag_name == 'Repository size':
+                Repository_size = element_tag_value_list[index]
+            elif element_tag_name == 'Total releases':
+                Total_releases = element_tag_value_list[index]
+            else:
+                continue
+        
+        with open("Scraper_1_output.json", "r") as Scraper_1_input_json_file:
+            metadata_list = json.load(Scraper_1_input_json_file)
+        
+        metadata_list.append({'project': project_name, 'Latest_release': Latest_release, 'First_release': First_release, 'Stars': Stars, 'Forks': Forks, 'Watch': Watch, 'Contributors': Contributors, 'repository_size': Repository_size, 'total_releases': Total_releases, 'crates_url': crates_url, 'github_repo': github_repo})
 
-            with open("Scraper_1_output.json", "w") as Scraper_1_output_json_file:
-                json.dump(metadata_list, Scraper_1_output_json_file, indent=4, sort_keys=True)
+        with open("Scraper_1_output.json", "w") as Scraper_1_output_json_file:
+            json.dump(metadata_list, Scraper_1_output_json_file, indent=4, sort_keys=True)
 
-            # # get the maintainer and contributor url
+    except Exception as e:
 
-            # maintainer_contributor_heading = None
-            # maintainer_contributor_url = None
+        driver.close()
 
-            # maintainer_contributor_list = driver.find_elements(By.XPATH,r"//*[@class='col-md-12']")
+        driver = webdriver.Remote(
+            selenium_connection,
+            options=chrome_options,
+        )
 
-            # for maintainer_contributor in maintainer_contributor_list:
-
-            #     maintainer_contributor_heading = maintainer_contributor.find_element(By.XPATH,r"./h3").text
-
-            #     if maintainer_contributor_heading == 'Maintainers' or maintainer_contributor_heading == "Contributors":
-
-            #         maintainer_contributor_url_list = maintainer_contributor.find_elements(By.XPATH,r"./a")
-
-            #         for maintainer_contributor_url_el in maintainer_contributor_url_list:
-            #             maintainer_contributor_url = maintainer_contributor_url_el.get_attribute('href')
-                
-            #             with open("../rust_scraper/Scraper_1/contributor_url.json", "r") as contributor_list_input_json_file:
-            #                 contributor_list = json.load(contributor_list_input_json_file)
-
-            #             contributor_list.append({'project': project_name, 'contributor_type': maintainer_contributor_heading, 'maintainer_contributor_url': maintainer_contributor_url})
-
-            #             with open("../rust_scraper/Scraper_1/contributor_url.json", "w") as contributor_list_output_json_file:
-            #                 json.dump(contributor_list, contributor_list_output_json_file, indent=4, sort_keys=True)
-
-        except Exception as e:
-
+        if depth > 3:
             with open("error_list.json", "r") as error_list_input_json_file:
                 error_list = json.load(error_list_input_json_file)
 
@@ -179,17 +156,18 @@ with open("../names_projects_Cargo.csv") as csv_file:
 
             with open("unscraped_projects.csv", "a+") as unscraped_projects_file:
                 unscraped_projects_file.write(project + "\n")
-            
-            driver.close()
-
-            driver = webdriver.Remote(
-                selenium_connection,
-                options=chrome_options,
-            )
+        else:
+            depth += 1
 
             time.sleep(60)
 
-            continue
+            scrape_project(project, index_project, depth)
+
+with open("../names_projects_Cargo.csv") as csv_file:
+    project_list = csv.DictReader(csv_file)
+
+    for index_project, project in enumerate(project_list):
+        scrape_project(project, index_project, 1)
 
 
 
