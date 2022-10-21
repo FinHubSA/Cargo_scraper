@@ -24,7 +24,6 @@ chrome_options.add_experimental_option(
         "profile.password_manager_enabled": False,  # gets rid of password saver popup
     },
 )
-throttle = 0
 
 selenium_connection = remote_connection.RemoteConnection(
     "http://localhost:4444/wd/hub"
@@ -38,6 +37,9 @@ driver = webdriver.Remote(
 count = 0
         
 def scrape_project(project, index_project, depth):
+
+    global count, driver, selenium_connection, chrome_options
+
     count += 1
 
     if count == 500:
