@@ -178,7 +178,7 @@ with open("../names_projects_Cargo.csv") as csv_file:
                 json.dump(error_list, error_list_output_json_file, indent=4, sort_keys=True)
 
             with open("unscraped_projects.csv", "a+") as unscraped_projects_file:
-                unscraped_projects_file.write(project)
+                unscraped_projects_file.write(project + "\n")
             
             driver.close()
 
