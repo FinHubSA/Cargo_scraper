@@ -1,5 +1,6 @@
 import time
 import json
+import pandas as pd
 
 from selenium import webdriver
 from selenium.webdriver.common.by import By
@@ -40,73 +41,75 @@ for index_metadata, metadata in enumerate(metadata_list):
     project = metadata['project']
     crates_url = metadata['crates_url']
 
-    try:
+    if not crates_url is None:
 
-        # go to the crates url page for project
-        driver.get(crates_url)
-
-        project_maintainer_github_url = None
-
-        # get github url of project
         try:
-            url_name_list = [el.text for el in WebDriverWait(driver, 2).until(expected_conditions.presence_of_all_elements_located((By.XPATH,r"//*[@class='_title_t2rnmm']")))]
-            url_link_list = [el.text for el in WebDriverWait(driver, 2).until(expected_conditions.presence_of_all_elements_located((By.XPATH,r"//*[@class='_link_t2rnmm']")))]
 
-            for index, url_name in enumerate(url_name_list):
-                if url_name == "Repository":
-                    github_url = url_link_list[index]
+            # go to the crates url page for project
+            driver.get(crates_url)
 
-        except:
-            github_url = None
+            project_maintainer_github_url = None
 
-        # get the list of project maintainer url
-        project_maintainer_el_list = WebDriverWait(driver, 5).until(expected_conditions.presence_of_all_elements_located((By.XPATH,r"//*[@class='_list_181lzn _detailed_181lzn']/li/a")))
-
-        maintainer_url_list = []
-
-        for project_maintainer_el in project_maintainer_el_list:
-
-            # get the crates owner url
-            maintainer_url = project_maintainer_el.get_attribute('href')
-            maintainer_url_list.append(maintainer_url)
-
-        for maintainer_url in maintainer_url_list:
-
-            # get the project maintainer github repo
-            driver.get(maintainer_url)
-
+            # get github url of project
             try:
+                url_name_list = [el.text for el in WebDriverWait(driver, 2).until(expected_conditions.presence_of_all_elements_located((By.XPATH,r"//*[@class='_title_t2rnmm']")))]
+                url_link_list = [el.text for el in WebDriverWait(driver, 2).until(expected_conditions.presence_of_all_elements_located((By.XPATH,r"//*[@class='_link_t2rnmm']")))]
 
-                project_maintainer_github_el = WebDriverWait(driver, 2).until(expected_conditions.presence_of_element_located((By.XPATH,r"//*[@class='_header-row_pld0lu']/a")))
-
-                project_maintainer_github_url = project_maintainer_github_el.get_attribute('href')
+                for index, url_name in enumerate(url_name_list):
+                    if url_name == "Repository":
+                        github_url = url_link_list[index]
 
             except:
+                github_url = None
 
-                project_maintainer_github_el = driver.find_element(By.XPATH,r"//*[@class='_header_yor1li _header_1c6xgh']/a")
+            # get the list of project maintainer url
+            project_maintainer_el_list = WebDriverWait(driver, 5).until(expected_conditions.presence_of_all_elements_located((By.XPATH,r"//*[@class='_list_181lzn _detailed_181lzn']/li/a")))
 
-                project_maintainer_github_url = project_maintainer_github_el.get_attribute('href')
+            maintainer_url_list = []
 
+            for project_maintainer_el in project_maintainer_el_list:
+
+                # get the crates owner url
+                maintainer_url = project_maintainer_el.get_attribute('href')
+                maintainer_url_list.append(maintainer_url)
+
+            for maintainer_url in maintainer_url_list:
+
+                # get the project maintainer github repo
+                driver.get(maintainer_url)
+
+                try:
+
+                    project_maintainer_github_el = WebDriverWait(driver, 2).until(expected_conditions.presence_of_element_located((By.XPATH,r"//*[@class='_header-row_pld0lu']/a")))
+
+                    project_maintainer_github_url = project_maintainer_github_el.get_attribute('href')
+
+                except:
+
+                    project_maintainer_github_el = driver.find_element(By.XPATH,r"//*[@class='_header_yor1li _header_1c6xgh']/a")
+
+                    project_maintainer_github_url = project_maintainer_github_el.get_attribute('href')
+
+                
+
+                with open("../rust_scraper/Scraper_2/Scraper_2_output.json", "r") as Scraper_2_input_file:
+                    maintainer_github_url_list = json.load(Scraper_2_input_file)
+
+                maintainer_github_url_list.append({'project': project, 'crates_url': crates_url,'owner_url': project_maintainer_github_url, 'github_url': github_url})
+
+                with open("../rust_scraper/Scraper_2/Scraper_2_output.json", "w") as Scraper_2_output_file:
+                    json.dump(maintainer_github_url_list, Scraper_2_output_file, indent=4, sort_keys=True)
+
+        except Exception as e:
+
+            with open("../rust_scraper/Scraper_2/error_list.json", "r") as error_list_input_json_file:
+                error_list = json.load(error_list_input_json_file)
+
+            error_list.append({'failed_requests': project, 'Index': str(index_metadata), 'Error': str(e)})
             
+            with open("../rust_scraper/Scraper_2/error_list.json", "w") as error_list_output_json_file:
+                json.dump(error_list, error_list_output_json_file, indent=4, sort_keys=True)
 
-            with open("../rust_scraper/Scraper_2/Scraper_2_output.json", "r") as Scraper_2_input_file:
-                maintainer_github_url_list = json.load(Scraper_2_input_file)
+            time.sleep(10)
 
-            maintainer_github_url_list.append({'project': project, 'crates_url': crates_url,'owner_url': project_maintainer_github_url, 'github_url': github_url})
-
-            with open("../rust_scraper/Scraper_2/Scraper_2_output.json", "w") as Scraper_2_output_file:
-                json.dump(maintainer_github_url_list, Scraper_2_output_file, indent=4, sort_keys=True)
-
-    except Exception as e:
-
-        with open("../rust_scraper/Scraper_2/error_list.json", "r") as error_list_input_json_file:
-            error_list = json.load(error_list_input_json_file)
-
-        error_list.append({'failed_requests': project, 'Index': str(index_metadata), 'Error': str(e)})
-        
-        with open("../rust_scraper/Scraper_2/error_list.json", "w") as error_list_output_json_file:
-            json.dump(error_list, error_list_output_json_file, indent=4, sort_keys=True)
-
-        time.sleep(10)
-
-        continue
+            continue

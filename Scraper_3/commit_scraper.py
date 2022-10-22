@@ -35,6 +35,9 @@ count = 0
 with open("../rust_scraper/names_projects_Cargo.csv") as csv_file:
     project_list = csv.DictReader(csv_file)
 
+    prev_contributors_url = None
+    prev_project = None
+
     for index_project, project in enumerate(project_list):
 
         try:
@@ -46,13 +49,23 @@ with open("../rust_scraper/names_projects_Cargo.csv") as csv_file:
             driver.get(project_url)
 
             # Check for too many requests error
-            error_429 = driver.find_element(By.XPATH,r"//*").text
+            too_many_requests = True
+            count_requests_error = 0
 
-            if error_429 == '429 Too Many Requests':
-                time.sleep(20)
-                driver.get(project_url)
+            while too_many_requests and count_requests_error <=10:
 
-            time.sleep(5)
+                error_429 = driver.find_element(By.XPATH,r"//*").text
+
+                if error_429 == '429 Too Many Requests':
+                    count_requests_error += 1
+                    print(project_name)
+                    print(error_429)
+                    time.sleep(30)
+                    driver.get(project_url)
+                else:
+                    too_many_requests = False
+
+            time.sleep(10)
 
             contributor_el_list = [el for el in driver.find_elements(By.XPATH,r"//*[@class='col-md-4 sidebar']/p/a")]
 
@@ -72,52 +85,88 @@ with open("../rust_scraper/names_projects_Cargo.csv") as csv_file:
 
             if has_contributors:
 
-                driver.get(contributors_url)
+                print(prev_contributors_url)
+                print(contributors_url)
 
-                # Check for too many requests error
-                error_429 = driver.find_element(By.XPATH,r"//*").text
+                #add logic here to see if prev contributors same
+                if contributors_url == prev_contributors_url:
+                    with open("../rust_scraper/Scraper_3/Scraper_3_output.json", "r") as commit_githuburl_input_json_file:
+                        commit_github_url = json.load(commit_githuburl_input_json_file)
 
-                if error_429 == '429 Too Many Requests':
-                    time.sleep(20)
+                        for commit_item in reversed(commit_github_url):
+                            if commit_item['project'] == prev_project:
+
+                                commit_github_url.append({'project': project_name, 'contributor_name': commit_item['contributor_name'], 'contributor_commits': commit_item['contributor_commits'], 'contributor_github_url': commit_item['contributor_github_url']})
+                            
+                            else:
+
+                                break
+
+                    with open("../rust_scraper/Scraper_3/Scraper_3_output.json", "w") as commit_githuburl_output_json_file:
+                            json.dump(commit_github_url, commit_githuburl_output_json_file, indent=4, sort_keys=True)
+
+                    prev_contributors_url = contributors_url
+
+                else:
+
                     driver.get(contributors_url)
 
-                next_page = True
+                    # Check for too many requests error
+                    too_many_requests = True
+                    count_requests_error = 0
 
-                while next_page:
+                    while too_many_requests and count_requests_error <=10:
 
-                    time.sleep(2)
+                        error_429 = driver.find_element(By.XPATH,r"//*").text
 
-                    commit_data_list = driver.find_elements(By.XPATH,r"//*[@class='col-sm-8']/div")
+                        if error_429 == '429 Too Many Requests':
+                            count_requests_error += 1
+                            print(project_name)
+                            print(error_429)
+                            time.sleep(30)
+                            driver.get(contributors_url)
+                        else:
+                            too_many_requests = False
 
-                    # get contributor commits and github url
-                    for commit in commit_data_list:
+                    next_page = True
 
-                        contributor_name = commit.find_element(By.XPATH,r"./div/h4/a").text
+                    while next_page:
 
-                        contributor_commits = commit.find_element(By.XPATH,r"./div/p/small/a").text
+                        time.sleep(4)
 
-                        contributor_github_url = commit.find_element(By.XPATH,r"./div/p/small/a").get_attribute('href')
-                        contributor_github_url = contributor_github_url.split("=")[-1]
-                        contributor_github_url = 'https://github.com/' + contributor_github_url
+                        commit_data_list = driver.find_elements(By.XPATH,r"//*[@class='col-sm-8']/div")
 
+                        # get contributor commits and github url
                         with open("../rust_scraper/Scraper_3/Scraper_3_output.json", "r") as commit_githuburl_input_json_file:
                             commit_github_url = json.load(commit_githuburl_input_json_file)
 
-                        commit_github_url.append({'project': project_name, 'contributor_name': contributor_name, 'contributor_commits': contributor_commits, 'contributor_github_url': contributor_github_url})
+                            for commit in commit_data_list:
+
+                                contributor_name = commit.find_element(By.XPATH,r"./div/h4/a").text
+
+                                contributor_commits = commit.find_element(By.XPATH,r"./div/p/small/a").text
+
+                                contributor_github_url = commit.find_element(By.XPATH,r"./div/p/small/a").get_attribute('href')
+                                contributor_github_url = contributor_github_url.split("=")[-1]
+                                contributor_github_url = 'https://github.com/' + contributor_github_url
+
+                                commit_github_url.append({'project': project_name, 'contributor_name': contributor_name, 'contributor_commits': contributor_commits, 'contributor_github_url': contributor_github_url})
                         
                         with open("../rust_scraper/Scraper_3/Scraper_3_output.json", "w") as commit_githuburl_output_json_file:
                             json.dump(commit_github_url, commit_githuburl_output_json_file, indent=4, sort_keys=True)
 
-                    try:
-                    
-                        next_page_button = driver.find_element(By.XPATH, r"//*[@class='next']/a").get_attribute('href')
-                        driver.get(next_page_button)
+                        try:
+                        
+                            next_page_button = driver.find_element(By.XPATH, r"//*[@class='next']/a").get_attribute('href')
+                            driver.get(next_page_button)
 
-                        next_page = True
-                    
-                    except:
+                            next_page = True
+                        
+                        except:
 
-                        next_page = False
+                            next_page = False
+
+                    prev_contributors_url = contributors_url
                 
             else:
                 
@@ -128,6 +177,8 @@ with open("../rust_scraper/names_projects_Cargo.csv") as csv_file:
                 
                 with open("../rust_scraper/Scraper_3/Scraper_3_output.json", "w") as commit_githuburl_output_json_file:
                     json.dump(commit_github_url, commit_githuburl_output_json_file, indent=4, sort_keys=True)
+            
+            prev_project = project_name
 
         except Exception as e:
 
