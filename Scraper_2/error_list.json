@@ -1013,5 +1013,1230 @@
         "Error": "Message: \n",
         "Index": "2694",
         "failed_requests": "clap-test"
+    },
+    {
+        "Error": "Message: \n",
+        "Index": "46",
+        "failed_requests": "peregrine"
+    },
+    {
+        "Error": "Message: \n",
+        "Index": "139",
+        "failed_requests": "unused_variable"
+    },
+    {
+        "Error": "Message: \n",
+        "Index": "145",
+        "failed_requests": "json"
+    },
+    {
+        "Error": "Message: \n",
+        "Index": "175",
+        "failed_requests": "unicorn-messages"
+    },
+    {
+        "Error": "Message: \n",
+        "Index": "220",
+        "failed_requests": "serde_item"
+    },
+    {
+        "Error": "Message: \n",
+        "Index": "330",
+        "failed_requests": "thrussh_client"
+    },
+    {
+        "Error": "Message: \n",
+        "Index": "345",
+        "failed_requests": "gmp"
+    },
+    {
+        "Error": "Message: \n",
+        "Index": "425",
+        "failed_requests": "curved_gear"
+    },
+    {
+        "Error": "Message: \n",
+        "Index": "475",
+        "failed_requests": "stable-borrow-state"
+    },
+    {
+        "Error": "Message: \n",
+        "Index": "548",
+        "failed_requests": "cmp3"
+    },
+    {
+        "Error": "Message: \n",
+        "Index": "563",
+        "failed_requests": "marlin"
+    },
+    {
+        "Error": "Message: \n",
+        "Index": "782",
+        "failed_requests": "teleecho"
+    },
+    {
+        "Error": "Message: \n",
+        "Index": "906",
+        "failed_requests": "cart"
+    },
+    {
+        "Error": "Message: \n",
+        "Index": "916",
+        "failed_requests": "conductor"
+    },
+    {
+        "Error": "Message: no such element: Unable to locate element: {\"method\":\"xpath\",\"selector\":\"//*[@class='_header_yor1li _header_1c6xgh']/a\"}\n  (Session info: chrome=106.0.5249.119)\nStacktrace:\n0   chromedriver                        0x0000000104b86f44 chromedriver + 3813188\n1   chromedriver                        0x0000000104b18ae0 chromedriver + 3361504\n2   chromedriver                        0x000000010481cc5c chromedriver + 232540\n3   chromedriver                        0x000000010484e380 chromedriver + 435072\n4   chromedriver                        0x000000010487bf44 chromedriver + 622404\n5   chromedriver                        0x0000000104843358 chromedriver + 389976\n6   chromedriver                        0x0000000104844284 chromedriver + 393860\n7   chromedriver                        0x0000000104b5ae18 chromedriver + 3632664\n8   chromedriver                        0x0000000104b5e97c chromedriver + 3647868\n9   chromedriver                        0x0000000104b64b58 chromedriver + 3672920\n10  chromedriver                        0x0000000104b5f350 chromedriver + 3650384\n11  chromedriver                        0x0000000104b3c8dc chromedriver + 3508444\n12  chromedriver                        0x0000000104b79914 chromedriver + 3758356\n13  chromedriver                        0x0000000104b79a78 chromedriver + 3758712\n14  chromedriver                        0x0000000104b8d6cc chromedriver + 3839692\n15  libsystem_pthread.dylib             0x000000018d655240 _pthread_start + 148\n16  libsystem_pthread.dylib             0x000000018d650024 thread_start + 8\n",
+        "Index": "960",
+        "failed_requests": "roboime-next-protocol"
+    },
+    {
+        "Error": "Message: \n",
+        "Index": "227",
+        "failed_requests": "cargonauts"
+    },
+    {
+        "Error": "Message: \n",
+        "Index": "236",
+        "failed_requests": "dbus-macros"
+    },
+    {
+        "Error": "Message: \n",
+        "Index": "237",
+        "failed_requests": "iron-maud"
+    },
+    {
+        "Error": "Message: \n",
+        "Index": "272",
+        "failed_requests": "sarkara"
+    },
+    {
+        "Error": "Message: no such element: Unable to locate element: {\"method\":\"xpath\",\"selector\":\"//*[@class='_header_yor1li _header_1c6xgh']/a\"}\n  (Session info: chrome=106.0.5249.119)\nStacktrace:\n0   chromedriver                        0x0000000104546f44 chromedriver + 3813188\n1   chromedriver                        0x00000001044d8ae0 chromedriver + 3361504\n2   chromedriver                        0x00000001041dcc5c chromedriver + 232540\n3   chromedriver                        0x000000010420e380 chromedriver + 435072\n4   chromedriver                        0x000000010423bf44 chromedriver + 622404\n5   chromedriver                        0x0000000104203358 chromedriver + 389976\n6   chromedriver                        0x0000000104204284 chromedriver + 393860\n7   chromedriver                        0x000000010451ae18 chromedriver + 3632664\n8   chromedriver                        0x000000010451e97c chromedriver + 3647868\n9   chromedriver                        0x0000000104524b58 chromedriver + 3672920\n10  chromedriver                        0x000000010451f350 chromedriver + 3650384\n11  chromedriver                        0x00000001044fc8dc chromedriver + 3508444\n12  chromedriver                        0x0000000104539914 chromedriver + 3758356\n13  chromedriver                        0x0000000104539a78 chromedriver + 3758712\n14  chromedriver                        0x000000010454d6cc chromedriver + 3839692\n15  libsystem_pthread.dylib             0x000000018d655240 _pthread_start + 148\n16  libsystem_pthread.dylib             0x000000018d650024 thread_start + 8\n",
+        "Index": "302",
+        "failed_requests": "nuklear-backend-gfx"
+    },
+    {
+        "Error": "Message: \n",
+        "Index": "462",
+        "failed_requests": "rust-jack"
+    },
+    {
+        "Error": "Message: \n",
+        "Index": "500",
+        "failed_requests": "sotassl"
+    },
+    {
+        "Error": "Message: \n",
+        "Index": "555",
+        "failed_requests": "post-expansion"
+    },
+    {
+        "Error": "Message: \n",
+        "Index": "580",
+        "failed_requests": "hermes"
+    },
+    {
+        "Error": "Message: \n",
+        "Index": "753",
+        "failed_requests": "maddr"
+    },
+    {
+        "Error": "Message: \n",
+        "Index": "872",
+        "failed_requests": "samba-vfs"
+    },
+    {
+        "Error": "Message: \n",
+        "Index": "956",
+        "failed_requests": "xoroshiro128"
+    },
+    {
+        "Error": "Message: \n",
+        "Index": "988",
+        "failed_requests": "forecast-rs"
+    },
+    {
+        "Error": "Message: \n",
+        "Index": "994",
+        "failed_requests": "fastchemail"
+    },
+    {
+        "Error": "Message: \n",
+        "Index": "999",
+        "failed_requests": "philips_hue_client"
+    },
+    {
+        "Error": "Message: \n",
+        "Index": "22",
+        "failed_requests": "meterproxy"
+    },
+    {
+        "Error": "Message: \n",
+        "Index": "52",
+        "failed_requests": "slice-cast"
+    },
+    {
+        "Error": "Message: \n",
+        "Index": "92",
+        "failed_requests": "libbindgen"
+    },
+    {
+        "Error": "Message: \n",
+        "Index": "106",
+        "failed_requests": "zdaemon"
+    },
+    {
+        "Error": "Message: \n",
+        "Index": "107",
+        "failed_requests": "zfilexfer"
+    },
+    {
+        "Error": "Message: \n",
+        "Index": "111",
+        "failed_requests": "cpp_demangle"
+    },
+    {
+        "Error": "Message: \n",
+        "Index": "131",
+        "failed_requests": "droom-ui"
+    },
+    {
+        "Error": "Message: \n",
+        "Index": "136",
+        "failed_requests": "let-it-go"
+    },
+    {
+        "Error": "Message: \n",
+        "Index": "219",
+        "failed_requests": "tablegen"
+    },
+    {
+        "Error": "Message: \n",
+        "Index": "293",
+        "failed_requests": "lopdf"
+    },
+    {
+        "Error": "Message: \n",
+        "Index": "323",
+        "failed_requests": "lodash"
+    },
+    {
+        "Error": "Message: \n",
+        "Index": "638",
+        "failed_requests": "aurum-color"
+    },
+    {
+        "Error": "Message: \n",
+        "Index": "639",
+        "failed_requests": "aurum-winbase"
+    },
+    {
+        "Error": "Message: \n",
+        "Index": "707",
+        "failed_requests": "pdqsort"
+    },
+    {
+        "Error": "Message: \n",
+        "Index": "814",
+        "failed_requests": "crystal-cluster"
+    },
+    {
+        "Error": "Message: \n",
+        "Index": "858",
+        "failed_requests": "webm-native"
+    },
+    {
+        "Error": "Message: \n",
+        "Index": "897",
+        "failed_requests": "parse_xml"
+    },
+    {
+        "Error": "Message: \n",
+        "Index": "917",
+        "failed_requests": "reql-derive"
+    },
+    {
+        "Error": "Message: \n",
+        "Index": "164",
+        "failed_requests": "nmbr-identities"
+    },
+    {
+        "Error": "Message: \n",
+        "Index": "174",
+        "failed_requests": "nmbr-bounded"
+    },
+    {
+        "Error": "Message: \n",
+        "Index": "194",
+        "failed_requests": "nmbr-float"
+    },
+    {
+        "Error": "Message: \n",
+        "Index": "331",
+        "failed_requests": "libcapstone"
+    },
+    {
+        "Error": "Message: \n",
+        "Index": "702",
+        "failed_requests": "twitch_api"
+    },
+    {
+        "Error": "Message: \n",
+        "Index": "781",
+        "failed_requests": "coco"
+    },
+    {
+        "Error": "Message: \n",
+        "Index": "785",
+        "failed_requests": "greyhawk-vm"
+    },
+    {
+        "Error": "Message: \n",
+        "Index": "843",
+        "failed_requests": "gh_vm"
+    },
+    {
+        "Error": "Message: \n",
+        "Index": "932",
+        "failed_requests": "hibitset"
+    },
+    {
+        "Error": "Message: \n",
+        "Index": "946",
+        "failed_requests": "json_typegen_derive"
+    },
+    {
+        "Error": "Message: \n",
+        "Index": "984",
+        "failed_requests": "rust_c"
+    },
+    {
+        "Error": "Message: \n",
+        "Index": "60",
+        "failed_requests": "prom-attire-bootstrap"
+    },
+    {
+        "Error": "Message: \n",
+        "Index": "61",
+        "failed_requests": "prom-attire-impl"
+    },
+    {
+        "Error": "Message: \n",
+        "Index": "80",
+        "failed_requests": "nul"
+    },
+    {
+        "Error": "Message: \n",
+        "Index": "140",
+        "failed_requests": "pcan-basic-bindings"
+    },
+    {
+        "Error": "Message: \n",
+        "Index": "149",
+        "failed_requests": "cargo-registry"
+    },
+    {
+        "Error": "Message: \n",
+        "Index": "179",
+        "failed_requests": "pf_sandbox"
+    },
+    {
+        "Error": "Message: \n",
+        "Index": "257",
+        "failed_requests": "node-api-sys"
+    },
+    {
+        "Error": "Message: \n",
+        "Index": "423",
+        "failed_requests": "extern_attrib"
+    },
+    {
+        "Error": "Message: \n",
+        "Index": "472",
+        "failed_requests": "oath2"
+    },
+    {
+        "Error": "Message: \n",
+        "Index": "482",
+        "failed_requests": "set"
+    },
+    {
+        "Error": "Message: \n",
+        "Index": "629",
+        "failed_requests": "pm"
+    },
+    {
+        "Error": "Message: \n",
+        "Index": "716",
+        "failed_requests": "dcolor"
+    },
+    {
+        "Error": "Message: \n",
+        "Index": "717",
+        "failed_requests": "dimage"
+    },
+    {
+        "Error": "Message: \n",
+        "Index": "838",
+        "failed_requests": "influx_db_client"
+    },
+    {
+        "Error": "Message: \n",
+        "Index": "888",
+        "failed_requests": "wren_rust"
+    },
+    {
+        "Error": "Message: \n",
+        "Index": "922",
+        "failed_requests": "webkitgtk"
+    },
+    {
+        "Error": "Message: \n",
+        "Index": "5",
+        "failed_requests": "dinput"
+    },
+    {
+        "Error": "Message: \n",
+        "Index": "6",
+        "failed_requests": "dwindow"
+    },
+    {
+        "Error": "Message: \n",
+        "Index": "10",
+        "failed_requests": "dterm-built-in-font"
+    },
+    {
+        "Error": "Message: \n",
+        "Index": "73",
+        "failed_requests": "peeky-read"
+    },
+    {
+        "Error": "Message: \n",
+        "Index": "201",
+        "failed_requests": "magenta-sys"
+    },
+    {
+        "Error": "Message: \n",
+        "Index": "205",
+        "failed_requests": "mxruntime"
+    },
+    {
+        "Error": "Message: \n",
+        "Index": "342",
+        "failed_requests": "susanoo"
+    },
+    {
+        "Error": "Message: \n",
+        "Index": "624",
+        "failed_requests": "crow_engine"
+    },
+    {
+        "Error": "Message: \n",
+        "Index": "711",
+        "failed_requests": "kinito"
+    },
+    {
+        "Error": "Message: \n",
+        "Index": "736",
+        "failed_requests": "baidu"
+    },
+    {
+        "Error": "Message: \n",
+        "Index": "887",
+        "failed_requests": "random_derive"
+    },
+    {
+        "Error": "Message: \n",
+        "Index": "917",
+        "failed_requests": "randtest_macros"
+    },
+    {
+        "Error": "Message: \n",
+        "Index": "997",
+        "failed_requests": "line_segment_intersection"
+    },
+    {
+        "Error": "Message: \n",
+        "Index": "133",
+        "failed_requests": "cache"
+    },
+    {
+        "Error": "Message: \n",
+        "Index": "183",
+        "failed_requests": "openssl-src"
+    },
+    {
+        "Error": "Message: \n",
+        "Index": "212",
+        "failed_requests": "as_with_bytes"
+    },
+    {
+        "Error": "Message: \n",
+        "Index": "296",
+        "failed_requests": "spatialindex-sys"
+    },
+    {
+        "Error": "Message: \n",
+        "Index": "380",
+        "failed_requests": "libsodium"
+    },
+    {
+        "Error": "Message: \n",
+        "Index": "469",
+        "failed_requests": "ayanami"
+    },
+    {
+        "Error": "Message: \n",
+        "Index": "507",
+        "failed_requests": "sweep"
+    },
+    {
+        "Error": "Message: \n",
+        "Index": "898",
+        "failed_requests": "scoped_stateful_threadpool"
+    },
+    {
+        "Error": "Message: \n",
+        "Index": "970",
+        "failed_requests": "columnar_derive"
+    },
+    {
+        "Error": "Message: \n",
+        "Index": "987",
+        "failed_requests": "tayar"
+    },
+    {
+        "Error": "Message: \n",
+        "Index": "31",
+        "failed_requests": "labs-oneshot"
+    },
+    {
+        "Error": "Message: \n",
+        "Index": "145",
+        "failed_requests": "libnv-sys"
+    },
+    {
+        "Error": "Message: \n",
+        "Index": "179",
+        "failed_requests": "crypto-currency"
+    },
+    {
+        "Error": "Message: \n",
+        "Index": "183",
+        "failed_requests": "crypto-market-stream-ws"
+    },
+    {
+        "Error": "Message: \n",
+        "Index": "287",
+        "failed_requests": "ant-usb"
+    },
+    {
+        "Error": "Message: \n",
+        "Index": "502",
+        "failed_requests": "steam-vdf"
+    },
+    {
+        "Error": "Message: \n",
+        "Index": "677",
+        "failed_requests": "ifaddrs-sys"
+    },
+    {
+        "Error": "Message: \n",
+        "Index": "678",
+        "failed_requests": "ifaddrs"
+    },
+    {
+        "Error": "Message: \n",
+        "Index": "712",
+        "failed_requests": "wee-rl"
+    },
+    {
+        "Error": "Message: \n",
+        "Index": "731",
+        "failed_requests": "ganon"
+    },
+    {
+        "Error": "Message: \n",
+        "Index": "8",
+        "failed_requests": "parse_float_radix"
+    },
+    {
+        "Error": "Message: \n",
+        "Index": "23",
+        "failed_requests": "s3-types"
+    },
+    {
+        "Error": "Message: \n",
+        "Index": "47",
+        "failed_requests": "amethyst_audio"
+    },
+    {
+        "Error": "Message: \n",
+        "Index": "56",
+        "failed_requests": "zyx_test"
+    },
+    {
+        "Error": "Message: \n",
+        "Index": "384",
+        "failed_requests": "lambdaOS"
+    },
+    {
+        "Error": "Message: \n",
+        "Index": "463",
+        "failed_requests": "sevenzipx"
+    },
+    {
+        "Error": "Message: \n",
+        "Index": "521",
+        "failed_requests": "aecs"
+    },
+    {
+        "Error": "Message: \n",
+        "Index": "652",
+        "failed_requests": "arccell"
+    },
+    {
+        "Error": "Message: \n",
+        "Index": "725",
+        "failed_requests": "kiteconnect_rust"
+    },
+    {
+        "Error": "Message: \n",
+        "Index": "827",
+        "failed_requests": "lib-xch-ceb"
+    },
+    {
+        "Error": "Message: \n",
+        "Index": "841",
+        "failed_requests": "libyobicash"
+    },
+    {
+        "Error": "Message: \n",
+        "Index": "885",
+        "failed_requests": "live2d"
+    },
+    {
+        "Error": "Message: \n",
+        "Index": "886",
+        "failed_requests": "live2d-sys"
+    },
+    {
+        "Error": "Message: \n",
+        "Index": "906",
+        "failed_requests": "transmute"
+    },
+    {
+        "Error": "Message: \n",
+        "Index": "12",
+        "failed_requests": "rustags"
+    },
+    {
+        "Error": "Message: \n",
+        "Index": "121",
+        "failed_requests": "cretonne-reader"
+    },
+    {
+        "Error": "Message: \n",
+        "Index": "122",
+        "failed_requests": "cretonne-wasm"
+    },
+    {
+        "Error": "Message: \n",
+        "Index": "246",
+        "failed_requests": "holy_crate"
+    },
+    {
+        "Error": "Message: \n",
+        "Index": "384",
+        "failed_requests": "command-macro"
+    },
+    {
+        "Error": "Message: \n",
+        "Index": "858",
+        "failed_requests": "snowflake-multi-threaded"
+    },
+    {
+        "Error": "Message: \n",
+        "Index": "908",
+        "failed_requests": "arrow"
+    },
+    {
+        "Error": "Message: \n",
+        "Index": "0",
+        "failed_requests": "yass-parser"
+    },
+    {
+        "Error": "Message: \n",
+        "Index": "1",
+        "failed_requests": "yass-serializer"
+    },
+    {
+        "Error": "Message: \n",
+        "Index": "2",
+        "failed_requests": "yass-aux"
+    },
+    {
+        "Error": "Message: \n",
+        "Index": "3",
+        "failed_requests": "yass"
+    },
+    {
+        "Error": "Message: \n",
+        "Index": "4",
+        "failed_requests": "yass-schema-error"
+    },
+    {
+        "Error": "Message: \n",
+        "Index": "5",
+        "failed_requests": "yass-codegen"
+    },
+    {
+        "Error": "Message: \n",
+        "Index": "34",
+        "failed_requests": "checkpoint"
+    },
+    {
+        "Error": "Message: \n",
+        "Index": "49",
+        "failed_requests": "datafusion-arrow"
+    },
+    {
+        "Error": "Message: \n",
+        "Index": "99",
+        "failed_requests": "blub"
+    },
+    {
+        "Error": "Message: \n",
+        "Index": "104",
+        "failed_requests": "constdb"
+    },
+    {
+        "Error": "Message: \n",
+        "Index": "108",
+        "failed_requests": "rpmlib-sys"
+    },
+    {
+        "Error": "Message: \n",
+        "Index": "119",
+        "failed_requests": "rpmbuild"
+    },
+    {
+        "Error": "Message: \n",
+        "Index": "302",
+        "failed_requests": "cretonne-faerie"
+    },
+    {
+        "Error": "Message: \n",
+        "Index": "346",
+        "failed_requests": "iq-cli"
+    },
+    {
+        "Error": "Message: \n",
+        "Index": "411",
+        "failed_requests": "librpmbuild"
+    },
+    {
+        "Error": "Message: \n",
+        "Index": "691",
+        "failed_requests": "amath"
+    },
+    {
+        "Error": "Message: \n",
+        "Index": "786",
+        "failed_requests": "repeat"
+    },
+    {
+        "Error": "Message: \n",
+        "Index": "800",
+        "failed_requests": "pax"
+    },
+    {
+        "Error": "Message: \n",
+        "Index": "841",
+        "failed_requests": "stm32f446"
+    },
+    {
+        "Error": "Message: \n",
+        "Index": "33",
+        "failed_requests": "mio-poll-handler"
+    },
+    {
+        "Error": "Message: \n",
+        "Index": "103",
+        "failed_requests": "microgrep"
+    },
+    {
+        "Error": "Message: \n",
+        "Index": "139",
+        "failed_requests": "kmip"
+    },
+    {
+        "Error": "Message: \n",
+        "Index": "293",
+        "failed_requests": "ttcc"
+    },
+    {
+        "Error": "Message: \n",
+        "Index": "338",
+        "failed_requests": "web-view_suppress"
+    },
+    {
+        "Error": "Message: \n",
+        "Index": "357",
+        "failed_requests": "tfe"
+    },
+    {
+        "Error": "Message: \n",
+        "Index": "476",
+        "failed_requests": "int_hash"
+    },
+    {
+        "Error": "Message: \n",
+        "Index": "480",
+        "failed_requests": "eventstore"
+    },
+    {
+        "Error": "Message: \n",
+        "Index": "549",
+        "failed_requests": "zerodmg-utils"
+    },
+    {
+        "Error": "Message: \n",
+        "Index": "620",
+        "failed_requests": "rustyline-nightly"
+    },
+    {
+        "Error": "Message: \n",
+        "Index": "624",
+        "failed_requests": "napi-rs"
+    },
+    {
+        "Error": "Message: \n",
+        "Index": "639",
+        "failed_requests": "bungie-rs"
+    },
+    {
+        "Error": "Message: \n",
+        "Index": "655",
+        "failed_requests": "textwidth"
+    },
+    {
+        "Error": "Message: \n",
+        "Index": "874",
+        "failed_requests": "dsa-rs"
+    },
+    {
+        "Error": "Message: \n",
+        "Index": "879",
+        "failed_requests": "ekiden-grpcio"
+    },
+    {
+        "Error": "Message: \n",
+        "Index": "895",
+        "failed_requests": "ez"
+    },
+    {
+        "Error": "Message: \n",
+        "Index": "899",
+        "failed_requests": "rudp"
+    },
+    {
+        "Error": "Message: \n",
+        "Index": "133",
+        "failed_requests": "cargo-build-git"
+    },
+    {
+        "Error": "Message: \n",
+        "Index": "188",
+        "failed_requests": "toykio"
+    },
+    {
+        "Error": "Message: \n",
+        "Index": "258",
+        "failed_requests": "enigma-tools-u"
+    },
+    {
+        "Error": "Message: \n",
+        "Index": "278",
+        "failed_requests": "cargo-gc"
+    },
+    {
+        "Error": "Message: \n",
+        "Index": "288",
+        "failed_requests": "rigel"
+    },
+    {
+        "Error": "Message: \n",
+        "Index": "329",
+        "failed_requests": "configdir"
+    },
+    {
+        "Error": "Message: \n",
+        "Index": "342",
+        "failed_requests": "tomlenv"
+    },
+    {
+        "Error": "Message: \n",
+        "Index": "567",
+        "failed_requests": "twa_table_decrypt_lib"
+    },
+    {
+        "Error": "Message: \n",
+        "Index": "626",
+        "failed_requests": "yagii"
+    },
+    {
+        "Error": "Message: \n",
+        "Index": "691",
+        "failed_requests": "yank"
+    },
+    {
+        "Error": "Message: \n",
+        "Index": "731",
+        "failed_requests": "signatory-sodiumoxide"
+    },
+    {
+        "Error": "Message: \n",
+        "Index": "831",
+        "failed_requests": "syn-error-experiment"
+    },
+    {
+        "Error": "Message: \n",
+        "Index": "845",
+        "failed_requests": "vad-sys"
+    },
+    {
+        "Error": "Message: \n",
+        "Index": "850",
+        "failed_requests": "safe_cell_exts"
+    },
+    {
+        "Error": "Message: \n",
+        "Index": "1005",
+        "failed_requests": "iqlusion"
+    },
+    {
+        "Error": "Message: \n",
+        "Index": "1006",
+        "failed_requests": "ithosc"
+    },
+    {
+        "Error": "Message: \n",
+        "Index": "1010",
+        "failed_requests": "keyspace"
+    },
+    {
+        "Error": "Message: \n",
+        "Index": "1015",
+        "failed_requests": "palimpsest"
+    },
+    {
+        "Error": "Message: \n",
+        "Index": "1020",
+        "failed_requests": "eink_waveshare_rs"
+    },
+    {
+        "Error": "Message: \n",
+        "Index": "1145",
+        "failed_requests": "sblam"
+    },
+    {
+        "Error": "Message: \n",
+        "Index": "1179",
+        "failed_requests": "syn-next"
+    },
+    {
+        "Error": "Message: \n",
+        "Index": "1219",
+        "failed_requests": "jojo"
+    },
+    {
+        "Error": "Message: \n",
+        "Index": "1229",
+        "failed_requests": "ledger-cosmos-rs"
+    },
+    {
+        "Error": "Message: \n",
+        "Index": "1333",
+        "failed_requests": "reference"
+    },
+    {
+        "Error": "Message: \n",
+        "Index": "1488",
+        "failed_requests": "org-tangle"
+    },
+    {
+        "Error": "Message: \n",
+        "Index": "1507",
+        "failed_requests": "dio"
+    },
+    {
+        "Error": "Message: \n",
+        "Index": "1532",
+        "failed_requests": "polarization"
+    },
+    {
+        "Error": "Message: \n",
+        "Index": "1663",
+        "failed_requests": "fox"
+    },
+    {
+        "Error": "Message: \n",
+        "Index": "1683",
+        "failed_requests": "sise-decoder"
+    },
+    {
+        "Error": "Message: \n",
+        "Index": "1697",
+        "failed_requests": "reflow"
+    },
+    {
+        "Error": "Message: \n",
+        "Index": "1702",
+        "failed_requests": "kanren"
+    },
+    {
+        "Error": "Message: \n",
+        "Index": "1703",
+        "failed_requests": "eopl"
+    },
+    {
+        "Error": "Message: \n",
+        "Index": "1772",
+        "failed_requests": "leben"
+    },
+    {
+        "Error": "Message: \n",
+        "Index": "1802",
+        "failed_requests": "solana-jsonrpc-pubsub"
+    },
+    {
+        "Error": "Message: \n",
+        "Index": "1817",
+        "failed_requests": "disparity"
+    },
+    {
+        "Error": "Message: \n",
+        "Index": "1857",
+        "failed_requests": "grammar-macro"
+    },
+    {
+        "Error": "Message: \n",
+        "Index": "1897",
+        "failed_requests": "hyphenated_lib"
+    },
+    {
+        "Error": "Message: \n",
+        "Index": "1927",
+        "failed_requests": "md-parser"
+    },
+    {
+        "Error": "Message: \n",
+        "Index": "1933",
+        "failed_requests": "md-tangle-engine"
+    },
+    {
+        "Error": "Message: \n",
+        "Index": "1972",
+        "failed_requests": "trillian"
+    },
+    {
+        "Error": "Message: \n",
+        "Index": "1987",
+        "failed_requests": "portunus"
+    },
+    {
+        "Error": "Message: \n",
+        "Index": "1988",
+        "failed_requests": "cloudbuild"
+    },
+    {
+        "Error": "Message: \n",
+        "Index": "1993",
+        "failed_requests": "claver"
+    },
+    {
+        "Error": "Message: \n",
+        "Index": "1997",
+        "failed_requests": "capability"
+    },
+    {
+        "Error": "Message: \n",
+        "Index": "1999",
+        "failed_requests": "ocap"
+    },
+    {
+        "Error": "Message: \n",
+        "Index": "2001",
+        "failed_requests": "filler"
+    },
+    {
+        "Error": "Message: \n",
+        "Index": "2002",
+        "failed_requests": "mentos"
+    },
+    {
+        "Error": "Message: \n",
+        "Index": "2006",
+        "failed_requests": "cloudstorage"
+    },
+    {
+        "Error": "Message: \n",
+        "Index": "2011",
+        "failed_requests": "maphash"
+    },
+    {
+        "Error": "Message: \n",
+        "Index": "2066",
+        "failed_requests": "solana-jsonrpc-ws-server"
+    },
+    {
+        "Error": "Message: \n",
+        "Index": "2096",
+        "failed_requests": "parsing-codegen"
+    },
+    {
+        "Error": "Message: \n",
+        "Index": "2116",
+        "failed_requests": "cargo-dependencies"
+    },
+    {
+        "Error": "Message: \n",
+        "Index": "2126",
+        "failed_requests": "rose"
+    },
+    {
+        "Error": "Message: \n",
+        "Index": "2141",
+        "failed_requests": "multihashes"
+    },
+    {
+        "Error": "Message: \n",
+        "Index": "2335",
+        "failed_requests": "icc"
+    },
+    {
+        "Error": "Message: \n",
+        "Index": "2349",
+        "failed_requests": "wsgi"
+    },
+    {
+        "Error": "Message: \n",
+        "Index": "2354",
+        "failed_requests": "used"
+    },
+    {
+        "Error": "Message: \n",
+        "Index": "2369",
+        "failed_requests": "aif"
+    },
+    {
+        "Error": "Message: \n",
+        "Index": "2400",
+        "failed_requests": "tmkms-prost"
+    },
+    {
+        "Error": "Message: \n",
+        "Index": "2430",
+        "failed_requests": "rand_hc128"
+    },
+    {
+        "Error": "Message: \n",
+        "Index": "2554",
+        "failed_requests": "iq"
+    },
+    {
+        "Error": "Message: \n",
+        "Index": "2574",
+        "failed_requests": "shipcat"
+    },
+    {
+        "Error": "Message: \n",
+        "Index": "2634",
+        "failed_requests": "rust-swf-fixed"
+    },
+    {
+        "Error": "Message: \n",
+        "Index": "2679",
+        "failed_requests": "potassium"
+    },
+    {
+        "Error": "Message: \n",
+        "Index": "2804",
+        "failed_requests": "block-cipher"
+    },
+    {
+        "Error": "Message: \n",
+        "Index": "2864",
+        "failed_requests": "json-model"
+    },
+    {
+        "Error": "Message: \n",
+        "Index": "3025",
+        "failed_requests": "corevideo-sys"
+    },
+    {
+        "Error": "Message: \n",
+        "Index": "3179",
+        "failed_requests": "sonr"
+    },
+    {
+        "Error": "Message: \n",
+        "Index": "3184",
+        "failed_requests": "unsafesc"
+    },
+    {
+        "Error": "Message: \n",
+        "Index": "3234",
+        "failed_requests": "proximo"
+    },
+    {
+        "Error": "Message: \n",
+        "Index": "3461",
+        "failed_requests": "winpty-sys"
+    },
+    {
+        "Error": "Message: \n",
+        "Index": "3680",
+        "failed_requests": "javelin"
+    },
+    {
+        "Error": "Message: \n",
+        "Index": "4037",
+        "failed_requests": "deep_core"
+    },
+    {
+        "Error": "Message: \n",
+        "Index": "4062",
+        "failed_requests": "crustaceans"
+    },
+    {
+        "Error": "Message: \n",
+        "Index": "4067",
+        "failed_requests": "binary-rs"
+    },
+    {
+        "Error": "Message: \n",
+        "Index": "4068",
+        "failed_requests": "binaryRW"
+    },
+    {
+        "Error": "Message: \n",
+        "Index": "4160",
+        "failed_requests": "swoosh"
+    },
+    {
+        "Error": "Message: \n",
+        "Index": "4171",
+        "failed_requests": "managed-heap"
+    },
+    {
+        "Error": "Message: \n",
+        "Index": "9",
+        "failed_requests": "slack-verify"
+    },
+    {
+        "Error": "Message: \n",
+        "Index": "11",
+        "failed_requests": "cargo-bsdport"
     }
 ]
