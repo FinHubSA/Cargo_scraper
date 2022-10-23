@@ -213,4 +213,7 @@ with open("../names_projects_Cargo.csv") as csv_file:
 
     for index_project, project in enumerate(project_list):
         scrape_project(project, index_project, 1)
+    
+    with open("scraping_complete.text", "a+") as scraping_complete_file:
+                scraping_complete_file.write("scraping complete!")
         
