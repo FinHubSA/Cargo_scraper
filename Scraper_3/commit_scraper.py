@@ -182,7 +182,7 @@ def scrape_project(project, index_project, depth):
 
     except Exception as e:
 
-        driver.close()
+        driver.quit()
 
         driver = webdriver.Remote(
             selenium_connection,
