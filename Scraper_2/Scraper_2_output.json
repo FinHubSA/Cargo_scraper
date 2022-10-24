@@ -1978,5 +1978,383 @@
         "github_url": null,
         "owner_url": "https://github.com/swmon",
         "project": "chemistry"
+    },
+    {
+        "crates_url": "https://crates.io/crates/upnp/0.0.0",
+        "github_url": null,
+        "owner_url": "https://github.com/swmon",
+        "project": "upnp"
+    },
+    {
+        "crates_url": "https://crates.io/crates/keyboard/0.0.0",
+        "github_url": null,
+        "owner_url": "https://github.com/swmon",
+        "project": "keyboard"
+    },
+    {
+        "crates_url": "https://crates.io/crates/gi/0.0.0",
+        "github_url": null,
+        "owner_url": "https://github.com/swmon",
+        "project": "gi"
+    },
+    {
+        "crates_url": "https://crates.io/crates/key/0.0.0",
+        "github_url": null,
+        "owner_url": "https://github.com/swmon",
+        "project": "key"
+    },
+    {
+        "crates_url": "https://crates.io/crates/up/0.0.0",
+        "github_url": null,
+        "owner_url": "https://github.com/swmon",
+        "project": "up"
+    },
+    {
+        "crates_url": "https://crates.io/crates/down/0.0.0",
+        "github_url": null,
+        "owner_url": "https://github.com/swmon",
+        "project": "down"
+    },
+    {
+        "crates_url": "https://crates.io/crates/upload/0.0.0",
+        "github_url": null,
+        "owner_url": "https://github.com/swmon",
+        "project": "upload"
+    },
+    {
+        "crates_url": "https://crates.io/crates/download/0.0.0",
+        "github_url": null,
+        "owner_url": "https://github.com/swmon",
+        "project": "download"
+    },
+    {
+        "crates_url": "https://crates.io/crates/car/0.0.0",
+        "github_url": null,
+        "owner_url": "https://github.com/swmon",
+        "project": "car"
+    },
+    {
+        "crates_url": "https://crates.io/crates/hcl/0.0.0",
+        "github_url": null,
+        "owner_url": "https://github.com/swmon",
+        "project": "hcl"
+    },
+    {
+        "crates_url": "https://crates.io/crates/h2so4/0.0.0",
+        "github_url": null,
+        "owner_url": "https://github.com/swmon",
+        "project": "h2so4"
+    },
+    {
+        "crates_url": "https://crates.io/crates/cra/0.0.0",
+        "github_url": null,
+        "owner_url": "https://github.com/swmon",
+        "project": "cra"
+    },
+    {
+        "crates_url": "https://crates.io/crates/locks/0.0.0",
+        "github_url": null,
+        "owner_url": "https://github.com/swmon",
+        "project": "locks"
+    },
+    {
+        "crates_url": "https://crates.io/crates/vector/0.0.0",
+        "github_url": null,
+        "owner_url": "https://github.com/swmon",
+        "project": "vector"
+    },
+    {
+        "crates_url": "https://crates.io/crates/stdlib/0.0.0",
+        "github_url": null,
+        "owner_url": "https://github.com/swmon",
+        "project": "stdlib"
+    },
+    {
+        "crates_url": "https://crates.io/crates/any/0.0.0",
+        "github_url": null,
+        "owner_url": "https://github.com/swmon",
+        "project": "any"
+    },
+    {
+        "crates_url": "https://crates.io/crates/limits/0.0.0",
+        "github_url": null,
+        "owner_url": "https://github.com/swmon",
+        "project": "limits"
+    },
+    {
+        "crates_url": "https://crates.io/crates/contract/0.0.0",
+        "github_url": null,
+        "owner_url": "https://github.com/swmon",
+        "project": "contract"
+    },
+    {
+        "crates_url": "https://crates.io/crates/consts/0.0.0",
+        "github_url": null,
+        "owner_url": "https://github.com/swmon",
+        "project": "consts"
+    },
+    {
+        "crates_url": "https://crates.io/crates/span/0.0.0",
+        "github_url": null,
+        "owner_url": "https://github.com/swmon",
+        "project": "span"
+    },
+    {
+        "crates_url": "https://crates.io/crates/wstring/0.0.0",
+        "github_url": null,
+        "owner_url": "https://github.com/swmon",
+        "project": "wstring"
+    },
+    {
+        "crates_url": "https://crates.io/crates/ls/0.0.0",
+        "github_url": null,
+        "owner_url": "https://github.com/swmon",
+        "project": "ls"
+    },
+    {
+        "crates_url": "https://crates.io/crates/new/0.0.0",
+        "github_url": null,
+        "owner_url": "https://github.com/swmon",
+        "project": "new"
+    },
+    {
+        "crates_url": "https://crates.io/crates/jquery/0.0.0",
+        "github_url": null,
+        "owner_url": "https://github.com/swmon",
+        "project": "jquery"
+    },
+    {
+        "crates_url": "https://crates.io/crates/low/0.0.0",
+        "github_url": null,
+        "owner_url": "https://github.com/swmon",
+        "project": "low"
+    },
+    {
+        "crates_url": "https://crates.io/crates/sys/0.0.0",
+        "github_url": null,
+        "owner_url": "https://github.com/swmon",
+        "project": "sys"
+    },
+    {
+        "crates_url": "https://crates.io/crates/iterator/",
+        "github_url": null,
+        "owner_url": "https://github.com/swmon",
+        "project": "iterator"
+    },
+    {
+        "crates_url": "https://crates.io/crates/plugins/0.0.0",
+        "github_url": null,
+        "owner_url": "https://github.com/swmon",
+        "project": "plugins"
+    },
+    {
+        "crates_url": "https://crates.io/crates/plug/0.0.0",
+        "github_url": null,
+        "owner_url": "https://github.com/swmon",
+        "project": "plug"
+    },
+    {
+        "crates_url": "https://crates.io/crates/goo/0.0.0",
+        "github_url": null,
+        "owner_url": "https://github.com/swmon",
+        "project": "goo"
+    },
+    {
+        "crates_url": "https://crates.io/crates/fb/0.0.0",
+        "github_url": null,
+        "owner_url": "https://github.com/swmon",
+        "project": "fb"
+    },
+    {
+        "crates_url": "https://crates.io/crates/youtube/0.0.0",
+        "github_url": null,
+        "owner_url": "https://github.com/swmon",
+        "project": "youtube"
+    },
+    {
+        "crates_url": "https://crates.io/crates/yahoo/0.0.0",
+        "github_url": null,
+        "owner_url": "https://github.com/swmon",
+        "project": "yahoo"
+    },
+    {
+        "crates_url": "https://crates.io/crates/found/0.0.0",
+        "github_url": null,
+        "owner_url": "https://github.com/swmon",
+        "project": "found"
+    },
+    {
+        "crates_url": "https://crates.io/crates/searching/0.0.0",
+        "github_url": null,
+        "owner_url": "https://github.com/swmon",
+        "project": "searching"
+    },
+    {
+        "crates_url": "https://crates.io/crates/cgmath/0.18.0",
+        "github_url": null,
+        "owner_url": "https://github.com/emberian",
+        "project": "cgmath"
+    },
+    {
+        "crates_url": "https://crates.io/crates/cgmath/0.18.0",
+        "github_url": null,
+        "owner_url": "https://github.com/tomaka",
+        "project": "cgmath"
+    },
+    {
+        "crates_url": "https://crates.io/crates/ts/0.0.0",
+        "github_url": null,
+        "owner_url": "https://github.com/swmon",
+        "project": "ts"
+    },
+    {
+        "crates_url": "https://crates.io/crates/cgmath/0.18.0",
+        "github_url": null,
+        "owner_url": "https://github.com/ozkriff",
+        "project": "cgmath"
+    },
+    {
+        "crates_url": "https://crates.io/crates/op/0.0.0",
+        "github_url": null,
+        "owner_url": "https://github.com/swmon",
+        "project": "op"
+    },
+    {
+        "crates_url": "https://crates.io/crates/gy/0.0.0",
+        "github_url": null,
+        "owner_url": "https://github.com/swmon",
+        "project": "gy"
+    },
+    {
+        "crates_url": "https://crates.io/crates/secure/0.0.0",
+        "github_url": null,
+        "owner_url": "https://github.com/swmon",
+        "project": "secure"
+    },
+    {
+        "crates_url": "https://crates.io/crates/thefuck/0.0.0",
+        "github_url": null,
+        "owner_url": "https://github.com/swmon",
+        "project": "thefuck"
+    },
+    {
+        "crates_url": "https://crates.io/crates/fuck/0.0.0",
+        "github_url": null,
+        "owner_url": "https://github.com/swmon",
+        "project": "fuck"
+    },
+    {
+        "crates_url": "https://crates.io/crates/bash/0.0.0",
+        "github_url": null,
+        "owner_url": "https://github.com/swmon",
+        "project": "bash"
+    },
+    {
+        "crates_url": "https://crates.io/crates/sh/0.0.0",
+        "github_url": null,
+        "owner_url": "https://github.com/swmon",
+        "project": "sh"
+    },
+    {
+        "crates_url": "https://crates.io/crates/match/0.0.0",
+        "github_url": null,
+        "owner_url": "https://github.com/swmon",
+        "project": "match"
+    },
+    {
+        "crates_url": "https://crates.io/crates/if/0.0.0",
+        "github_url": null,
+        "owner_url": "https://github.com/swmon",
+        "project": "if"
+    },
+    {
+        "crates_url": "https://crates.io/crates/while/0.0.0",
+        "github_url": null,
+        "owner_url": "https://github.com/swmon",
+        "project": "while"
+    },
+    {
+        "crates_url": "https://crates.io/crates/for/0.0.0",
+        "github_url": null,
+        "owner_url": "https://github.com/swmon",
+        "project": "for"
+    },
+    {
+        "crates_url": "https://crates.io/crates/yay/0.0.0",
+        "github_url": null,
+        "owner_url": "https://github.com/swmon",
+        "project": "yay"
+    },
+    {
+        "crates_url": "https://crates.io/crates/deno/1.26.2",
+        "github_url": null,
+        "owner_url": "https://github.com/denoland",
+        "project": "deno"
+    },
+    {
+        "crates_url": "https://crates.io/crates/deno/1.26.2",
+        "github_url": null,
+        "owner_url": "https://github.com/satyarohith",
+        "project": "deno"
+    },
+    {
+        "crates_url": "https://crates.io/crates/deno/1.26.2",
+        "github_url": null,
+        "owner_url": "https://github.com/ry",
+        "project": "deno"
+    },
+    {
+        "crates_url": "https://crates.io/crates/deno/1.26.2",
+        "github_url": null,
+        "owner_url": "https://github.com/piscisaureus",
+        "project": "deno"
+    },
+    {
+        "crates_url": "https://crates.io/crates/deno/1.26.2",
+        "github_url": null,
+        "owner_url": "https://github.com/kt3k",
+        "project": "deno"
+    },
+    {
+        "crates_url": "https://crates.io/crates/deno/1.26.2",
+        "github_url": null,
+        "owner_url": "https://github.com/dsherret",
+        "project": "deno"
+    },
+    {
+        "crates_url": "https://crates.io/crates/deno/1.26.2",
+        "github_url": null,
+        "owner_url": "https://github.com/lucacasonato",
+        "project": "deno"
+    },
+    {
+        "crates_url": "https://crates.io/crates/deno/1.26.2",
+        "github_url": null,
+        "owner_url": "https://github.com/bartlomieju",
+        "project": "deno"
+    },
+    {
+        "crates_url": "https://crates.io/crates/deno/1.26.2",
+        "github_url": null,
+        "owner_url": "https://github.com/littledivy",
+        "project": "deno"
+    },
+    {
+        "crates_url": "https://crates.io/crates/deno/1.26.2",
+        "github_url": null,
+        "owner_url": "https://github.com/kitsonk",
+        "project": "deno"
+    },
+    {
+        "crates_url": "https://crates.io/crates/deno/1.26.2",
+        "github_url": null,
+        "owner_url": "https://github.com/crowlKats",
+        "project": "deno"
+    },
+    {
+        "crates_url": "https://crates.io/crates/bernard/0.1.0",
+        "github_url": null,
+        "owner_url": "https://github.com/max-wittig",
+        "project": "bernard"
     }
 ]

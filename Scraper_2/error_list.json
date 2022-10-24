@@ -3453,5 +3453,960 @@
         "Error": "Message: \n",
         "Index": "962",
         "failed_requests": "safe_cell_exts"
+    },
+    {
+        "Error": "Message: \n",
+        "Index": "0",
+        "failed_requests": "bare-websocket"
+    },
+    {
+        "Error": "Message: \n",
+        "Index": "1015",
+        "failed_requests": "iq-bech32"
+    },
+    {
+        "Error": "Message: \n",
+        "Index": "1016",
+        "failed_requests": "capacore"
+    },
+    {
+        "Error": "Message: \n",
+        "Index": "1017",
+        "failed_requests": "acolyte"
+    },
+    {
+        "Error": "Message: \n",
+        "Index": "1018",
+        "failed_requests": "absence"
+    },
+    {
+        "Error": "Message: \n",
+        "Index": "1019",
+        "failed_requests": "iqlusion"
+    },
+    {
+        "Error": "Message: \n",
+        "Index": "1020",
+        "failed_requests": "ithosc"
+    },
+    {
+        "Error": "Message: \n",
+        "Index": "1021",
+        "failed_requests": "ithosd"
+    },
+    {
+        "Error": "Message: \n",
+        "Index": "1022",
+        "failed_requests": "krypto"
+    },
+    {
+        "Error": "Message: \n",
+        "Index": "1023",
+        "failed_requests": "langley"
+    },
+    {
+        "Error": "Message: \n",
+        "Index": "1024",
+        "failed_requests": "keyspace"
+    },
+    {
+        "Error": "Message: \n",
+        "Index": "1025",
+        "failed_requests": "repotoire"
+    },
+    {
+        "Error": "Message: \n",
+        "Index": "1026",
+        "failed_requests": "parcely"
+    },
+    {
+        "Error": "Message: \n",
+        "Index": "1027",
+        "failed_requests": "palimpsest"
+    },
+    {
+        "Error": "Message: \n",
+        "Index": "1028",
+        "failed_requests": "setec-astronomy"
+    },
+    {
+        "Error": "Message: \n",
+        "Index": "1029",
+        "failed_requests": "stinkage"
+    },
+    {
+        "Error": "Message: \n",
+        "Index": "1030",
+        "failed_requests": "eink_waveshare_rs"
+    },
+    {
+        "Error": "Message: \n",
+        "Index": "1031",
+        "failed_requests": "join_to_string"
+    },
+    {
+        "Error": "Message: \n",
+        "Index": "1032",
+        "failed_requests": "keystore"
+    },
+    {
+        "Error": "Message: \n",
+        "Index": "1033",
+        "failed_requests": "crypto_proto"
+    },
+    {
+        "Error": "Message: \n",
+        "Index": "1034",
+        "failed_requests": "depend"
+    },
+    {
+        "Error": "Message: \n",
+        "Index": "1035",
+        "failed_requests": "tioft_rust_get_http"
+    },
+    {
+        "Error": "Message: \n",
+        "Index": "1036",
+        "failed_requests": "sblam"
+    },
+    {
+        "Error": "Message: \n",
+        "Index": "1037",
+        "failed_requests": "yardstick"
+    },
+    {
+        "Error": "Message: \n",
+        "Index": "1038",
+        "failed_requests": "syn-next"
+    },
+    {
+        "Error": "Message: \n",
+        "Index": "1041",
+        "failed_requests": "tocks"
+    },
+    {
+        "Error": "Message: \n",
+        "Index": "1042",
+        "failed_requests": "dic"
+    },
+    {
+        "Error": "Message: \n",
+        "Index": "1043",
+        "failed_requests": "jojo"
+    },
+    {
+        "Error": "Message: \n",
+        "Index": "1044",
+        "failed_requests": "dic-server"
+    },
+    {
+        "Error": "Message: \n",
+        "Index": "1045",
+        "failed_requests": "ledger-cosmos-rs"
+    },
+    {
+        "Error": "Message: \n",
+        "Index": "1046",
+        "failed_requests": "reference"
+    },
+    {
+        "Error": "Message: \n",
+        "Index": "1047",
+        "failed_requests": "clasp"
+    },
+    {
+        "Error": "Message: \n",
+        "Index": "1049",
+        "failed_requests": "batteryd"
+    },
+    {
+        "Error": "Message: \n",
+        "Index": "1050",
+        "failed_requests": "ai-graph"
+    },
+    {
+        "Error": "Message: \n",
+        "Index": "1051",
+        "failed_requests": "org-tangle"
+    },
+    {
+        "Error": "Message: \n",
+        "Index": "1052",
+        "failed_requests": "org-book"
+    },
+    {
+        "Error": "Message: \n",
+        "Index": "1053",
+        "failed_requests": "org-parser"
+    },
+    {
+        "Error": "Message: \n",
+        "Index": "1054",
+        "failed_requests": "dio"
+    },
+    {
+        "Error": "Message: \n",
+        "Index": "1056",
+        "failed_requests": "polarization"
+    },
+    {
+        "Error": "Message: \n",
+        "Index": "1059",
+        "failed_requests": "jojo-core"
+    },
+    {
+        "Error": "Message: \n",
+        "Index": "1060",
+        "failed_requests": "jojo-web"
+    },
+    {
+        "Error": "Message: \n",
+        "Index": "1061",
+        "failed_requests": "serde_json_experimental"
+    },
+    {
+        "Error": "Message: \n",
+        "Index": "1062",
+        "failed_requests": "todo"
+    },
+    {
+        "Error": "Message: \n",
+        "Index": "1064",
+        "failed_requests": "fox"
+    },
+    {
+        "Error": "Message: \n",
+        "Index": "1066",
+        "failed_requests": "draw2d"
+    },
+    {
+        "Error": "Message: \n",
+        "Index": "1067",
+        "failed_requests": "now-cli"
+    },
+    {
+        "Error": "Message: \n",
+        "Index": "1068",
+        "failed_requests": "oysterpack_built_mod"
+    },
+    {
+        "Error": "Message: \n",
+        "Index": "1069",
+        "failed_requests": "sise-decoder"
+    },
+    {
+        "Error": "Message: \n",
+        "Index": "1070",
+        "failed_requests": "sise-encoder"
+    },
+    {
+        "Error": "Message: \n",
+        "Index": "1072",
+        "failed_requests": "test-cargo-publich-project-1"
+    },
+    {
+        "Error": "Message: \n",
+        "Index": "1073",
+        "failed_requests": "reflow"
+    },
+    {
+        "Error": "Message: \n",
+        "Index": "1074",
+        "failed_requests": "sicp"
+    },
+    {
+        "Error": "Message: \n",
+        "Index": "1075",
+        "failed_requests": "parsing-tech"
+    },
+    {
+        "Error": "Message: \n",
+        "Index": "1076",
+        "failed_requests": "kanren"
+    },
+    {
+        "Error": "Message: \n",
+        "Index": "1077",
+        "failed_requests": "eopl"
+    },
+    {
+        "Error": "Message: \n",
+        "Index": "1079",
+        "failed_requests": "pkgparse"
+    },
+    {
+        "Error": "Message: \n",
+        "Index": "1080",
+        "failed_requests": "pkgparse_rs"
+    },
+    {
+        "Error": "Message: \n",
+        "Index": "1081",
+        "failed_requests": "rust-cgui"
+    },
+    {
+        "Error": "Message: \n",
+        "Index": "1082",
+        "failed_requests": "leben"
+    },
+    {
+        "Error": "Message: \n",
+        "Index": "1083",
+        "failed_requests": "solana-jsonrpc-core"
+    },
+    {
+        "Error": "Message: \n",
+        "Index": "1084",
+        "failed_requests": "solana-jsonrpc-server-utils"
+    },
+    {
+        "Error": "Message: \n",
+        "Index": "1085",
+        "failed_requests": "solana-jsonrpc-http-server"
+    },
+    {
+        "Error": "Message: \n",
+        "Index": "1086",
+        "failed_requests": "solana-jsonrpc-tcp-server"
+    },
+    {
+        "Error": "Message: \n",
+        "Index": "1087",
+        "failed_requests": "solana-jsonrpc-pubsub"
+    },
+    {
+        "Error": "Message: \n",
+        "Index": "1088",
+        "failed_requests": "solana-jsonrpc-macros"
+    },
+    {
+        "Error": "Message: \n",
+        "Index": "1089",
+        "failed_requests": "grammar-tech"
+    },
+    {
+        "Error": "Message: \n",
+        "Index": "1090",
+        "failed_requests": "disparity"
+    },
+    {
+        "Error": "Message: \n",
+        "Index": "1092",
+        "failed_requests": "simi-html-tags"
+    },
+    {
+        "Error": "Message: \n",
+        "Index": "1093",
+        "failed_requests": "sequence"
+    },
+    {
+        "Error": "Message: \n",
+        "Index": "1094",
+        "failed_requests": "grammar-macro"
+    },
+    {
+        "Error": "Message: \n",
+        "Index": "1095",
+        "failed_requests": "parsing"
+    },
+    {
+        "Error": "Message: \n",
+        "Index": "1096",
+        "failed_requests": "wikiwiki"
+    },
+    {
+        "Error": "Message: \n",
+        "Index": "1097",
+        "failed_requests": "finchers-r2d2"
+    },
+    {
+        "Error": "Message: \n",
+        "Index": "1098",
+        "failed_requests": "hyphenated_lib"
+    },
+    {
+        "Error": "Message: \n",
+        "Index": "1099",
+        "failed_requests": "md-tangle"
+    },
+    {
+        "Error": "Message: \n",
+        "Index": "1100",
+        "failed_requests": "md-parser"
+    },
+    {
+        "Error": "Message: \n",
+        "Index": "1101",
+        "failed_requests": "org-tangle-engine"
+    },
+    {
+        "Error": "Message: \n",
+        "Index": "1103",
+        "failed_requests": "md-tangle-engine"
+    },
+    {
+        "Error": "Message: \n",
+        "Index": "1104",
+        "failed_requests": "trillian"
+    },
+    {
+        "Error": "Message: \n",
+        "Index": "1105",
+        "failed_requests": "forestry"
+    },
+    {
+        "Error": "Message: \n",
+        "Index": "1106",
+        "failed_requests": "gaunt"
+    },
+    {
+        "Error": "Message: \n",
+        "Index": "1107",
+        "failed_requests": "spanner"
+    },
+    {
+        "Error": "Message: \n",
+        "Index": "1108",
+        "failed_requests": "portunus"
+    },
+    {
+        "Error": "Message: \n",
+        "Index": "1109",
+        "failed_requests": "cloudbuild"
+    },
+    {
+        "Error": "Message: \n",
+        "Index": "1110",
+        "failed_requests": "twirp"
+    },
+    {
+        "Error": "Message: \n",
+        "Index": "1111",
+        "failed_requests": "acl"
+    },
+    {
+        "Error": "Message: \n",
+        "Index": "1112",
+        "failed_requests": "claver"
+    },
+    {
+        "Error": "Message: \n",
+        "Index": "1113",
+        "failed_requests": "gauntlet"
+    },
+    {
+        "Error": "Message: \n",
+        "Index": "1114",
+        "failed_requests": "gcp-oauth"
+    },
+    {
+        "Error": "Message: \n",
+        "Index": "1115",
+        "failed_requests": "capability"
+    },
+    {
+        "Error": "Message: \n",
+        "Index": "1116",
+        "failed_requests": "ocap"
+    },
+    {
+        "Error": "Message: \n",
+        "Index": "1117",
+        "failed_requests": "voucher"
+    },
+    {
+        "Error": "Message: \n",
+        "Index": "1118",
+        "failed_requests": "filler"
+    },
+    {
+        "Error": "Message: \n",
+        "Index": "1119",
+        "failed_requests": "mentos"
+    },
+    {
+        "Error": "Message: \n",
+        "Index": "1120",
+        "failed_requests": "netconf"
+    },
+    {
+        "Error": "Message: \n",
+        "Index": "1121",
+        "failed_requests": "junos"
+    },
+    {
+        "Error": "Message: \n",
+        "Index": "1122",
+        "failed_requests": "junos-config"
+    },
+    {
+        "Error": "Message: \n",
+        "Index": "1123",
+        "failed_requests": "cloudstorage"
+    },
+    {
+        "Error": "Message: \n",
+        "Index": "1124",
+        "failed_requests": "gsuite"
+    },
+    {
+        "Error": "Message: \n",
+        "Index": "1125",
+        "failed_requests": "setec"
+    },
+    {
+        "Error": "Message: \n",
+        "Index": "1126",
+        "failed_requests": "maphash"
+    },
+    {
+        "Error": "Message: \n",
+        "Index": "1127",
+        "failed_requests": "tpm"
+    },
+    {
+        "Error": "Message: \n",
+        "Index": "1128",
+        "failed_requests": "anaconda"
+    },
+    {
+        "Error": "Message: \n",
+        "Index": "1130",
+        "failed_requests": "callipygian_spaghettification_impossibly"
+    },
+    {
+        "Error": "Message: \n",
+        "Index": "1131",
+        "failed_requests": "rust-cgui-render"
+    },
+    {
+        "Error": "Message: \n",
+        "Index": "1132",
+        "failed_requests": "solana-jsonrpc-ws-server"
+    },
+    {
+        "Error": "Message: \n",
+        "Index": "1133",
+        "failed_requests": "gyrus"
+    },
+    {
+        "Error": "Message: \n",
+        "Index": "1134",
+        "failed_requests": "size_format"
+    },
+    {
+        "Error": "Message: \n",
+        "Index": "1135",
+        "failed_requests": "parsing-codegen"
+    },
+    {
+        "Error": "Message: \n",
+        "Index": "1137",
+        "failed_requests": "signatory-ledger-cosval"
+    },
+    {
+        "Error": "Message: \n",
+        "Index": "1138",
+        "failed_requests": "cargo-dependencies"
+    },
+    {
+        "Error": "Message: \n",
+        "Index": "1139",
+        "failed_requests": "actix-net"
+    },
+    {
+        "Error": "Message: \n",
+        "Index": "1140",
+        "failed_requests": "tyser"
+    },
+    {
+        "Error": "Message: \n",
+        "Index": "1141",
+        "failed_requests": "rose"
+    },
+    {
+        "Error": "Message: \n",
+        "Index": "1142",
+        "failed_requests": "nvec"
+    },
+    {
+        "Error": "Message: \n",
+        "Index": "1143",
+        "failed_requests": "multihashes"
+    },
+    {
+        "Error": "Message: \n",
+        "Index": "1144",
+        "failed_requests": "parallel-getter"
+    },
+    {
+        "Error": "Message: \n",
+        "Index": "1145",
+        "failed_requests": "xls"
+    },
+    {
+        "Error": "Message: \n",
+        "Index": "1146",
+        "failed_requests": "icc"
+    },
+    {
+        "Error": "Message: \n",
+        "Index": "1147",
+        "failed_requests": "gab"
+    },
+    {
+        "Error": "Message: \n",
+        "Index": "1148",
+        "failed_requests": "ios"
+    },
+    {
+        "Error": "Message: \n",
+        "Index": "1149",
+        "failed_requests": "fry"
+    },
+    {
+        "Error": "Message: \n",
+        "Index": "1150",
+        "failed_requests": "otf"
+    },
+    {
+        "Error": "Message: \n",
+        "Index": "1151",
+        "failed_requests": "wsgi"
+    },
+    {
+        "Error": "Message: \n",
+        "Index": "1152",
+        "failed_requests": "vine"
+    },
+    {
+        "Error": "Message: \n",
+        "Index": "1153",
+        "failed_requests": "weka"
+    },
+    {
+        "Error": "Message: \n",
+        "Index": "1154",
+        "failed_requests": "used"
+    },
+    {
+        "Error": "Message: \n",
+        "Index": "1155",
+        "failed_requests": "xslt"
+    },
+    {
+        "Error": "Message: \n",
+        "Index": "1156",
+        "failed_requests": "usbc"
+    },
+    {
+        "Error": "Message: \n",
+        "Index": "1157",
+        "failed_requests": "tilt"
+    },
+    {
+        "Error": "Message: \n",
+        "Index": "1158",
+        "failed_requests": "and"
+    },
+    {
+        "Error": "Message: \n",
+        "Index": "1159",
+        "failed_requests": "add"
+    },
+    {
+        "Error": "Message: \n",
+        "Index": "1160",
+        "failed_requests": "aif"
+    },
+    {
+        "Error": "Message: \n",
+        "Index": "1161",
+        "failed_requests": "tmkms-prost"
+    },
+    {
+        "Error": "Message: \n",
+        "Index": "1162",
+        "failed_requests": "tmkms-prost-derive"
+    },
+    {
+        "Error": "Message: \n",
+        "Index": "1163",
+        "failed_requests": "parsing-macro"
+    },
+    {
+        "Error": "Message: \n",
+        "Index": "1164",
+        "failed_requests": "avapi"
+    },
+    {
+        "Error": "Message: \n",
+        "Index": "1165",
+        "failed_requests": "rand_hc128"
+    },
+    {
+        "Error": "Message: \n",
+        "Index": "1166",
+        "failed_requests": "rust-sdl2-extras"
+    },
+    {
+        "Error": "Message: \n",
+        "Index": "1167",
+        "failed_requests": "testest1234"
+    },
+    {
+        "Error": "Message: \n",
+        "Index": "1168",
+        "failed_requests": "iq"
+    },
+    {
+        "Error": "Message: \n",
+        "Index": "1169",
+        "failed_requests": "beeper"
+    },
+    {
+        "Error": "Message: \n",
+        "Index": "1170",
+        "failed_requests": "slack-hook-clux"
+    },
+    {
+        "Error": "Message: \n",
+        "Index": "1171",
+        "failed_requests": "shipcat"
+    },
+    {
+        "Error": "Message: \n",
+        "Index": "1172",
+        "failed_requests": "sha3-plus"
+    },
+    {
+        "Error": "Message: \n",
+        "Index": "1173",
+        "failed_requests": "cargo-reserve"
+    },
+    {
+        "Error": "Message: \n",
+        "Index": "1174",
+        "failed_requests": "rust-swf-fixed"
+    },
+    {
+        "Error": "Message: \n",
+        "Index": "1177",
+        "failed_requests": "potassium"
+    },
+    {
+        "Error": "Message: \n",
+        "Index": "1178",
+        "failed_requests": "cargo-with"
+    },
+    {
+        "Error": "Message: \n",
+        "Index": "1179",
+        "failed_requests": "drop-take"
+    },
+    {
+        "Error": "Message: \n",
+        "Index": "1180",
+        "failed_requests": "drop-take-derive"
+    },
+    {
+        "Error": "Message: \n",
+        "Index": "1182",
+        "failed_requests": "BuildEAR"
+    },
+    {
+        "Error": "Message: \n",
+        "Index": "1184",
+        "failed_requests": "signature-traits"
+    },
+    {
+        "Error": "Message: \n",
+        "Index": "1185",
+        "failed_requests": "block-cipher"
+    },
+    {
+        "Error": "Message: \n",
+        "Index": "1186",
+        "failed_requests": "cloudwatch_logger"
+    },
+    {
+        "Error": "Message: \n",
+        "Index": "1187",
+        "failed_requests": "alpm-sys-fork"
+    },
+    {
+        "Error": "Message: \n",
+        "Index": "1188",
+        "failed_requests": "json-model"
+    },
+    {
+        "Error": "Message: \n",
+        "Index": "1191",
+        "failed_requests": "corevideo-sys"
+    },
+    {
+        "Error": "Message: \n",
+        "Index": "1192",
+        "failed_requests": "ship8"
+    },
+    {
+        "Error": "Message: \n",
+        "Index": "1195",
+        "failed_requests": "ilp"
+    },
+    {
+        "Error": "Message: \n",
+        "Index": "1196",
+        "failed_requests": "sonr"
+    },
+    {
+        "Error": "Message: \n",
+        "Index": "1197",
+        "failed_requests": "unsafesc"
+    },
+    {
+        "Error": "Message: \n",
+        "Index": "1199",
+        "failed_requests": "mongodb-h2co3"
+    },
+    {
+        "Error": "Message: \n",
+        "Index": "1200",
+        "failed_requests": "proximo"
+    },
+    {
+        "Error": "Message: \n",
+        "Index": "1201",
+        "failed_requests": "webpacker-rs"
+    },
+    {
+        "Error": "Message: \n",
+        "Index": "1202",
+        "failed_requests": "calcu"
+    },
+    {
+        "Error": "Message: \n",
+        "Index": "1204",
+        "failed_requests": "unix_socket2"
+    },
+    {
+        "Error": "Message: \n",
+        "Index": "1205",
+        "failed_requests": "winpty-sys"
+    },
+    {
+        "Error": "Message: \n",
+        "Index": "1206",
+        "failed_requests": "lettre-openssl111_email"
+    },
+    {
+        "Error": "Message: \n",
+        "Index": "1209",
+        "failed_requests": "sodiumoxide-xchacha20poly1305"
+    },
+    {
+        "Error": "Message: \n",
+        "Index": "1210",
+        "failed_requests": "lettre-openssl111"
+    },
+    {
+        "Error": "Message: \n",
+        "Index": "1212",
+        "failed_requests": "display-as-template"
+    },
+    {
+        "Error": "Message: \n",
+        "Index": "1214",
+        "failed_requests": "cfn-resource-provider"
+    },
+    {
+        "Error": "Message: \n",
+        "Index": "1215",
+        "failed_requests": "gnit"
+    },
+    {
+        "Error": "Message: \n",
+        "Index": "1217",
+        "failed_requests": "javelin"
+    },
+    {
+        "Error": "Message: \n",
+        "Index": "1218",
+        "failed_requests": "serde_plugin"
+    },
+    {
+        "Error": "Message: \n",
+        "Index": "1221",
+        "failed_requests": "octoon"
+    },
+    {
+        "Error": "Message: \n",
+        "Index": "1222",
+        "failed_requests": "daemonize-rs"
+    },
+    {
+        "Error": "Message: \n",
+        "Index": "1224",
+        "failed_requests": "downwards"
+    },
+    {
+        "Error": "Message: \n",
+        "Index": "1227",
+        "failed_requests": "ethereum-rust-utils"
+    },
+    {
+        "Error": "Message: \n",
+        "Index": "1228",
+        "failed_requests": "sise-read-util"
+    },
+    {
+        "Error": "Message: \n",
+        "Index": "1230",
+        "failed_requests": "wallabag-backend"
+    },
+    {
+        "Error": "Message: \n",
+        "Index": "1231",
+        "failed_requests": "wallabag-cli"
+    },
+    {
+        "Error": "Message: \n",
+        "Index": "1232",
+        "failed_requests": "my_crate25"
+    },
+    {
+        "Error": "Message: \n",
+        "Index": "1234",
+        "failed_requests": "deep_core"
+    },
+    {
+        "Error": "Message: \n",
+        "Index": "1236",
+        "failed_requests": "crustaceans"
+    },
+    {
+        "Error": "Message: \n",
+        "Index": "1237",
+        "failed_requests": "binary-rs"
+    },
+    {
+        "Error": "Message: \n",
+        "Index": "1238",
+        "failed_requests": "binaryRW"
+    },
+    {
+        "Error": "Message: \n",
+        "Index": "1240",
+        "failed_requests": "swoosh"
+    },
+    {
+        "Error": "Message: \n",
+        "Index": "1241",
+        "failed_requests": "slack-verify"
+    },
+    {
+        "Error": "Message: \n",
+        "Index": "1242",
+        "failed_requests": "cargo-bsdport"
     }
 ]
