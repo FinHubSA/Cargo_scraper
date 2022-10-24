@@ -11,7 +11,7 @@ from selenium.webdriver.common.action_chains import ActionChains
 
 
 # import contributor_project_data file
-with open("../rust_scraper/Scraper_4/Scraper_3_output.json", "r") as Scraper_3_input_json_file:
+with open("../rust_scraper/Scraper_3/Scraper_3_output.json", "r") as Scraper_3_input_json_file:
     contributor_github_url_data_list = json.load(Scraper_3_input_json_file)
 
 # Set User Agent and chrome option
