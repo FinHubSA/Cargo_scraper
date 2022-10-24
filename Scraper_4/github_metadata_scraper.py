@@ -93,12 +93,12 @@ def yearly_metadata(date):
         pull_requests = None
         commits = None
 
-    with open("../Scraper_4_output.json", "r") as Scraper_4_input_json_file:
+    with open("Scraper_4_output.json", "r") as Scraper_4_input_json_file:
         contributor_metadata = json.load(Scraper_4_input_json_file)
 
     contributor_metadata.append({'year': date, 'contributor_github_url': contributor_github_url, 'contributions': contributions,'code_review': code_review,'issues': issues,'pull_requests': pull_requests,'commits': commits})
     
-    with open("../Scraper_4_output.json", "w") as Scraper_4_output_json_file:
+    with open("Scraper_4_output.json", "w") as Scraper_4_output_json_file:
         json.dump(contributor_metadata, Scraper_4_output_json_file, indent=4, sort_keys=True)
 
 
@@ -148,12 +148,12 @@ with open("../contributor_github_url.csv", "r") as Scraper_3_input_json_file:
 
         except Exception as e:
 
-            with open("../error_list.json", "r") as error_list_input_json_file:
+            with open("error_list.json", "r") as error_list_input_json_file:
                 error_list = json.load(error_list_input_json_file)
 
             error_list.append({'failed_requests': contributor_github_url, 'Index': str(index_contributor_github_url_data), 'Error': str(e)})
             
-            with open("../error_list.json", "w") as error_list_output_json_file:
+            with open("error_list.json", "w") as error_list_output_json_file:
                 json.dump(error_list, error_list_output_json_file, indent=4, sort_keys=True)
 
             time.sleep(10)
