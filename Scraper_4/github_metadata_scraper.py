@@ -103,7 +103,7 @@ def yearly_metadata(date):
 
 
 # import contributor_project_data file
-with open("../rust_scraper/contributor_github_url.csv", "r") as Scraper_3_input_json_file:
+with open("../contributor_github_url.csv", "r") as Scraper_3_input_json_file:
     contributor_github_url_data_list = csv.DictReader(Scraper_3_input_json_file)
 
     for index_contributor_github_url_data, contributor_github_url_data in enumerate(contributor_github_url_data_list):
