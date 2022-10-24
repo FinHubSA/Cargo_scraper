@@ -38,8 +38,11 @@ driver = webdriver.Chrome(
 
 for index_metadata, metadata in enumerate(metadata_list):
 
-    project = metadata['project']
-    crates_url = metadata['crates_url']
+    try:
+        project = metadata['project']
+        crates_url = metadata['crates_url']
+    except:
+        continue
 
     if not crates_url is None:
 
@@ -63,7 +66,11 @@ for index_metadata, metadata in enumerate(metadata_list):
                 github_url = None
 
             # get the list of project maintainer url
-            project_maintainer_el_list = WebDriverWait(driver, 5).until(expected_conditions.presence_of_all_elements_located((By.XPATH,r"//*[@class='_list_181lzn _detailed_181lzn']/li/a")))
+            try:
+                project_maintainer_el_list = WebDriverWait(driver, 5).until(expected_conditions.presence_of_all_elements_located((By.XPATH,r"//*[@class='_list_181lzn _detailed_181lzn']/li/a")))
+            except:
+                project_maintainer_el_list = WebDriverWait(driver, 5).until(expected_conditions.presence_of_all_elements_located((By.XPATH,r"//*[@class='_list_181lzn']/li/a")))
+
 
             maintainer_url_list = []
 
@@ -109,7 +116,5 @@ for index_metadata, metadata in enumerate(metadata_list):
             
             with open("../rust_scraper/Scraper_2/error_list.json", "w") as error_list_output_json_file:
                 json.dump(error_list, error_list_output_json_file, indent=4, sort_keys=True)
-
-            time.sleep(10)
 
             continue

@@ -2,20 +2,17 @@ from cmath import nan
 import pandas as pd
 import time
 import json
+import csv
 
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support import expected_conditions
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.common.action_chains import ActionChains
-
-
-# import contributor_project_data file
-with open("../rust_scraper/Scraper_4/Scraper_3_output.json", "r") as Scraper_3_input_json_file:
-    contributor_github_url_data_list = json.load(Scraper_3_input_json_file)
+from selenium.webdriver.remote import remote_connection
 
 # Set User Agent and chrome option
-USER_AGENT = "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/104.0.0.0 Safari/537.36"
+USER_AGENT = "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/106.0.5249.119 Safari/537.36"
 chrome_options = webdriver.ChromeOptions()
 chrome_options.add_argument(f"user-agent={USER_AGENT}")
 chrome_options.add_argument("--disable-blink-features=AutomationControlled")
@@ -31,11 +28,13 @@ chrome_options.add_experimental_option(
         "profile.password_manager_enabled": False,  # gets rid of password saver popup
     },
 )
-throttle = 0
 
-# Start driver
-driver = webdriver.Chrome(
-    "/Users/danaebouwer/Documents/Work/rust_scraper/chromedriver",
+selenium_connection = remote_connection.RemoteConnection(
+    "http://localhost:4444/wd/hub"
+)
+
+driver = webdriver.Remote(
+    selenium_connection,
     options=chrome_options,
 )
 
@@ -103,70 +102,60 @@ def yearly_metadata(date):
         json.dump(contributor_metadata, Scraper_4_output_json_file, indent=4, sort_keys=True)
 
 
+# import contributor_project_data file
+with open("../rust_scraper/contributor_github_url.csv", "r") as Scraper_3_input_json_file:
+    contributor_github_url_data_list = csv.DictReader(Scraper_3_input_json_file)
 
-for index_contributor_github_url_data, contributor_github_url_data in enumerate(contributor_github_url_data_list):
+    for index_contributor_github_url_data, contributor_github_url_data in enumerate(contributor_github_url_data_list):
 
-    project = contributor_github_url_data['project']
-    contributor_github_url = contributor_github_url_data['contributor_github_url']
+        contributor_github_url = contributor_github_url_data['contributor_github_url']
 
-    try:
+        try:
 
-        if pd.isnull(contributor_github_url):
+            driver.get(contributor_github_url)
 
-            with open("../rust_scraper/Scraper_4/contributors_to_scrape.json", "r") as contributors_to_scrape_input_json_file:
-                contributors_to_scrape = json.load(contributors_to_scrape_input_json_file)
-
-            contributors_to_scrape.append({'project': project})
-    
-            with open("../rust_scraper/Scraper_4/contributors_to_scrape.json", "w") as contributors_to_scrape_output_json_file:
-                json.dump(contributors_to_scrape, contributors_to_scrape_output_json_file, indent=4, sort_keys=True)
-
-            continue
-
-        driver.get(contributor_github_url)
-
-        # get latest year data
-        
-        date = "2022"
-
-        yearly_metadata(date)
-
-        # get all other years data
-        year_list_len = WebDriverWait(driver, 5).until(expected_conditions.presence_of_all_elements_located((By.XPATH, r"//*[@class='filter-list small']/li")))
-
-        for year in range(1,len(year_list_len)):
-
-            time.sleep(2)
-
-            year_list = WebDriverWait(driver, 5).until(expected_conditions.presence_of_all_elements_located((By.XPATH, r"//*[@class='filter-list small']/li")))
-
-            year_element = year_list[year]
-            date = year_element.text
-
-            ActionChains(driver).move_to_element(year_element).click().perform()
-
-            # driver.execute_script("arguments[0].scrollIntoView(true);", year_element)
-
-            # driver.execute_script('arguments[0].click();', year_element)
-
-            # ActionChains(driver).move_to_element(year_element).perform()
+            # get latest year data
             
-            # year_element.click()
+            date = "2022"
 
             yearly_metadata(date)
 
+            # get all other years data
+            year_list_len = WebDriverWait(driver, 5).until(expected_conditions.presence_of_all_elements_located((By.XPATH, r"//*[@class='filter-list small']/li")))
+
+            for year in range(1,len(year_list_len)):
+
+                time.sleep(2)
+
+                year_list = WebDriverWait(driver, 5).until(expected_conditions.presence_of_all_elements_located((By.XPATH, r"//*[@class='filter-list small']/li")))
+
+                year_element = year_list[year]
+                date = year_element.text
+
+                ActionChains(driver).move_to_element(year_element).click().perform()
+
+                # driver.execute_script("arguments[0].scrollIntoView(true);", year_element)
+
+                # driver.execute_script('arguments[0].click();', year_element)
+
+                # ActionChains(driver).move_to_element(year_element).perform()
+                
+                # year_element.click()
+
+                yearly_metadata(date)
 
 
-    except Exception as e:
 
-        with open("../rust_scraper/Scraper_4/error_list.json", "r") as error_list_input_json_file:
-            error_list = json.load(error_list_input_json_file)
+        except Exception as e:
 
-        error_list.append({'project': project, 'failed_requests': contributor_github_url, 'Index': str(index_contributor_github_url_data), 'Error': str(e)})
-        
-        with open("../rust_scraper/Scraper_4/error_list.json", "w") as error_list_output_json_file:
-            json.dump(error_list, error_list_output_json_file, indent=4, sort_keys=True)
+            with open("../rust_scraper/Scraper_4/error_list.json", "r") as error_list_input_json_file:
+                error_list = json.load(error_list_input_json_file)
 
-        time.sleep(10)
+            error_list.append({'failed_requests': contributor_github_url, 'Index': str(index_contributor_github_url_data), 'Error': str(e)})
+            
+            with open("../rust_scraper/Scraper_4/error_list.json", "w") as error_list_output_json_file:
+                json.dump(error_list, error_list_output_json_file, indent=4, sort_keys=True)
 
-        continue
+            time.sleep(10)
+
+            continue
