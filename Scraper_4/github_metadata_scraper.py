@@ -129,7 +129,6 @@ with open("../rust_scraper/contributor_github_url.csv", "r") as Scraper_3_input_
 
                 year_element = year_list[year]
                 date = year_element.text
-                print(date)
 
                 ActionChains(driver).move_to_element(year_element).click().perform()
 
