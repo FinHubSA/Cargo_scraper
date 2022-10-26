@@ -134,6 +134,8 @@ with open("../contributor_github_url.csv", "r") as Scraper_3_input_json_file:
 
                 ActionChains(driver).move_to_element(year_element).click().perform()
 
+                time.sleep(5)
+
                 # driver.execute_script("arguments[0].scrollIntoView(true);", year_element)
 
                 # driver.execute_script('arguments[0].click();', year_element)
