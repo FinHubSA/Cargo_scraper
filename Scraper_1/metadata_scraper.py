@@ -1,5 +1,4 @@
 import csv
-import pandas as pd
 import time
 import json
 
@@ -16,9 +15,9 @@ chrome_options.add_experimental_option("useAutomationExtension", False)
 chrome_options.add_experimental_option(
     "prefs",
     {
-        "download.prompt_for_download": False,  # To auto download the file
+        "download.prompt_for_download": False,  # to auto download the file
         "download.directory_upgrade": True,
-        "plugins.always_open_pdf_externally": True,  # It will not show PDF directly in chrome
+        "plugins.always_open_pdf_externally": True,  # it will not show PDF directly in chrome
         "credentials_enable_service": False,  # gets rid of password saver popup
         "profile.password_manager_enabled": False,  # gets rid of password saver popup
     },
@@ -27,21 +26,21 @@ throttle = 0
 
 # Start driver
 driver = webdriver.Chrome(
-    "../rust_scraper/chromedriver",
     options=chrome_options,
 )
+
 count = 0
 
-# load csv list
+# load Cargo projects list from csv file
 with open("../rust_scraper/names_projects_Cargo.csv") as csv_file:
     project_list = csv.DictReader(csv_file)
 
+    # loop through Cargo projects list
     for index_project, project in enumerate(project_list):
-
         count += 1
 
+        # restart chromedriver after x number of projects
         if count == 500:
-
             count = 0
 
             driver.close()
@@ -52,10 +51,10 @@ with open("../rust_scraper/names_projects_Cargo.csv") as csv_file:
             )
 
         try:
+            # go to libraries.io to retrieve the project data
+            project_name = project["project"]
 
-            project_name = project['project']
-
-            project_url = "https://libraries.io/cargo/" + str(project['project'])
+            project_url = "https://libraries.io/cargo/" + str(project["project"])
 
             driver.get(project_url)
 
@@ -65,22 +64,21 @@ with open("../rust_scraper/names_projects_Cargo.csv") as csv_file:
             too_many_requests = True
             count_requests_error = 0
 
-            while too_many_requests and count_requests_error <=10:
+            while too_many_requests and count_requests_error <= 10:
+                error_429 = driver.find_element(By.XPATH, r"//*").text
 
-                error_429 = driver.find_element(By.XPATH,r"//*").text
-
-                if error_429 == '429 Too Many Requests':
+                if error_429 == "429 Too Many Requests":
                     count_requests_error += 1
-                    print(project_name)
-                    print(error_429)
+                    print("error_429:" + project_name)
                     time.sleep(20)
                     driver.get(project_url)
                 else:
                     too_many_requests = False
 
-
+            # set the time between requests to avoid error 429(too many requests)
             time.sleep(10)
 
+            # set variable default values
             Latest_release = None
             First_release = None
             Stars = None
@@ -92,93 +90,106 @@ with open("../rust_scraper/names_projects_Cargo.csv") as csv_file:
             crates_url = None
             github_repo = None
 
-            # get the project links
-            project_el_list = driver.find_elements(By.XPATH,r"//*[@class='project-links']/span/a")
+            # get the project links (crates.io and GitHub)
+            project_el_list = driver.find_elements(
+                By.XPATH, r"//*[@class='project-links']/span/a"
+            )
             for project_el in project_el_list:
-                        
                 project_link_name = project_el.text
-                if project_link_name == 'Cargo':
-                    crates_url = project_el.get_attribute('href')
-                elif project_link_name == 'Repository':
-                    github_repo = project_el.get_attribute('href')
+                if project_link_name == "Cargo":
+                    crates_url = project_el.get_attribute("href")
+                elif project_link_name == "Repository":
+                    github_repo = project_el.get_attribute("href")
                 else:
                     continue
-            
-            # get the metadata
-            element_tag_name_list = [el.text for el in driver.find_elements(By.XPATH,r"//*[@class='col-md-4 sidebar']/dl[@class='row']/dt")]
-            element_tag_value_list = [el.text for el in driver.find_elements(By.XPATH,r"//*[@class='col-md-4 sidebar']/dl[@class='row']/dd")]
+
+            # get the project metadata
+            element_tag_name_list = [
+                el.text
+                for el in driver.find_elements(
+                    By.XPATH,
+                    r"//*[@class='col-md-4 sidebar']/dl[@class='row detail-card']/dt",
+                )
+            ]
+            element_tag_value_list = [
+                el.text
+                for el in driver.find_elements(
+                    By.XPATH,
+                    r"//*[@class='col-md-4 sidebar']/dl[@class='row detail-card']/dd",
+                )
+            ]
 
             for index, element_tag_name in enumerate(element_tag_name_list):
-
-                if element_tag_name == 'Latest release':
+                if element_tag_name == "Latest release":
                     Latest_release = element_tag_value_list[index]
-                elif element_tag_name == 'First release':
+                elif element_tag_name == "First release":
                     First_release = element_tag_value_list[index]
-                elif element_tag_name == 'Stars':
+                elif element_tag_name == "Stars":
                     Stars = element_tag_value_list[index]
-                elif element_tag_name == 'Forks':
+                elif element_tag_name == "Forks":
                     Forks = element_tag_value_list[index]
-                elif element_tag_name == 'Watchers':
+                elif element_tag_name == "Watchers":
                     Watch = element_tag_value_list[index]
-                elif element_tag_name == 'Contributors':
+                elif element_tag_name == "Contributors":
                     Contributors = element_tag_value_list[index]
-                elif element_tag_name == 'Repository size':
+                elif element_tag_name == "Repository size":
                     Repository_size = element_tag_value_list[index]
-                elif element_tag_name == 'Total releases':
+                elif element_tag_name == "Total releases":
                     Total_releases = element_tag_value_list[index]
                 else:
                     continue
-            
-            with open("../rust_scraper/Scraper_1/Scraper_1_output.json", "r") as Scraper_1_input_json_file:
+
+            # append the metadata json file
+            with open(
+                "../rust_scraper/Scraper_1/Scraper_1_output.json", "r"
+            ) as Scraper_1_input_json_file:
                 metadata_list = json.load(Scraper_1_input_json_file)
-            
-            metadata_list.append({'project': project_name, 'Latest_release': Latest_release, 'First_release': First_release, 'Stars': Stars, 'Forks': Forks, 'Watch': Watch, 'Contributors': Contributors, 'repository_size': Repository_size, 'total_releases': Total_releases, 'crates_url': crates_url, 'github_repo': github_repo})
 
-            with open("../rust_scraper/Scraper_1/Scraper_1_output.json", "w") as Scraper_1_output_json_file:
-                json.dump(metadata_list, Scraper_1_output_json_file, indent=4, sort_keys=True)
+            metadata_list.append(
+                {
+                    "project": project_name,
+                    "Latest_release": Latest_release,
+                    "First_release": First_release,
+                    "Stars": Stars,
+                    "Forks": Forks,
+                    "Watch": Watch,
+                    "Contributors": Contributors,
+                    "repository_size": Repository_size,
+                    "total_releases": Total_releases,
+                    "crates_url": crates_url,
+                    "github_repo": github_repo,
+                }
+            )
 
-            # # get the maintainer and contributor url
-
-            # maintainer_contributor_heading = None
-            # maintainer_contributor_url = None
-
-            # maintainer_contributor_list = driver.find_elements(By.XPATH,r"//*[@class='col-md-12']")
-
-            # for maintainer_contributor in maintainer_contributor_list:
-
-            #     maintainer_contributor_heading = maintainer_contributor.find_element(By.XPATH,r"./h3").text
-
-            #     if maintainer_contributor_heading == 'Maintainers' or maintainer_contributor_heading == "Contributors":
-
-            #         maintainer_contributor_url_list = maintainer_contributor.find_elements(By.XPATH,r"./a")
-
-            #         for maintainer_contributor_url_el in maintainer_contributor_url_list:
-            #             maintainer_contributor_url = maintainer_contributor_url_el.get_attribute('href')
-                
-            #             with open("../rust_scraper/Scraper_1/contributor_url.json", "r") as contributor_list_input_json_file:
-            #                 contributor_list = json.load(contributor_list_input_json_file)
-
-            #             contributor_list.append({'project': project_name, 'contributor_type': maintainer_contributor_heading, 'maintainer_contributor_url': maintainer_contributor_url})
-
-            #             with open("../rust_scraper/Scraper_1/contributor_url.json", "w") as contributor_list_output_json_file:
-            #                 json.dump(contributor_list, contributor_list_output_json_file, indent=4, sort_keys=True)
+            with open(
+                "../rust_scraper/Scraper_1/Scraper_1_output.json", "w"
+            ) as Scraper_1_output_json_file:
+                json.dump(
+                    metadata_list, Scraper_1_output_json_file, indent=4, sort_keys=True
+                )
 
         except Exception as e:
-
-            with open("../rust_scraper/Scraper_1/error_list.json", "r") as error_list_input_json_file:
+            # append the error json file
+            with open(
+                "../rust_scraper/Scraper_1/error_list.json", "r"
+            ) as error_list_input_json_file:
                 error_list = json.load(error_list_input_json_file)
 
-            error_list.append({'failed_requests':project, 'Index': str(index_project), 'Error': str(e)})
-            
-            with open("../rust_scraper/Scraper_1/error_list.json", "w") as error_list_output_json_file:
-                json.dump(error_list, error_list_output_json_file, indent=4, sort_keys=True)
+            error_list.append(
+                {
+                    "failed_requests": project,
+                    "Index": str(index_project),
+                    "Error": str(e),
+                }
+            )
+
+            with open(
+                "../rust_scraper/Scraper_1/error_list.json", "w"
+            ) as error_list_output_json_file:
+                json.dump(
+                    error_list, error_list_output_json_file, indent=4, sort_keys=True
+                )
 
             time.sleep(60)
 
             continue
-
-
-
-        
-        
-
