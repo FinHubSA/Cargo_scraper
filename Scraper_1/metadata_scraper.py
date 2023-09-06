@@ -69,13 +69,13 @@ with open("../rust_scraper/names_projects_Cargo.csv") as csv_file:
 
                 if error_429 == "429 Too Many Requests":
                     count_requests_error += 1
-                    print("error_429:" + project_name)
+                    print("error_429: " + project_name)
                     time.sleep(20)
                     driver.get(project_url)
                 else:
                     too_many_requests = False
 
-            # set the time between requests to avoid error 429(too many requests)
+            # set the time between requests to avoid error 429 (too many requests)
             time.sleep(10)
 
             # set variable default values
