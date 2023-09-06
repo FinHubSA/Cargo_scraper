@@ -45,10 +45,10 @@ with open("../rust_scraper/names_projects_Cargo.csv") as csv_file:
 
             driver.close()
 
-            driver = webdriver.Chrome(
-                "../rust_scraper/chromedriver",
-                options=chrome_options,
-            )
+        # Start driver
+        driver = webdriver.Chrome(
+            options=chrome_options,
+        )
 
         try:
             # go to libraries.io to retrieve the project data
