@@ -1,15 +1,10 @@
 import json
+import csv
 
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions
-
-# import metadata file
-with open(
-    "../rust_scraper/Scraper_1/Scraper_1_output.json", "r"
-) as Scraper_1_input_json_file:
-    metadata_list = json.load(Scraper_1_input_json_file)
 
 # Set User Agent and chrome option
 USER_AGENT = "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/104.0.0.0 Safari/537.36"
@@ -35,15 +30,15 @@ driver = webdriver.Chrome(
     options=chrome_options,
 )
 
-# loop through crates.io project url list
-for index_metadata, metadata in enumerate(metadata_list):
-    try:
-        project = metadata["project"]
-        crates_url = metadata["crates_url"]
-    except:
-        continue
+# load Cargo projects list from csv file
+with open("../rust_scraper/names_projects_Cargo.csv") as csv_file:
+    project_list = csv.DictReader(csv_file)
 
-    if not crates_url is None:
+    # loop through crates.io project url list
+    for index_project, project in enumerate(project_list):
+        
+        crates_url = "https://crates.io/crates/" + str(project["project"])
+
         try:
             # go to the crates.io project page
             driver.get(crates_url)
@@ -129,7 +124,7 @@ for index_metadata, metadata in enumerate(metadata_list):
 
                 maintainer_github_url_list.append(
                     {
-                        "project": project,
+                        "project": project["project"],
                         "crates_url": crates_url,
                         "owner_url": project_maintainer_github_url,
                         "github_url": github_url,
@@ -155,8 +150,8 @@ for index_metadata, metadata in enumerate(metadata_list):
 
             error_list.append(
                 {
-                    "failed_requests": project,
-                    "Index": str(index_metadata),
+                    "failed_requests": project["project"],
+                    "Index": str(index_project),
                     "Error": str(e),
                 }
             )
