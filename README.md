@@ -1,4 +1,4 @@
-# Cargo projects scraper
+# Rust projects scraper
 
 ## Introduction
 
