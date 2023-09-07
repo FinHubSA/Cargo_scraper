@@ -18,11 +18,11 @@ To use this code, do the following steps:
 
 First read the [documentation](https://docs.google.com/document/d/1wJWbDbL90ChDO4d2GOycmVYS8Fla83_UmT8ajXI6gMc/edit) to learn about each scraper.
 
+## On your local
+
 Simply run the relevant scraper according to your data requirements.
 
 **Note: Scraper 2 uses input produced by Scraper 1. Scraper 4 uses input produced by Scraper 3.**
-
-## On your local
 
 ## On a vm
 
