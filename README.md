@@ -22,7 +22,7 @@ First read the [documentation](https://docs.google.com/document/d/1wJWbDbL90ChDO
 
 Simply run the relevant scraper according to your data requirements.
 
-**Note: Scraper 2 uses input produced by Scraper 1. Scraper 4 uses input produced by Scraper 3.**
+**Note: Scraper 4 uses input produced by Scraper 3.**
 
 ### On a vm
 
